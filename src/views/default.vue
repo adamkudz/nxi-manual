@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="background">
-    <router-view />
+  <div class="background">
+    <nuxt />
   </div>
 </template>
 
@@ -62,7 +62,7 @@ html {
   z-index: 2;
 }
 .bezelLabelBackground {
-  background: url("./assets/singleLabel.svg") no-repeat;
+  background: url("../assets/singleLabel.svg") no-repeat;
   background-size: 70%;
   background-position: center;
   p {
