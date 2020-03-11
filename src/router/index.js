@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Search from "../views/Search.vue";
 import SearchPath from "../views/SearchPath.vue";
+import BezelKeySim from "../views/BezelKeySim.vue";
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,11 @@ const routes = [
     path: "/SearchPath",
     name: "SearchPath",
     component: SearchPath
+  },
+  {
+    path: "/bezelkeysim",
+    name: "BezelKeySim",
+    component: BezelKeySim
   }
 ];
 

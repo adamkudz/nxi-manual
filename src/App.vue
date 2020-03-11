@@ -39,6 +39,8 @@ html {
     rgba(77, 92, 128, 1) 0%,
     rgba(24, 24, 22, 1) 100%
   );
+  height: 100vh;
+  width: 100vw;
 }
 .navButton {
   width: 200px;

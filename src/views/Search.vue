@@ -7,12 +7,7 @@
       <div class="searchBox">
         <div class="searchItems">
           <p>What can I help you find?</p>
-          <input
-            v-focus
-            v-model="searchText"
-            type="text"
-            placeholder="ex. radar, traffic, wind..."
-          />
+          <input v-focus v-model="searchText" type="text" placeholder="ex. radar, traffic, wind..." />
         </div>
       </div>
     </div>
@@ -43,6 +38,7 @@ import store from "../store/store";
 
 export default {
   name: "Search",
+  components: {},
   data() {
     return {
       searchText: "",
@@ -58,6 +54,8 @@ export default {
   },
   created: function() {
     this.$store.dispatch("pfdStore/setPfdData", { self: this });
+    this.$store.dispatch("systemMessagesStore/setSystemMessages");
+    this.$store.dispatch("CASMessageStore/setCASMessages");
   },
   methods: {
     getPath: function(e) {
@@ -103,7 +101,9 @@ export default {
   display: grid;
   grid-template-rows: 15vh 1fr;
   overflow: hidden;
+  position: relative;
 }
+
 .searchContainer {
   height: 100%;
   width: 100%;

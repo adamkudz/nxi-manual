@@ -1,5 +1,8 @@
 <template>
   <div class="TESTCOMPONENTCONTAINER">
+    <div v-if="showPDF" class="pdfContainer">
+      <PDFComponent @togglePDF="togglePDF" />
+    </div>
     <header>
       <h2>Search Results</h2>
     </header>
@@ -26,6 +29,7 @@
     </div>
     <div v-if="displayDescription" class="buttonContainer">
       <button class="navButton" @click="goHome">Search Again</button>
+      <button class="navButton" @click="togglePDF">Show Info</button>
     </div>
   </div>
 </template>
@@ -33,13 +37,15 @@
 <script>
 import TestBezelRow from "../components/TestBezelRow.vue";
 import DescriptionWithLabel from "../components/DescriptionWithLabel";
+import PDFComponent from "../components/PDF/PDFComponent";
 
 export default {
   name: "SearchPath",
 
   components: {
     TestBezelRow,
-    DescriptionWithLabel
+    DescriptionWithLabel,
+    PDFComponent
   },
   data() {
     return {
@@ -47,7 +53,8 @@ export default {
       highlightArray: this.$store.getters["pfdStore/getHighlightArray"],
       selected: this.$store.getters["pfdStore/getSelected"],
       count: 0,
-      displayDescription: false
+      displayDescription: false,
+      showPDF: false
     };
   },
   mounted() {},
@@ -72,6 +79,9 @@ export default {
     showFullPath: function() {
       this.count = 5;
       this.displayDescription = true;
+    },
+    togglePDF: function() {
+      this.showPDF = !this.showPDF;
     }
   }
 };
@@ -89,6 +99,13 @@ header {
   button {
     margin-top: 1em;
   }
+}
+.pdfContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #2c2a2a;
+  padding: 2em;
 }
 .featureDescription {
   padding: 20px;
