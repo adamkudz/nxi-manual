@@ -21,6 +21,7 @@
           :highlighted="highlightArray[this.count]"
           :count="count"
           @selectCurrentKey="selectCurrentKey"
+          @countUp="countUp"
         />
       </div>
 
@@ -55,8 +56,11 @@ export default {
     ...mapState(["pfdData", "selected", "selectionArray", "highlightArray"])
   },
   methods: {
-    selectCurrentKey: function(e) {
-      console.log(e.target);
+    selectCurrentKey: function(payload) {
+      console.log(payload);
+    },
+    countUp: function() {
+      this.count++;
     }
   }
 };
@@ -85,11 +89,12 @@ export default {
   grid-column: 2/3;
   grid-row: 2/3;
   align-self: end;
+  margin-bottom: 10px;
 }
 #pfdWindDisplay {
   grid-column: 4/5;
   grid-row: 2/3;
-  align-self: start;
+  margin-top: 40px;
 }
 #horizon {
   grid-column: 2/10;

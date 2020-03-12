@@ -2,7 +2,14 @@
   <div class="PFDBEZELROWCONTAINER">
     <div class="pfdBezelRow">
       <div class="labelGrid">
-        <p v-for="label in labels" :key="label">{{ label }}</p>
+        <p
+          @click="selectCurrentKey"
+          :id="label"
+          v-for="(label, index) in labels"
+          :key="index"
+        >
+          {{ label }}
+        </p>
       </div>
     </div>
   </div>
@@ -21,9 +28,9 @@ export default {
       if (this.highlighted !== e.target.id) {
         console.log("Wrong Button");
       } else if (this.selected.buttonName == e.target.id) {
-        this.$emit("selectCurrentKey", false);
+        console.log(e.target.id);
       } else {
-        this.$emit("selectCurrentKey", e.target.id);
+        this.$emit("countUp");
       }
     }
   },
