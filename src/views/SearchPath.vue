@@ -29,7 +29,7 @@
     </div>
     <div v-if="displayDescription" class="buttonContainer">
       <button class="navButton" @click="goHome">Search Again</button>
-      <button class="navButton" @click="togglePDF">Show Info</button>
+      <button class="navButton" @click="goSimulate">Simulate</button>
     </div>
   </div>
 </template>
@@ -76,6 +76,9 @@ export default {
     goHome: function() {
       this.$router.push("/");
     },
+    goSimulate: function() {
+      this.$router.push("/bezelkeysim");
+    },
     showFullPath: function() {
       this.count = 5;
       this.displayDescription = true;
@@ -109,7 +112,7 @@ header {
 }
 .featureDescription {
   padding: 20px;
-  max-width: 864px;
+  max-width: 700px;
   margin: auto;
 }
 .bezelRows {
@@ -120,7 +123,7 @@ header {
   padding: 20px;
   grid-auto-rows: 10vh;
 
-  max-width: 864px;
+  max-width: 700px;
 }
 .buttonContainer {
   width: 100%;

@@ -17,10 +17,12 @@ export default {
   height: 100%;
   width: 100%;
   background: url("../../../public/pfdImages/nxiCdi.png") no-repeat;
+  background-size: cover;
   display: grid;
 }
 .magenta {
   padding-left: 22px;
   padding-top: 35px;
+  padding-bottom: 22px;
 }
 </style>
