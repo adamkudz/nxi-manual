@@ -3,7 +3,7 @@ export const data = [
     buttonName: "Top",
     level: 0,
     desc: "Display the PFD Map display settings softkeys",
-    ancestors: null,
+    ancestors: "none",
     labels: [
       "",
       "MAP/HSI",
@@ -21,7 +21,8 @@ export const data = [
     toggle: false,
     ref: [123, 143],
     unit: "pfd",
-    id: 0
+    id: 0,
+    buttonType: "bezelMenu"
   },
   {
     buttonName: "MAP/HSI",
@@ -45,7 +46,8 @@ export const data = [
     toggle: false,
     ref: [123, 143],
     unit: "pfd",
-    id: 1
+    id: 1,
+    buttonType: "bezelMenu"
   },
   {
     buttonName: "Layout",
@@ -80,7 +82,8 @@ export const data = [
     toggle: true,
     ref: [169],
     unit: "pfd",
-    id: 3
+    id: 3,
+    buttonType: "display"
   },
   {
     buttonName: "Inset Map",
@@ -91,7 +94,8 @@ export const data = [
     toggle: true,
     ref: [169],
     unit: "pfd",
-    id: 4
+    id: 4,
+    buttonType: "display"
   },
   {
     buttonName: "HSI Map",
@@ -102,7 +106,8 @@ export const data = [
     toggle: true,
     ref: [169],
     unit: "pfd",
-    id: 5
+    id: 5,
+    buttonType: "display"
   },
   {
     buttonName: "Inset Trfc",
@@ -113,7 +118,8 @@ export const data = [
     toggle: true,
     ref: [169],
     unit: "pfd",
-    id: 6
+    id: 6,
+    buttonType: "display"
   },
   {
     buttonName: "HSI Trfc",
@@ -124,7 +130,8 @@ export const data = [
     toggle: true,
     ref: [169],
     unit: "pfd",
-    id: 7
+    id: 7,
+    buttonType: "display"
   },
   {
     buttonName: "Detail",
@@ -133,15 +140,11 @@ export const data = [
     ancestors: ["Top", "MAP/HSI"],
     labels: null,
     toggle: true,
-    toggleValues: [
-      "All: All map features visible",
-      "Detail 3: Declutters land data",
-      "Detail 2: Declutters land and SUA data",
-      "Detail 1:Removes everything except for the active flight plan"
-    ],
+    toggleValues: ["All", "Detail 3", "Detail 2", "Detail 1"],
     ref: [169],
     unit: "pfd",
-    id: 8
+    id: 8,
+    buttonType: "toggle"
   },
   {
     buttonName: "Traffic",
@@ -153,7 +156,8 @@ export const data = [
     toggleValues: [null],
     ref: [169],
     unit: "pfd",
-    id: 9
+    id: 9,
+    buttonType: "display"
   },
   {
     buttonName: "TER",
@@ -162,14 +166,11 @@ export const data = [
     ancestors: ["Top", "MAP/HSI"],
     labels: null,
     toggle: true,
-    toggleValues: [
-      "Off: No terrain information show on the PFD Map",
-      "Topo: Displays topographical data",
-      "REL Displays relative terrain information on the PFD Map"
-    ],
+    toggleValues: ["Off", "Topo", "REL"],
     ref: [169],
     unit: "pfd",
-    id: 10
+    id: 10,
+    buttonType: "toggle"
   },
   {
     buttonName: "WX LGND",
@@ -182,7 +183,8 @@ export const data = [
     toggleValues: [null],
     ref: [170],
     unit: "pfd",
-    id: 11
+    id: 11,
+    buttonType: "display"
   },
   {
     buttonName: "NEXRAD",
@@ -194,7 +196,8 @@ export const data = [
     toggleValues: [null],
     ref: [171],
     unit: "pfd",
-    id: 12
+    id: 12,
+    buttonType: "display"
   },
   {
     buttonName: "METAR",
@@ -206,7 +209,8 @@ export const data = [
     toggleValues: [null],
     ref: [172],
     unit: "pfd",
-    id: 13
+    id: 13,
+    buttonType: "display"
   },
   {
     buttonName: "Lightning",
@@ -233,7 +237,8 @@ export const data = [
     toggleValues: [null],
     ref: [172],
     unit: "pfd",
-    id: 14
+    id: 14,
+    buttonType: "belzelMenu"
   },
   {
     buttonName: "LTNG Off",
@@ -246,7 +251,8 @@ export const data = [
     toggleValues: [null],
     ref: [172],
     unit: "pfd",
-    id: 15
+    id: 15,
+    buttonType: "display"
   },
   {
     buttonName: "Datalink",
@@ -258,7 +264,8 @@ export const data = [
     toggleValues: [null],
     ref: [172],
     unit: "pfd",
-    id: 16
+    id: 16,
+    buttonType: "display"
   },
   {
     buttonName: "STRMSCP",
@@ -271,7 +278,8 @@ export const data = [
     toggleValues: [null],
     ref: [172],
     unit: "pfd",
-    id: 17
+    id: 17,
+    buttonType: "display"
   },
   {
     buttonName: "Wx Radar",
@@ -284,7 +292,8 @@ export const data = [
     toggleValues: [null],
     ref: [172],
     unit: "pfd",
-    id: 18
+    id: 18,
+    buttonType: "display"
   },
   {
     buttonName: "RDR Opt",
@@ -309,19 +318,34 @@ export const data = [
     toggleValues: [null],
     ref: [174],
     unit: "pfd",
-    id: 19
+    id: 19,
+    buttonType: "belzelMenu"
   },
   {
     buttonName: "Mode SEL",
     level: 3,
     desc: "Displays softkeys of weather radar mode selection",
     ancestors: ["Top", "MAP/HSI", "RDR Opt"],
-    labels: ["Standby", "Weather", "Ground"],
+    labels: [
+      "Standby",
+      "Weather",
+      "Ground",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "Back",
+      "Alerts"
+    ],
     toggle: false,
     toggleValues: [null],
     ref: [174],
     unit: "pfd",
-    id: 20
+    id: 20,
+    buttonType: "belzelMenu"
   },
   {
     buttonName: "Standby",
@@ -333,7 +357,8 @@ export const data = [
     toggleValues: [null],
     ref: [174],
     unit: "pfd",
-    id: 21
+    id: 21,
+    buttonType: "display"
   },
   {
     buttonName: "Weather",
@@ -345,7 +370,8 @@ export const data = [
     toggleValues: [null],
     ref: [174],
     unit: "pfd",
-    id: 22
+    id: 22,
+    buttonType: "display"
   },
   {
     buttonName: "Ground",
@@ -357,7 +383,8 @@ export const data = [
     toggleValues: [null],
     ref: [174],
     unit: "pfd",
-    id: 23
+    id: 23,
+    buttonType: "display"
   },
   {
     buttonName: "Gain -",
@@ -369,7 +396,8 @@ export const data = [
     toggleValues: [null],
     ref: [174],
     unit: "pfd",
-    id: 24
+    id: 24,
+    buttonType: "display"
   },
   {
     buttonName: "Gain +",
@@ -381,7 +409,8 @@ export const data = [
     toggleValues: [null],
     ref: [174],
     unit: "pfd",
-    id: 25
+    id: 25,
+    buttonType: "display"
   },
   {
     buttonName: "WX ALRT",
@@ -393,7 +422,8 @@ export const data = [
     toggleValues: [null],
     ref: [174],
     unit: "pfd",
-    id: 26
+    id: 26,
+    buttonType: "display"
   },
   {
     buttonName: "STAB",
@@ -405,7 +435,8 @@ export const data = [
     toggleValues: [null],
     ref: [174],
     unit: "pfd",
-    id: 27
+    id: 27,
+    buttonType: "display"
   },
   {
     buttonName: "ACT",
@@ -417,7 +448,8 @@ export const data = [
     toggleValues: [null],
     ref: [174],
     unit: "pfd",
-    id: 28
+    id: 28,
+    buttonType: "display"
   },
   {
     buttonName: "TFC Map",
@@ -429,7 +461,8 @@ export const data = [
     toggleValues: [null],
     ref: [174],
     unit: "pfd",
-    id: 29
+    id: 29,
+    buttonType: "display"
   },
   {
     buttonName: "PFD Opt",
@@ -454,7 +487,8 @@ export const data = [
     toggleValues: [null],
     ref: [200],
     unit: "pfd",
-    id: 30
+    id: 30,
+    buttonType: "belzelMenu"
   },
   {
     buttonName: "SVT",
@@ -479,7 +513,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 31
+    id: 31,
+    buttonType: "belzelMenu"
   },
   {
     buttonName: "Pathways",
@@ -491,7 +526,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 32
+    id: 32,
+    buttonType: "display"
   },
   {
     buttonName: "Terrain",
@@ -503,7 +539,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 33
+    id: 33,
+    buttonType: "display"
   },
   {
     buttonName: "HDG LBL",
@@ -515,7 +552,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 34
+    id: 34,
+    buttonType: "display"
   },
   {
     buttonName: "APT Sign",
@@ -528,7 +566,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 35
+    id: 35,
+    buttonType: "display"
   },
   {
     buttonName: "AOA",
@@ -541,7 +580,8 @@ export const data = [
     toggleValues: ["Auto", "Off"],
     ref: [201],
     unit: "pfd",
-    id: 36
+    id: 36,
+    buttonType: "display"
   },
   {
     buttonName: "Wind",
@@ -566,7 +606,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 37
+    id: 37,
+    buttonType: "belzelMenu"
   },
   {
     buttonName: "Off",
@@ -578,7 +619,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 38
+    id: 38,
+    buttonType: "display"
   },
   {
     buttonName: "Option 1",
@@ -590,7 +632,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 39
+    id: 39,
+    buttonType: "display"
   },
   {
     buttonName: "Option 2",
@@ -602,7 +645,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 40
+    id: 40,
+    buttonType: "display"
   },
   {
     buttonName: "Option 3",
@@ -614,7 +658,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 41
+    id: 41,
+    buttonType: "display"
   },
   {
     buttonName: "DME",
@@ -626,7 +671,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 42
+    id: 42,
+    buttonType: "display"
   },
   {
     buttonName: "Bearing 1",
@@ -639,7 +685,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 43
+    id: 43,
+    buttonType: "display"
   },
   {
     buttonName: "Sensors",
@@ -651,7 +698,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 44
+    id: 44,
+    buttonType: "bezelMenu"
   },
   {
     buttonName: "ADC",
@@ -676,7 +724,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 45
+    id: 45,
+    buttonType: "bezelMenu"
   },
   {
     buttonName: "ADC 1",
@@ -688,7 +737,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 46
+    id: 46,
+    buttonType: "display"
   },
   {
     buttonName: "ADC 2",
@@ -700,7 +750,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 47
+    id: 47,
+    buttonType: "display"
   },
   {
     buttonName: "AHRS",
@@ -725,7 +776,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 48
+    id: 48,
+    buttonType: "bezelMenu"
   },
   {
     buttonName: "AHRS 1",
@@ -737,7 +789,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 49
+    id: 49,
+    buttonType: "display"
   },
   {
     buttonName: "AHRS 2",
@@ -749,7 +802,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 50
+    id: 50,
+    buttonType: "display"
   },
   {
     buttonName: "Bearing 2",
@@ -762,7 +816,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 51
+    id: 51,
+    buttonType: "display"
   },
   {
     buttonName: "ALT Units",
@@ -787,7 +842,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 52
+    id: 52,
+    buttonType: "bezelMenu"
   },
   {
     buttonName: "Meters",
@@ -799,7 +855,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 53
+    id: 53,
+    buttonType: "display"
   },
   {
     buttonName: "IN",
@@ -811,7 +868,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 54
+    id: 54,
+    buttonType: "display"
   },
   {
     buttonName: "HPA",
@@ -823,7 +881,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 55
+    id: 55,
+    buttonType: "display"
   },
   {
     buttonName: "STD Baro",
@@ -836,7 +895,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 56
+    id: 56,
+    buttonType: "display"
   },
   {
     buttonName: "OBS",
@@ -849,7 +909,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 57
+    id: 57,
+    buttonType: "display"
   },
   {
     buttonName: "CDI",
@@ -861,7 +922,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 58
+    id: 58,
+    buttonType: "display"
   },
   {
     buttonName: "DME",
@@ -874,7 +936,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 59
+    id: 59,
+    buttonType: "display"
   },
   {
     buttonName: "XPDR",
@@ -899,7 +962,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 60
+    id: 60,
+    buttonType: "bezelMenu"
   },
   {
     buttonName: "XPDR 1",
@@ -911,7 +975,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 61
+    id: 61,
+    buttonType: "display"
   },
   {
     buttonName: "XPDR 2",
@@ -923,7 +988,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 62
+    id: 62,
+    buttonType: "display"
   },
   {
     buttonName: "Standby",
@@ -936,7 +1002,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 63
+    id: 63,
+    buttonType: "display"
   },
   {
     buttonName: "On",
@@ -949,7 +1016,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 64
+    id: 64,
+    buttonType: "display"
   },
   {
     buttonName: "ALT",
@@ -962,7 +1030,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 65
+    id: 65,
+    buttonType: "display"
   },
   {
     buttonName: "VFR",
@@ -974,7 +1043,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 66
+    id: 66,
+    buttonType: "display"
   },
   {
     buttonName: "Code",
@@ -1000,7 +1070,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 67
+    id: 67,
+    buttonType: "bezelMenu"
   },
   {
     buttonName: "BKSP",
@@ -1012,7 +1083,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 68
+    id: 68,
+    buttonType: "display"
   },
   {
     buttonName: "Ident",
@@ -1025,7 +1097,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 69
+    id: 69,
+    buttonType: "display"
   },
   {
     buttonName: "Ident",
@@ -1038,7 +1111,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 70
+    id: 70,
+    buttonType: "display"
   },
   {
     buttonName: "Tmr/Ref",
@@ -1050,7 +1124,8 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 71
+    id: 71,
+    buttonType: "display"
   },
   {
     buttonName: "Alerts",
@@ -1063,6 +1138,21 @@ export const data = [
     toggleValues: [null],
     ref: [201],
     unit: "pfd",
-    id: 72
+    id: 72,
+    buttonType: "display"
+  },
+  {
+    buttonName: "Back",
+    level: 1,
+    desc:
+      "Displays the Alerts Window when pressed. System generated messages cause the Alerts Softkey label to change to a flashing ‘Message’ label. Pressing the Message Softkey opens the Alerts Window, acknowledges the message, and the softkey reverts to the ‘Alerts’ label.",
+    ancestors: ["Top"],
+    labels: null,
+    toggle: false,
+    toggleValues: [null],
+    ref: [201],
+    unit: "pfd",
+    id: 73,
+    buttonType: "bezelMenu"
   }
 ];

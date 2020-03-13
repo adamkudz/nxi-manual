@@ -13,11 +13,7 @@
       </div>
     </div>
 
-    <div
-      v-for="(bezelKey, index) in selectionArray"
-      :key="bezelKey.index"
-      class="bezelRows"
-    >
+    <div v-for="(bezelKey, index) in selectionArray" :key="bezelKey.index" class="bezelRows">
       <TestBezelRow
         @selectCurrentKey="selectCurrentKey"
         :bezelKey="selectionArray[index]"
@@ -77,7 +73,7 @@ export default {
       this.$router.push("/");
     },
     goSimulate: function() {
-      this.$router.push("/bezelkeysim");
+      this.$router.push("/simulationview");
     },
     showFullPath: function() {
       this.count = 5;

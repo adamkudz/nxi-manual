@@ -12,12 +12,9 @@
         <PfdHsiDisplay />
       </div>
       <div id="pfdBezelRow">
-        <pfdBezelRow
-          :pfdData="pfdData"
-          :selected="selected"
-          :currentKey="selectionArray[this.count]"
-          :highlighted="highlightArray[this.count]"
-          :count="count"
+        <DynBezelRow
+          :selectedKey="selectedKey"
+          @searchForKey="searchForKey"
           @selectCurrentKey="selectCurrentKey"
           @countUp="countUp"
         />
@@ -34,28 +31,60 @@
 import PfdMapWindowDisplay from "../components/PFDComponents/PfdMapWindowDisplay";
 
 import PfdHsiDisplay from "../components/PFDComponents/PfdHsiDisplay";
-import pfdBezelRow from "../components/PFDComponents/pfdBezelRow";
+import DynBezelRow from "../components/PFDComponents/DynBezelRow";
+import { data } from "../../public/pfd";
 import { createNamespacedHelpers } from "vuex";
 const { mapState } = createNamespacedHelpers("pfdStore");
 export default {
-  name: "BezelKeySim",
+  name: "SimulationView",
   components: {
     PfdMapWindowDisplay,
 
     PfdHsiDisplay,
-    pfdBezelRow
+    DynBezelRow
   },
   data() {
     return {
-      count: 0
+      count: 0,
+      currentKey: "",
+      label: "",
+      keySearch: ""
     };
   },
+  created: function() {
+    this.label = "Top";
+  },
+
   computed: {
-    ...mapState(["pfdData", "selected", "selectionArray", "highlightArray"])
+    selectedKey: function() {
+      return data.find(x => x.buttonName == this.label);
+    }
   },
   methods: {
-    selectCurrentKey: function(payload) {
-      console.log(payload);
+    searchForKey: async function(payload) {
+      try {
+        let keyResults = await data.find(x => x.buttonName == payload[0]);
+        let current = payload[1];
+        let buttonType = keyResults.buttonType;
+        if (buttonType == "display") {
+          console.log(buttonType);
+        } else {
+          this.selectCurrentKey(keyResults, current);
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    },
+
+    selectCurrentKey: function(keyResults, current) {
+      if (keyResults.buttonName == "Back") {
+        this.goBackOneLevel(current);
+      } else {
+        this.label = keyResults.buttonName;
+      }
+    },
+    goBackOneLevel: function(current) {
+      this.label = current;
     },
     countUp: function() {
       this.count++;
