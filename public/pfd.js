@@ -592,7 +592,7 @@ export const data = [
       "Off",
       "Option 1",
       "Option 2",
-      "option 3",
+      "Option 3",
       "",
       "",
       "",
@@ -620,7 +620,9 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 38,
-    buttonType: "display"
+    buttonType: "display",
+    divId: "pfdWindData",
+    imageClass: "hidden"
   },
   {
     buttonName: "Option 1",
@@ -633,7 +635,9 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 39,
-    buttonType: "display"
+    buttonType: "display",
+    divId: "pfdWindData",
+    imageClass: "option1"
   },
   {
     buttonName: "Option 2",
@@ -646,7 +650,9 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 40,
-    buttonType: "display"
+    buttonType: "display",
+    divId: "pfdWindData",
+    imageClass: "option2"
   },
   {
     buttonName: "Option 3",
@@ -659,7 +665,9 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 41,
-    buttonType: "display"
+    buttonType: "display",
+    divId: "pfdWindData",
+    imageClass: "option3"
   },
   {
     buttonName: "DME",

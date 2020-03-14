@@ -14,13 +14,15 @@
       <div id="pfdBezelRow">
         <DynBezelRow
           :selectedKey="selectedKey"
+          :ancestor="ancestor"
           @searchForKey="searchForKey"
           @selectCurrentKey="selectCurrentKey"
-          @countUp="countUp"
         />
       </div>
 
-      <div id="pfdWindData"></div>
+      <div id="pfdWindData">
+        <pfdWindDataDisplay :currentImage="pfdWindData" />
+      </div>
       <div id="pfdTransponder"></div>
     </div>
     <footer></footer>
@@ -29,6 +31,7 @@
 
 <script>
 import PfdMapWindowDisplay from "../components/PFDComponents/PfdMapWindowDisplay";
+import PfdWindDataDisplay from "../components/PFDComponents/PfdWindDataDisplay";
 
 import PfdHsiDisplay from "../components/PFDComponents/PfdHsiDisplay";
 import DynBezelRow from "../components/PFDComponents/DynBezelRow";
@@ -39,6 +42,7 @@ export default {
   name: "SimulationView",
   components: {
     PfdMapWindowDisplay,
+    PfdWindDataDisplay,
 
     PfdHsiDisplay,
     DynBezelRow
@@ -48,7 +52,8 @@ export default {
       count: 0,
       currentKey: "",
       label: "",
-      keySearch: ""
+      keySearch: "",
+      pfdWindData: ""
     };
   },
   created: function() {
@@ -58,6 +63,9 @@ export default {
   computed: {
     selectedKey: function() {
       return data.find(x => x.buttonName == this.label);
+    },
+    ancestor: function() {
+      return this.selectedKey.ancestors[this.selectedKey.level - 1];
     }
   },
   methods: {
@@ -66,8 +74,11 @@ export default {
         let keyResults = await data.find(x => x.buttonName == payload[0]);
         let current = payload[1];
         let buttonType = keyResults.buttonType;
+        let buttonName = keyResults.buttonName;
+        let divId = keyResults.divId;
+        let imageClass = keyResults.imageClass;
         if (buttonType == "display") {
-          console.log(buttonType);
+          this[divId] = imageClass;
         } else {
           this.selectCurrentKey(keyResults, current);
         }
@@ -83,6 +94,7 @@ export default {
         this.label = keyResults.buttonName;
       }
     },
+    modifyDisplay: function(buttonName) {},
     goBackOneLevel: function(current) {
       this.label = current;
     },
@@ -119,7 +131,7 @@ export default {
   margin-bottom: 10px;
 }
 #pfdWindData {
-  grid-column: 4/5;
+  grid-column: 4/6;
   grid-row: 2/3;
   margin-top: 40px;
 }

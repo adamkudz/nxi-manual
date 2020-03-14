@@ -16,7 +16,7 @@
 <script>
 export default {
   name: "dynBezelRow",
-  props: ["count", "selectedKey", "highlighted"],
+  props: ["selectedKey", "ancestor"],
   data() {
     return {};
   },
@@ -28,18 +28,15 @@ export default {
     },
     searchForKey: function(e) {
       const target = e.target.id;
-      const current = this.selectedKey.ancestors[this.selectedKey.level - 1];
-      this.$emit("searchForKey", [target, current]);
-      // this.$emit("update:label", target);
+      const ancestor = this.ancestor;
+
+      this.$emit("searchForKey", [target, ancestor]);
     }
   },
 
   computed: {
     labels: function() {
       return this.selectedKey.labels;
-    },
-    getButtonType: function() {
-      return this.selectedKey.buttonType;
     }
   }
 };
