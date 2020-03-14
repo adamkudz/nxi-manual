@@ -1,17 +1,17 @@
 <template>
-  <div class="PFDMAPWINDOWDISPLAYCONTAINER">
+  <div class="PFDINSETMAPDISPLAYCONTAINER">
     <img src="../../../public/pfdImages/traffic.png" alt />
   </div>
 </template>
 
 <script>
 export default {
-  name: "PfdMapWindowDisplay"
+  name: "PfdInsetMapDisplay"
 };
 </script>
 
 <style lang="scss" scoped>
-.PFDMAPWINDOWDISPLAYCONTAINER {
+.PFDINSETMAPDISPLAYCONTAINER {
   height: 100%;
   width: 100%;
 }

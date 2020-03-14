@@ -66,6 +66,12 @@ export default {
     font-weight: 700;
     font-size: 0.7em;
     text-align: center;
+    &::after {
+      content: "aa ";
+      height: 5px;
+      width: 20px;
+      background: green;
+    }
   }
 }
 

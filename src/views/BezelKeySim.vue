@@ -5,7 +5,7 @@
     </header>
     <div class="simContainer">
       <div id="pfdMapWindow">
-        <PfdMapWindowDisplay />
+        <PfdInsetMapDisplay />
       </div>
 
       <div id="hsiDisplay">
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import PfdMapWindowDisplay from "../components/PFDComponents/PfdMapWindowDisplay";
+import PfdInsetMapDisplay from "../components/PFDComponents/PfdInsetMapDisplay";
 
 import PfdHsiDisplay from "../components/PFDComponents/PfdHsiDisplay";
 import pfdBezelRow from "../components/PFDComponents/pfdBezelRow";
@@ -40,7 +40,7 @@ const { mapState } = createNamespacedHelpers("pfdStore");
 export default {
   name: "BezelKeySim",
   components: {
-    PfdMapWindowDisplay,
+    PfdInsetMapDisplay,
 
     PfdHsiDisplay,
     pfdBezelRow

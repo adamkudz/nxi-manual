@@ -1,21 +1,17 @@
 <template>
   <div class="PFDWINDDISPLAYCONTAINER">
-    <div :class="currentImage"></div>
+    <div class="windImage" :class="imageClass"></div>
   </div>
 </template>
 
 <script>
 export default {
   name: "PfdWindDataDisplay",
-  props: ["currentImage"],
-  data() {
-    return {
-      currentClass: "option1"
-    };
-  },
-  computed: {
-    imageUrl: function() {
-      return `../../../public/pfdImages/${this.currentImage}`;
+  props: {
+    imageClass: {
+      type: String,
+      required: true,
+      default: "option1"
     }
   }
 };
@@ -27,24 +23,18 @@ export default {
   width: 100%;
   position: relative;
 }
-#windImage {
-  width: 100%;
-  height: 100%;
+.windImage {
+  width: 52px;
+  height: 36px;
 }
 .option1 {
-  background: url("../../../public/pfdImages/option1.png");
-  width: 52px;
-  height: 36px;
+  background: url("../../../src/assets/pfdImages/option1.png");
 }
 .option2 {
-  background: url("../../../public/pfdImages/option2.png");
-  width: 52px;
-  height: 36px;
+  background: url("../../../src/assets/pfdImages/option2.png");
 }
 .option3 {
-  background: url("../../../public/pfdImages/option3.png");
-  width: 52px;
-  height: 36px;
+  background: url("../../../src/assets/pfdImages/option3.png");
 }
 .hidden {
   display: none;

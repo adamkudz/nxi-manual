@@ -5,7 +5,7 @@
     </header>
     <div class="simContainer">
       <div id="pfdMapWindow">
-        <PfdMapWindowDisplay />
+        <PfdInsetMapDisplay />
       </div>
 
       <div id="hsiDisplay">
@@ -21,7 +21,7 @@
       </div>
 
       <div id="pfdWindData">
-        <pfdWindDataDisplay :currentImage="pfdWindData" />
+        <pfdWindDataDisplay :imageClass="pfdWindData" />
       </div>
       <div id="pfdTransponder"></div>
     </div>
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import PfdMapWindowDisplay from "../components/PFDComponents/PfdMapWindowDisplay";
+import PfdInsetMapDisplay from "../components/PFDComponents/PfdInsetMapDisplay";
 import PfdWindDataDisplay from "../components/PFDComponents/PfdWindDataDisplay";
 
 import PfdHsiDisplay from "../components/PFDComponents/PfdHsiDisplay";
@@ -41,7 +41,7 @@ const { mapState } = createNamespacedHelpers("pfdStore");
 export default {
   name: "SimulationView",
   components: {
-    PfdMapWindowDisplay,
+    PfdInsetMapDisplay,
     PfdWindDataDisplay,
 
     PfdHsiDisplay,
@@ -53,7 +53,7 @@ export default {
       currentKey: "",
       label: "",
       keySearch: "",
-      pfdWindData: ""
+      pfdWindData: "option1"
     };
   },
   created: function() {
