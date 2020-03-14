@@ -71,7 +71,8 @@ export const data = [
     toggle: false,
     ref: [169],
     unit: "pfd",
-    id: 2
+    id: 2,
+    lightArray: [0, 1, 2, 3, 4]
   },
   {
     buttonName: "Map Off",
@@ -238,13 +239,14 @@ export const data = [
     ref: [172],
     unit: "pfd",
     id: 14,
-    buttonType: "belzelMenu"
+    buttonType: "belzelMenu",
+    lightArray: [0, 1, 2]
   },
   {
     buttonName: "LTNG Off",
     level: 3,
     desc:
-      "Disables lightning function on PFD Map. The softkey annunciator is green when the lighning function is off",
+      "Disables lightning function on PFD Map. The softkey annunciator is green when the lightning function is off",
     ancestors: ["Top", "MAP/HSI", "Lightning"],
     labels: null,
     toggle: false,
@@ -319,7 +321,8 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 19,
-    buttonType: "belzelMenu"
+    buttonType: "belzelMenu",
+    lightArray: [3, 4, 5]
   },
   {
     buttonName: "Mode SEL",
@@ -345,7 +348,8 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 20,
-    buttonType: "belzelMenu"
+    buttonType: "belzelMenu",
+    lightArray: [0, 1, 2]
   },
   {
     buttonName: "Standby",
@@ -607,7 +611,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 37,
-    buttonType: "belzelMenu"
+    buttonType: "belzelMenu",
+    lightArray: [0, 1, 2, 3]
   },
   {
     buttonName: "Off",
@@ -733,7 +738,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 45,
-    buttonType: "bezelMenu"
+    buttonType: "bezelMenu",
+    lightArray: [0, 1]
   },
   {
     buttonName: "ADC 1",
@@ -785,7 +791,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 48,
-    buttonType: "bezelMenu"
+    buttonType: "bezelMenu",
+    lightArray: [0, 1]
   },
   {
     buttonName: "AHRS 1",
@@ -851,7 +858,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 52,
-    buttonType: "bezelMenu"
+    buttonType: "bezelMenu",
+    lightArray: [0, 1, 2]
   },
   {
     buttonName: "Meters",
@@ -971,7 +979,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 60,
-    buttonType: "bezelMenu"
+    buttonType: "bezelMenu",
+    lightArray: [0, 1, 2, 3, 4, 5, 6]
   },
   {
     buttonName: "XPDR 1",

@@ -2,12 +2,17 @@
   <div class="PFDBEZELROWCONTAINER">
     <div class="pfdBezelRow">
       <div class="labelGrid">
-        <p
+        <div
+          class="label"
           @click="searchForKey"
           :id="label"
           v-for="(label, index) in labels"
           :key="index"
-        >{{ label }}</p>
+          ref="labels"
+        >
+          {{ label }}
+          <div :id="index" ref="light"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -20,24 +25,45 @@ export default {
   data() {
     return {};
   },
-
+  computed: {
+    labels: function() {
+      return this.selectedKey.labels;
+    }
+  },
   methods: {
     selectCurrentKey: function(e) {
       const target = e.target.id;
       this.$emit("selectCurrentKey", target);
     },
     searchForKey: function(e) {
+      this.toggleBezelLight(e);
       const target = e.target.id;
       const ancestor = this.ancestor;
-
       this.$emit("searchForKey", [target, ancestor]);
+    },
+    toggleBezelLight: function(e) {
+      let divId = this.$refs.light[e.target.firstElementChild.id];
+      let allLabels = this.$refs.labels;
+
+      if (divId.classList.length < 2) {
+        divId.classList.add("labelLightOn");
+      } else {
+        divId.classList.remove("labelLightOn");
+      }
+    },
+    placeLights: function() {
+      let lightRow = this.$refs.light;
+      const lightArray = this.selectedKey.lightArray;
+
+      lightRow.forEach(row => {
+        if (row.id == lightArray[row.id]) {
+          lightRow[row.id].classList.add("labelLight");
+        }
+      });
     }
   },
-
-  computed: {
-    labels: function() {
-      return this.selectedKey.labels;
-    }
+  updated: function() {
+    if (this.selectedKey.lightArray) this.placeLights();
   }
 };
 </script>
@@ -55,33 +81,31 @@ export default {
 
 .labelGrid {
   display: grid;
+  grid-template-rows: min-content 1fr;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
-  height: 85px;
+  height: 100%;
   padding-left: 2%;
   padding-right: 3.5%;
-  p {
-    color: var(--brightWhite);
-    font-family: "Segoe UI";
-    font-weight: 700;
-    font-size: 0.7em;
-    text-align: center;
-    &::after {
-      content: "aa ";
-      height: 5px;
-      width: 20px;
-      background: green;
-    }
-  }
+}
+.label {
+  color: var(--brightWhite);
+  font-family: "Segoe UI";
+  font-weight: 700;
+  font-size: 0.6em;
+  text-align: center;
+  height: calc(100% * 5);
 }
 
-.labelItems {
-  border: transparent;
+.labelLight {
+  height: 2.3%;
+  width: 35%;
+  border-radius: 1px;
+  background: var(--bezelLightOff);
+  margin-left: calc(100% - 67.5%);
+  margin-top: calc(100% - 97%);
 }
-.labelName {
-  border: transparent;
-}
-.highlighted {
-  border: var(--mainGreen) solid 1px;
+.labelLightOn {
+  background: var(--mainGreen);
 }
 </style>

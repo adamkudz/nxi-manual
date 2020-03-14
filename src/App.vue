@@ -14,6 +14,9 @@
   --darkGreen: #3ab142;
   --lightFont: #e4e4e4;
   --labelDeselected: #8a8a8a;
+  --bezelLightOff: #e9ffff;
+
+  --bezelGreen: #80ff6a;
 }
 html {
   font-family: "Segoe UI";

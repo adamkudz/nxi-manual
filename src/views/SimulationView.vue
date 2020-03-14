@@ -121,7 +121,7 @@ export default {
   margin: auto;
   display: grid;
   grid-template-columns: 12px 165px 4px 31px 19px 202px 34px 89px 125px 11px 8px 34px;
-  grid-template-rows: 45px 224px 12px 83px;
+  grid-template-rows: 45px 222px 12px 83px;
   position: relative;
 }
 #pfdMapWindow {
