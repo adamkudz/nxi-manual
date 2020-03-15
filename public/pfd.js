@@ -72,7 +72,8 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 2,
-    lightArray: [0, 1, 2, 3, 4]
+    lightArray: [0, 1, 2, 3, 4],
+    buttonType: "bezelMenu"
   },
   {
     buttonName: "Map Off",
@@ -84,7 +85,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 3,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "Inset Map",
@@ -96,7 +97,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 4,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "HSI Map",
@@ -108,7 +109,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 5,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "Inset Trfc",
@@ -120,7 +121,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 6,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "HSI Trfc",
@@ -132,7 +133,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 7,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "Detail",
@@ -171,7 +172,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 10,
-    buttonType: "toggle"
+    buttonType: "display"
   },
   {
     buttonName: "WX LGND",
@@ -239,7 +240,7 @@ export const data = [
     ref: [172],
     unit: "pfd",
     id: 14,
-    buttonType: "belzelMenu",
+    buttonType: "bezelMenu",
     lightArray: [0, 1, 2]
   },
   {
@@ -321,7 +322,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 19,
-    buttonType: "belzelMenu",
+    buttonType: "bezelMenu",
     lightArray: [3, 4, 5]
   },
   {
@@ -348,7 +349,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 20,
-    buttonType: "belzelMenu",
+    buttonType: "bezelMenu",
     lightArray: [0, 1, 2]
   },
   {
@@ -492,7 +493,7 @@ export const data = [
     ref: [200],
     unit: "pfd",
     id: 30,
-    buttonType: "belzelMenu"
+    buttonType: "bezelMenu"
   },
   {
     buttonName: "SVT",
@@ -518,7 +519,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 31,
-    buttonType: "belzelMenu"
+    buttonType: "bezelMenu",
+    lightArray: [0, 1, 2, 3]
   },
   {
     buttonName: "Pathways",
@@ -611,7 +613,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 37,
-    buttonType: "belzelMenu",
+    buttonType: "bezelMenu",
     lightArray: [0, 1, 2, 3]
   },
   {
@@ -625,7 +627,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 38,
-    buttonType: "display",
+    buttonType: "bezelGroup",
     divId: "pfdWindData",
     imageClass: "hidden"
   },
@@ -640,7 +642,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 39,
-    buttonType: "display",
+    buttonType: "bezelGroup",
     divId: "pfdWindData",
     imageClass: "option1"
   },
@@ -655,7 +657,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 40,
-    buttonType: "display",
+    buttonType: "bezelGroup",
     divId: "pfdWindData",
     imageClass: "option2"
   },
@@ -670,7 +672,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 41,
-    buttonType: "display",
+    buttonType: "bezelGroup",
     divId: "pfdWindData",
     imageClass: "option3"
   },
@@ -752,7 +754,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 46,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "ADC 2",
@@ -765,7 +767,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 47,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "AHRS",
@@ -805,7 +807,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 49,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "AHRS 2",
@@ -818,7 +820,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 50,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "Bearing 2",
@@ -966,10 +968,10 @@ export const data = [
       "Standby",
       "On",
       "ALT",
+      "",
       "VFR",
       "Code",
       "Ident",
-      "",
       "",
       "Back",
       "Alerts"
@@ -1079,7 +1081,7 @@ export const data = [
       "7",
       "Ident",
       "BKSP",
-      "",
+
       "Back",
       "Alerts"
     ],

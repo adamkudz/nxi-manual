@@ -15,8 +15,10 @@
         <DynBezelRow
           :selectedKey="selectedKey"
           :ancestor="ancestor"
+          :pfdData="pfdData"
           @searchForKey="searchForKey"
           @selectCurrentKey="selectCurrentKey"
+          @setCurrentLabel="setCurrentLabel"
         />
       </div>
 
@@ -43,7 +45,6 @@ export default {
   components: {
     PfdInsetMapDisplay,
     PfdWindDataDisplay,
-
     PfdHsiDisplay,
     DynBezelRow
   },
@@ -58,6 +59,7 @@ export default {
   },
   created: function() {
     this.label = "Top";
+    this.$store.dispatch("simulationStore/setPfdData");
   },
 
   computed: {
@@ -66,6 +68,9 @@ export default {
     },
     ancestor: function() {
       return this.selectedKey.ancestors[this.selectedKey.level - 1];
+    },
+    pfdData: function() {
+      return this.$store.getters["simulationStore/getPfdData"];
     }
   },
   methods: {
@@ -73,11 +78,12 @@ export default {
       try {
         let keyResults = await data.find(x => x.buttonName == payload[0]);
         let current = payload[1];
+
         let buttonType = keyResults.buttonType;
         let buttonName = keyResults.buttonName;
         let divId = keyResults.divId;
         let imageClass = keyResults.imageClass;
-        if (buttonType == "display") {
+        if (buttonType !== "bezelMenu") {
           this[divId] = imageClass;
         } else {
           this.selectCurrentKey(keyResults, current);
@@ -88,6 +94,13 @@ export default {
     },
 
     selectCurrentKey: function(keyResults, current) {
+      if (keyResults.buttonName == "Back") {
+        this.goBackOneLevel(current);
+      } else {
+        this.label = keyResults.buttonName;
+      }
+    },
+    setCurrentLabel: function(keyResults, current) {
       if (keyResults.buttonName == "Back") {
         this.goBackOneLevel(current);
       } else {

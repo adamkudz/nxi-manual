@@ -4,7 +4,7 @@
       <div class="labelGrid">
         <div
           class="label"
-          @click="searchForKey"
+          @click="selectLocalKey"
           :id="label"
           v-for="(label, index) in labels"
           :key="index"
@@ -21,9 +21,12 @@
 <script>
 export default {
   name: "dynBezelRow",
-  props: ["selectedKey", "ancestor"],
+  props: ["selectedKey", "ancestor", "pfdData"],
   data() {
-    return {};
+    return {
+      localKey: "",
+      lightArray: ""
+    };
   },
   computed: {
     labels: function() {
@@ -31,36 +34,62 @@ export default {
     }
   },
   methods: {
-    selectCurrentKey: function(e) {
-      const target = e.target.id;
-      this.$emit("selectCurrentKey", target);
+    selectLocalKey: function(e) {
+      let target = e.target.id;
+      this.localKey = this.pfdData.find(data => data.buttonName == target);
+      if (this.localKey.buttonType == "bezelGroup") {
+        this.lightArray = this.selectedKey.lightArray;
+        let divId = this.$refs.light[e.target.firstElementChild.id];
+        this.toggleBezelGroup(e, divId, this.lightArray);
+      } else if (this.localKey.buttonType == "display") {
+        console.log("display");
+        this.toggleBezelLight(e);
+        this.searchForKey(e);
+      } else {
+        this.searchForKey(e);
+      }
     },
-    searchForKey: function(e) {
-      this.toggleBezelLight(e);
-      const target = e.target.id;
-      const ancestor = this.ancestor;
-      this.$emit("searchForKey", [target, ancestor]);
+    toggleBezelGroup: function(e, divId, lightArray) {
+      let lightRow = this.$refs.light;
+      lightArray.forEach(light => {
+        lightRow[light].classList.remove("labelLightOn");
+      });
+      lightRow[divId.id].classList.add("labelLightOn");
+      this.searchForKey(e);
     },
     toggleBezelLight: function(e) {
       let divId = this.$refs.light[e.target.firstElementChild.id];
-      let allLabels = this.$refs.labels;
-
       if (divId.classList.length < 2) {
         divId.classList.add("labelLightOn");
       } else {
         divId.classList.remove("labelLightOn");
       }
     },
+    searchForKey: function(e) {
+      let target = e.target.id;
+      let ancestor = this.ancestor;
+      this.$emit("searchForKey", [target, ancestor]);
+    },
+
     placeLights: function() {
       let lightRow = this.$refs.light;
-      const lightArray = this.selectedKey.lightArray;
-
+      let lightArray = this.selectedKey.lightArray;
       lightRow.forEach(row => {
         if (row.id == lightArray[row.id]) {
           lightRow[row.id].classList.add("labelLight");
         }
       });
+    },
+    removeLights: function() {
+      let lightRow = this.$refs.light;
+      lightRow.forEach(row => {
+        row.classList.remove("labelLight");
+        console.log(row);
+      });
     }
+  },
+  beforeUpdate: function() {
+    this.removeLights();
   },
   updated: function() {
     if (this.selectedKey.lightArray) this.placeLights();
