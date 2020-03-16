@@ -25,7 +25,8 @@ export default {
   data() {
     return {
       localKey: "",
-      lightArray: ""
+      lightArray: "",
+      buttonType: ""
     };
   },
   computed: {
@@ -37,6 +38,7 @@ export default {
     selectLocalKey: function(e) {
       let target = e.target.id;
       this.localKey = this.pfdData.find(data => data.buttonName == target);
+      this.buttonType = this.localKey.buttonType;
       if (this.localKey.buttonType == "bezelGroup") {
         this.lightArray = this.selectedKey.lightArray;
         let divId = this.$refs.light[e.target.firstElementChild.id];
@@ -58,11 +60,11 @@ export default {
       this.searchForKey(e);
     },
     toggleBezelLight: function(e) {
-      let divId = this.$refs.light[e.target.firstElementChild.id];
-      if (divId.classList.length < 2) {
-        divId.classList.add("labelLightOn");
+      let lightId = this.$refs.light[e.target.firstElementChild.id];
+      if (lightId.classList.length < 2) {
+        lightId.classList.add("labelLightOn");
       } else {
-        divId.classList.remove("labelLightOn");
+        lightId.classList.remove("labelLightOn");
       }
     },
     searchForKey: function(e) {

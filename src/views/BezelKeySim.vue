@@ -9,7 +9,7 @@
       </div>
 
       <div id="hsiDisplay">
-        <PfdHsiDisplay />
+        <PfdHsiDisplay2 />
       </div>
       <div id="pfdBezelRow">
         <pfdBezelRow
@@ -33,7 +33,7 @@
 <script>
 import PfdInsetMapDisplay from "../components/PFDComponents/PfdInsetMapDisplay";
 
-import PfdHsiDisplay from "../components/PFDComponents/PfdHsiDisplay";
+import PfdHsiDisplay2 from "../components/PFDComponents/PfdHsiDisplay2";
 import pfdBezelRow from "../components/PFDComponents/pfdBezelRow";
 import { createNamespacedHelpers } from "vuex";
 const { mapState } = createNamespacedHelpers("pfdStore");
@@ -42,7 +42,7 @@ export default {
   components: {
     PfdInsetMapDisplay,
 
-    PfdHsiDisplay,
+    PfdHsiDisplay2,
     pfdBezelRow
   },
   data() {

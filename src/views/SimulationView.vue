@@ -9,7 +9,7 @@
       </div>
 
       <div id="hsiDisplay">
-        <PfdHsiDisplay />
+        <PfdHsiDisplay2 />
       </div>
       <div id="pfdBezelRow">
         <DynBezelRow
@@ -25,6 +25,9 @@
       <div id="pfdWindData">
         <pfdWindDataDisplay :imageClass="pfdWindData" />
       </div>
+      <div id="dmeInfoWindow">
+        <DmeInfoWindow :imageClass="dmeInfoWindow" />
+      </div>
       <div id="pfdTransponder"></div>
     </div>
     <footer></footer>
@@ -34,8 +37,9 @@
 <script>
 import PfdInsetMapDisplay from "../components/PFDComponents/PfdInsetMapDisplay";
 import PfdWindDataDisplay from "../components/PFDComponents/PfdWindDataDisplay";
+import DmeInfoWindow from "../components/PFDComponents/DmeInfoWindow";
 
-import PfdHsiDisplay from "../components/PFDComponents/PfdHsiDisplay";
+import PfdHsiDisplay2 from "../components/PFDComponents/PfdHsiDisplay2";
 import DynBezelRow from "../components/PFDComponents/DynBezelRow";
 import { data } from "../../public/pfd";
 import { createNamespacedHelpers } from "vuex";
@@ -45,8 +49,9 @@ export default {
   components: {
     PfdInsetMapDisplay,
     PfdWindDataDisplay,
-    PfdHsiDisplay,
-    DynBezelRow
+    PfdHsiDisplay2,
+    DynBezelRow,
+    DmeInfoWindow
   },
   data() {
     return {
@@ -54,7 +59,8 @@ export default {
       currentKey: "",
       label: "",
       keySearch: "",
-      pfdWindData: "option1"
+      pfdWindData: "option1",
+      dmeWindowInfo: ""
     };
   },
   created: function() {
@@ -146,7 +152,8 @@ export default {
 #pfdWindData {
   grid-column: 4/6;
   grid-row: 2/3;
-  margin-top: 40px;
+  align-self: center;
+  margin-bottom: 220%;
 }
 #horizon {
   grid-column: 2/10;
@@ -156,13 +163,18 @@ export default {
 #hsiDisplay {
   grid-column: 5/7;
   grid-row: 2/3;
-  position: absolute;
+
   width: 100%;
   height: 100%;
-  z-index: 3;
 }
 #pfdBezelRow {
   grid-column: 1/12;
   grid-row: 4/5;
+}
+#dmeInfoWindow {
+  grid-column: 4/6;
+  grid-row: 2/3;
+  align-self: end;
+  margin-bottom: 34%;
 }
 </style>

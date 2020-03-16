@@ -687,7 +687,9 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 42,
-    buttonType: "display"
+    buttonType: "display",
+    divId: "dmeInfoWindow",
+    imageClass: "dmeImage"
   },
   {
     buttonName: "Bearing 1",

@@ -28,13 +28,13 @@ export default {
   height: 36px;
 }
 .option1 {
-  background: url("../../../src/assets/pfdImages/option1.png");
+  background: url("../../../src/assets/pfdImages/option1.svg");
 }
 .option2 {
-  background: url("../../../src/assets/pfdImages/option2.png");
+  background: url("../../../src/assets/pfdImages/option2.svg");
 }
 .option3 {
-  background: url("../../../src/assets/pfdImages/option3.png");
+  background: url("../../../src/assets/pfdImages/option3.svg");
 }
 .hidden {
   display: none;
