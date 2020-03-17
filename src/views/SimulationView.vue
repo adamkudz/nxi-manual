@@ -4,30 +4,13 @@
       <h1>Bezel Key Simulation</h1>
     </header>
     <div class="simContainer">
-      <div id="pfdMapWindow">
-        <PfdInsetMapDisplay />
-      </div>
+      <div id="pfdMapWindow"></div>
 
-      <div id="hsiDisplay">
-        <PfdHsiDisplay2 />
-      </div>
-      <div id="pfdBezelRow">
-        <DynBezelRow
-          :selectedKey="selectedKey"
-          :ancestor="ancestor"
-          :pfdData="pfdData"
-          @searchForKey="searchForKey"
-          @selectCurrentKey="selectCurrentKey"
-          @setCurrentLabel="setCurrentLabel"
-        />
-      </div>
+      <div id="hsiDisplay"></div>
+      <div id="pfdBezelRow"></div>
 
-      <div id="pfdWindData">
-        <pfdWindDataDisplay :imageClass="pfdWindData" />
-      </div>
-      <div id="dmeInfoWindow">
-        <DmeInfoWindow :imageClass="dmeInfoWindow" />
-      </div>
+      <div id="pfdWindData"></div>
+      <div id="dmeInfoWindow"></div>
       <div id="pfdTransponder"></div>
     </div>
     <footer></footer>
@@ -35,92 +18,16 @@
 </template>
 
 <script>
-import PfdInsetMapDisplay from "../components/PFDComponents/PfdInsetMapDisplay";
-import PfdWindDataDisplay from "../components/PFDComponents/PfdWindDataDisplay";
-import DmeInfoWindow from "../components/PFDComponents/DmeInfoWindow";
-
-import PfdHsiDisplay2 from "../components/PFDComponents/PfdHsiDisplay2";
-import DynBezelRow from "../components/PFDComponents/DynBezelRow";
-import { data } from "../../public/pfd";
-import { createNamespacedHelpers } from "vuex";
-const { mapState } = createNamespacedHelpers("pfdStore");
 export default {
   name: "SimulationView",
-  components: {
-    PfdInsetMapDisplay,
-    PfdWindDataDisplay,
-    PfdHsiDisplay2,
-    DynBezelRow,
-    DmeInfoWindow
-  },
+  components: {},
   data() {
-    return {
-      count: 0,
-      currentKey: "",
-      label: "",
-      keySearch: "",
-      pfdWindData: "option1",
-      dmeWindowInfo: ""
-    };
+    return {};
   },
-  created: function() {
-    this.label = "Top";
-    this.$store.dispatch("simulationStore/setPfdData");
-  },
+  created: function() {},
 
-  computed: {
-    selectedKey: function() {
-      return data.find(x => x.buttonName == this.label);
-    },
-    ancestor: function() {
-      return this.selectedKey.ancestors[this.selectedKey.level - 1];
-    },
-    pfdData: function() {
-      return this.$store.getters["simulationStore/getPfdData"];
-    }
-  },
-  methods: {
-    searchForKey: async function(payload) {
-      try {
-        let keyResults = await data.find(x => x.buttonName == payload[0]);
-        let current = payload[1];
-
-        let buttonType = keyResults.buttonType;
-        let buttonName = keyResults.buttonName;
-        let divId = keyResults.divId;
-        let imageClass = keyResults.imageClass;
-        if (buttonType !== "bezelMenu") {
-          this[divId] = imageClass;
-        } else {
-          this.selectCurrentKey(keyResults, current);
-        }
-      } catch (err) {
-        console.log(err);
-      }
-    },
-
-    selectCurrentKey: function(keyResults, current) {
-      if (keyResults.buttonName == "Back") {
-        this.goBackOneLevel(current);
-      } else {
-        this.label = keyResults.buttonName;
-      }
-    },
-    setCurrentLabel: function(keyResults, current) {
-      if (keyResults.buttonName == "Back") {
-        this.goBackOneLevel(current);
-      } else {
-        this.label = keyResults.buttonName;
-      }
-    },
-    modifyDisplay: function(buttonName) {},
-    goBackOneLevel: function(current) {
-      this.label = current;
-    },
-    countUp: function() {
-      this.count++;
-    }
-  }
+  computed: {},
+  methods: {}
 };
 </script>
 
