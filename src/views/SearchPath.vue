@@ -1,8 +1,5 @@
 <template>
   <div class="TESTCOMPONENTCONTAINER">
-    <div v-if="showPDF" class="pdfContainer">
-      <PDFComponent @togglePDF="togglePDF" />
-    </div>
     <header>
       <h2>Search Results</h2>
     </header>
@@ -13,7 +10,11 @@
       </div>
     </div>
 
-    <div v-for="(bezelKey, index) in selectionArray" :key="bezelKey.index" class="bezelRows">
+    <div
+      v-for="(bezelKey, index) in selectionArray"
+      :key="bezelKey.index"
+      class="bezelRows"
+    >
       <TestBezelRow
         @selectCurrentKey="selectCurrentKey"
         :bezelKey="selectionArray[index]"
@@ -33,15 +34,13 @@
 <script>
 import TestBezelRow from "../components/TestBezelRow.vue";
 import DescriptionWithLabel from "../components/DescriptionWithLabel";
-import PDFComponent from "../components/PDF/PDFComponent";
 
 export default {
   name: "SearchPath",
 
   components: {
     TestBezelRow,
-    DescriptionWithLabel,
-    PDFComponent
+    DescriptionWithLabel
   },
   data() {
     return {
