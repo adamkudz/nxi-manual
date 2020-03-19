@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import TestBezelRow from "../components/TestBezelRow.vue";
+import TestBezelRow from "../components/BezelRowComponents/TestBezelRow";
 import DescriptionWithLabel from "../components/DescriptionWithLabel";
 
 export default {

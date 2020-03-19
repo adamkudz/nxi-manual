@@ -56,7 +56,6 @@ export default {
   position: relative;
 }
 .pfdBezelRow {
-  background: url("../assets/totalBezelKeys.png") no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;

@@ -22,7 +22,8 @@ export const data = [
     ref: [123, 143],
     unit: "pfd",
     id: 0,
-    buttonType: "bezelMenu"
+    keyType: "RowKey",
+    rowId: "TopRow"
   },
   {
     buttonName: "MAP/HSI",
@@ -47,7 +48,7 @@ export const data = [
     ref: [123, 143],
     unit: "pfd",
     id: 1,
-    buttonType: "bezelMenu"
+    keyType: "RowKey"
   },
   {
     buttonName: "Layout",
@@ -73,7 +74,7 @@ export const data = [
     unit: "pfd",
     id: 2,
     lightArray: [0, 1, 2, 3, 4],
-    buttonType: "bezelMenu"
+    keyType: "RowKey"
   },
   {
     buttonName: "Map Off",
@@ -85,7 +86,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 3,
-    buttonType: "bezelGroup"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "Inset Map",
@@ -97,7 +98,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 4,
-    buttonType: "bezelGroup"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "HSI Map",
@@ -109,7 +110,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 5,
-    buttonType: "bezelGroup"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "Inset Trfc",
@@ -121,7 +122,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 6,
-    buttonType: "bezelGroup"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "HSI Trfc",
@@ -133,7 +134,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 7,
-    buttonType: "bezelGroup"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "Detail",
@@ -146,7 +147,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 8,
-    buttonType: "toggle"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "Traffic",
@@ -159,7 +160,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 9,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "TER",
@@ -172,7 +173,7 @@ export const data = [
     ref: [169],
     unit: "pfd",
     id: 10,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "WX LGND",
@@ -186,7 +187,7 @@ export const data = [
     ref: [170],
     unit: "pfd",
     id: 11,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "NEXRAD",
@@ -199,7 +200,7 @@ export const data = [
     ref: [171],
     unit: "pfd",
     id: 12,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "METAR",
@@ -212,7 +213,7 @@ export const data = [
     ref: [172],
     unit: "pfd",
     id: 13,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "Lightning",
@@ -240,7 +241,7 @@ export const data = [
     ref: [172],
     unit: "pfd",
     id: 14,
-    buttonType: "bezelMenu",
+    keyType: "RowKey",
     lightArray: [0, 1, 2]
   },
   {
@@ -255,7 +256,7 @@ export const data = [
     ref: [172],
     unit: "pfd",
     id: 15,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "Datalink",
@@ -268,7 +269,7 @@ export const data = [
     ref: [172],
     unit: "pfd",
     id: 16,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "STRMSCP",
@@ -282,7 +283,7 @@ export const data = [
     ref: [172],
     unit: "pfd",
     id: 17,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "Wx Radar",
@@ -296,7 +297,7 @@ export const data = [
     ref: [172],
     unit: "pfd",
     id: 18,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "RDR Opt",
@@ -322,7 +323,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 19,
-    buttonType: "bezelMenu",
+    keyType: "RowKey",
     lightArray: [3, 4, 5]
   },
   {
@@ -349,7 +350,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 20,
-    buttonType: "bezelMenu",
+    keyType: "RowKey",
     lightArray: [0, 1, 2]
   },
   {
@@ -363,7 +364,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 21,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "Weather",
@@ -376,7 +377,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 22,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "Ground",
@@ -389,7 +390,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 23,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "Gain -",
@@ -402,7 +403,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 24,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "Gain +",
@@ -415,7 +416,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 25,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "WX ALRT",
@@ -428,7 +429,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 26,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "STAB",
@@ -441,7 +442,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 27,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "ACT",
@@ -454,7 +455,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 28,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "TFC Map",
@@ -467,7 +468,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 29,
-    buttonType: "display"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "PFD Opt",
@@ -493,7 +494,7 @@ export const data = [
     ref: [200],
     unit: "pfd",
     id: 30,
-    buttonType: "bezelMenu"
+    keyType: "RowKey"
   },
   {
     buttonName: "SVT",
@@ -519,7 +520,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 31,
-    buttonType: "bezelMenu",
+    keyType: "RowKey",
     lightArray: [0, 1, 2, 3]
   },
   {
@@ -533,7 +534,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 32,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "Terrain",
@@ -546,7 +547,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 33,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "HDG LBL",
@@ -559,7 +560,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 34,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "APT Sign",
@@ -573,7 +574,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 35,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "AOA",
@@ -587,7 +588,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 36,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "Wind",
@@ -613,7 +614,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 37,
-    buttonType: "bezelMenu",
+    keyType: "RowKey",
     lightArray: [0, 1, 2, 3]
   },
   {
@@ -627,7 +628,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 38,
-    buttonType: "bezelGroup",
+    keyType: "ToggleDisplayKey",
     divId: "pfdWindData",
     imageClass: "hidden"
   },
@@ -642,7 +643,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 39,
-    buttonType: "bezelGroup",
+    keyType: "ToggleDisplayKey",
     divId: "pfdWindData",
     imageClass: "option1"
   },
@@ -657,7 +658,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 40,
-    buttonType: "bezelGroup",
+    keyType: "ToggleDisplayKey",
     divId: "pfdWindData",
     imageClass: "option2"
   },
@@ -672,7 +673,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 41,
-    buttonType: "bezelGroup",
+    keyType: "ToggleDisplayKey",
     divId: "pfdWindData",
     imageClass: "option3"
   },
@@ -687,7 +688,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 42,
-    buttonType: "display",
+    keyType: "ToggleDisplayKey",
     divId: "dmeInfoWindow",
     imageClass: "dmeImage"
   },
@@ -703,7 +704,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 43,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "Sensors",
@@ -716,7 +717,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 44,
-    buttonType: "bezelMenu"
+    keyType: "RowKey"
   },
   {
     buttonName: "ADC",
@@ -742,7 +743,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 45,
-    buttonType: "bezelMenu",
+    keyType: "RowKey",
     lightArray: [0, 1]
   },
   {
@@ -756,7 +757,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 46,
-    buttonType: "bezelGroup"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "ADC 2",
@@ -769,7 +770,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 47,
-    buttonType: "bezelGroup"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "AHRS",
@@ -795,7 +796,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 48,
-    buttonType: "bezelMenu",
+    keyType: "RowKey",
     lightArray: [0, 1]
   },
   {
@@ -809,7 +810,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 49,
-    buttonType: "bezelGroup"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "AHRS 2",
@@ -822,7 +823,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 50,
-    buttonType: "bezelGroup"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "Bearing 2",
@@ -836,7 +837,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 51,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "ALT Units",
@@ -862,7 +863,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 52,
-    buttonType: "bezelMenu",
+    keyType: "RowKey",
     lightArray: [0, 1, 2]
   },
   {
@@ -876,7 +877,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 53,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "IN",
@@ -889,7 +890,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 54,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "HPA",
@@ -902,7 +903,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 55,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "STD Baro",
@@ -916,7 +917,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 56,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "OBS",
@@ -930,7 +931,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 57,
-    buttonType: "display"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "CDI",
@@ -943,7 +944,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 58,
-    buttonType: "display"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "DME",
@@ -957,7 +958,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 59,
-    buttonType: "display"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "XPDR",
@@ -983,7 +984,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 60,
-    buttonType: "bezelMenu",
+    keyType: "RowKey",
     lightArray: [0, 1, 2, 3, 4, 5, 6]
   },
   {
@@ -997,7 +998,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 61,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "XPDR 2",
@@ -1010,7 +1011,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 62,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "Standby",
@@ -1024,7 +1025,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 63,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "On",
@@ -1038,7 +1039,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 64,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "ALT",
@@ -1052,7 +1053,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 65,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "VFR",
@@ -1065,7 +1066,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 66,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "Code",
@@ -1092,7 +1093,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 67,
-    buttonType: "bezelMenu"
+    keyType: "RowKey"
   },
   {
     buttonName: "BKSP",
@@ -1105,7 +1106,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 68,
-    buttonType: "display"
+    keyType: "display"
   },
   {
     buttonName: "Ident",
@@ -1119,7 +1120,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 69,
-    buttonType: "display"
+    keyType: "SystemKey"
   },
   {
     buttonName: "Ident",
@@ -1133,7 +1134,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 70,
-    buttonType: "display"
+    keyType: "SystemKey"
   },
   {
     buttonName: "Tmr/Ref",
@@ -1146,7 +1147,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 71,
-    buttonType: "display"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "Alerts",
@@ -1160,7 +1161,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 72,
-    buttonType: "display"
+    keyType: "ToggleDisplayKey"
   },
   {
     buttonName: "Back",
@@ -1174,6 +1175,6 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 73,
-    buttonType: "bezelMenu"
+    keyType: "BackKey"
   }
 ];

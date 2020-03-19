@@ -4,6 +4,7 @@ import pfdStore from "./modules/pfdStore";
 import systemMessagesStore from "./modules/systemMessagesStore";
 import CASMessageStore from "./modules/CASMessageStore";
 import simulationStore from "./modules/simulationStore";
+import TopRowStore from "./rowModules/TopRowStore";
 
 Vue.use(Vuex);
 
@@ -13,6 +14,7 @@ export default new Vuex.Store({
     pfdStore,
     systemMessagesStore,
     CASMessageStore,
-    simulationStore
+    simulationStore,
+    TopRowStore
   }
 });

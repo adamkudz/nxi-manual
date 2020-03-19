@@ -1,13 +1,20 @@
 <template>
   <div class="BEZELKEYSIMCONTAINER">
     <header>
-      <h1>Bezel Key Simulation</h1>
+      <h1>New Structure Simulation</h1>
     </header>
     <div class="simContainer">
       <div id="pfdMapWindow"></div>
 
       <div id="hsiDisplay"></div>
-      <div id="pfdBezelRow"></div>
+      <div id="pfdBezelRow">
+        <BaseRow
+          v-bind:is="rowId"
+          :keyData="keyData"
+          :pfdData="pfdData"
+          @selectKey="selectKey"
+        />
+      </div>
 
       <div id="pfdWindData"></div>
       <div id="dmeInfoWindow"></div>
@@ -18,16 +25,45 @@
 </template>
 
 <script>
+import { data } from "../../public/pfd";
+import BaseRow from "../components/BezelRowComponents/BaseRow";
+import TestBezelRow from "../components/BezelRowComponents/TestBezelRow";
+import TopRow from "../components/BezelRowComponents/TopRow";
 export default {
   name: "SimulationView",
-  components: {},
-  data() {
-    return {};
+  components: {
+    BaseRow,
+    TestBezelRow,
+    TopRow
   },
-  created: function() {},
-
-  computed: {},
-  methods: {}
+  data() {
+    return {
+      currentKey: "Top",
+      keyData: "",
+      rowId: ""
+    };
+  },
+  computed: {
+    newKeys: function() {
+      this.updateKeys();
+    },
+    pfdData: function() {
+      return data;
+    }
+  },
+  methods: {
+    selectKey: function(target) {
+      this.currentKey = target;
+    },
+    updateKeys: function() {
+      this.keyData = data.find(x => x.buttonName == this.currentKey);
+      this.rowId = this.keyData.rowId;
+    }
+  },
+  created: function() {
+    this.keyData = data.find(x => x.buttonName == this.currentKey);
+    this.rowId = this.keyData.rowId;
+  }
 };
 </script>
 
