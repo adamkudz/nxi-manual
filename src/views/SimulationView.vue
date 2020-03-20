@@ -94,8 +94,9 @@ export default {
           imageClass,
           rowType
         } = await keyResults;
+
         if (buttonType == "menu") {
-          this.selectCurrentRow(keyResults, ancestor, "DynBezelRow");
+          this.selectCurrentRow(keyResults, ancestor, rowType);
         } else if (buttonType == "display") {
           this[divId] = imageClass;
         } else {
@@ -107,9 +108,9 @@ export default {
     },
 
     selectCurrentRow: function(keyResults, ancestor, rowType) {
+      debugger;
       if (keyResults.buttonName == "Back") {
-        this.rowType = rowType;
-        this.goBackOneLevel(ancestor);
+        this.goBackOneLevel(ancestor, rowType);
       } else {
         this.rowType = rowType;
         this.currentKey = keyResults.buttonName;
@@ -117,7 +118,8 @@ export default {
     },
 
     modifyDisplay: function(buttonName) {},
-    goBackOneLevel: function(ancestor) {
+    goBackOneLevel: function(ancestor, rowType) {
+      this.rowType = rowType;
       this.currentKey = ancestor;
     },
     countUp: function() {
