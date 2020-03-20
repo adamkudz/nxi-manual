@@ -22,7 +22,8 @@ export const data = [
     ref: [123, 143],
     unit: "pfd",
     id: 0,
-    buttonType: "bezelMenu"
+    buttonType: "menu",
+    rowType: "DynBezelRow"
   },
   {
     buttonName: "MAP/HSI",
@@ -47,7 +48,8 @@ export const data = [
     ref: [123, 143],
     unit: "pfd",
     id: 1,
-    buttonType: "bezelMenu"
+    buttonType: "menu",
+    rowType: "DynBezelRow"
   },
   {
     buttonName: "Layout",
@@ -73,7 +75,8 @@ export const data = [
     unit: "pfd",
     id: 2,
     lightArray: [0, 1, 2, 3, 4],
-    buttonType: "bezelMenu"
+    buttonType: "menu",
+    rowType: "DynBezelRow"
   },
   {
     buttonName: "Map Off",
@@ -240,7 +243,8 @@ export const data = [
     ref: [172],
     unit: "pfd",
     id: 14,
-    buttonType: "bezelMenu",
+    buttonType: "menu",
+    rowType: "DynBezelRow",
     lightArray: [0, 1, 2]
   },
   {
@@ -322,7 +326,8 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 19,
-    buttonType: "bezelMenu",
+    buttonType: "menu",
+    rowType: "DynBezelRow",
     lightArray: [3, 4, 5]
   },
   {
@@ -349,7 +354,8 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 20,
-    buttonType: "bezelMenu",
+    buttonType: "menu",
+    rowType: "DynBezelRow",
     lightArray: [0, 1, 2]
   },
   {
@@ -493,7 +499,8 @@ export const data = [
     ref: [200],
     unit: "pfd",
     id: 30,
-    buttonType: "bezelMenu"
+    buttonType: "menu",
+    rowType: "DynBezelRow"
   },
   {
     buttonName: "SVT",
@@ -519,7 +526,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 31,
-    buttonType: "bezelMenu",
+    buttonType: "BezelMenu",
+    rowType: "DynBezelRow",
     lightArray: [0, 1, 2, 3]
   },
   {
@@ -533,7 +541,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 32,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "Terrain",
@@ -546,7 +554,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 33,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "HDG LBL",
@@ -559,7 +567,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 34,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "APT Sign",
@@ -573,7 +581,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 35,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "AOA",
@@ -613,7 +621,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 37,
-    buttonType: "bezelMenu",
+    buttonType: "menu",
+    rowType: "DynBezelRow",
     lightArray: [0, 1, 2, 3]
   },
   {
@@ -716,7 +725,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 44,
-    buttonType: "bezelMenu"
+    buttonType: "menu",
+    rowType: "DynBezelRow"
   },
   {
     buttonName: "ADC",
@@ -742,7 +752,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 45,
-    buttonType: "bezelMenu",
+    buttonType: "menu",
+    rowType: "DynBezelRow",
     lightArray: [0, 1]
   },
   {
@@ -795,7 +806,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 48,
-    buttonType: "bezelMenu",
+    buttonType: "menu",
+    rowType: "DynBezelRow",
     lightArray: [0, 1]
   },
   {
@@ -862,7 +874,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 52,
-    buttonType: "bezelMenu",
+    buttonType: "menu",
+    rowType: "DynBezelRow",
     lightArray: [0, 1, 2]
   },
   {
@@ -876,7 +889,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 53,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "IN",
@@ -889,7 +902,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 54,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "HPA",
@@ -902,7 +915,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 55,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "STD Baro",
@@ -983,8 +996,9 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 60,
-    buttonType: "bezelMenu",
-    lightArray: [0, 1, 2, 3, 4, 5, 6]
+    buttonType: "menu",
+    rowType: "XponderRow",
+    lightArray: [0, 1, 2, 3, 4, 7]
   },
   {
     buttonName: "XPDR 1",
@@ -997,7 +1011,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 61,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "XPDR 2",
@@ -1010,7 +1024,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 62,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "Standby",
@@ -1092,7 +1106,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 67,
-    buttonType: "bezelMenu"
+    buttonType: "menu",
+    rowType: "DynBezelRow"
   },
   {
     buttonName: "BKSP",
@@ -1174,6 +1189,6 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 73,
-    buttonType: "bezelMenu"
+    buttonType: "menu"
   }
 ];

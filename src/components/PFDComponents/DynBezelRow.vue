@@ -19,8 +19,10 @@
 </template>
 
 <script>
+import { toggleLights } from "../../mixins/toggleLights";
 export default {
   name: "dynBezelRow",
+  mixins: [toggleLights],
   props: ["selectedKey", "ancestor", "pfdData"],
   data() {
     return {
@@ -43,30 +45,14 @@ export default {
         this.lightArray = this.selectedKey.lightArray;
         let divId = this.$refs.light[e.target.firstElementChild.id];
         this.toggleBezelGroup(e, divId, this.lightArray);
+        this.searchForKey(e);
       } else if (this.localKey.buttonType == "display") {
-        console.log("display");
         this.toggleBezelLight(e);
-        this.searchForKey(e);
       } else {
         this.searchForKey(e);
       }
     },
-    toggleBezelGroup: function(e, divId, lightArray) {
-      let lightRow = this.$refs.light;
-      lightArray.forEach(light => {
-        lightRow[light].classList.remove("labelLightOn");
-      });
-      lightRow[divId.id].classList.add("labelLightOn");
-      this.searchForKey(e);
-    },
-    toggleBezelLight: function(e) {
-      let lightId = this.$refs.light[e.target.firstElementChild.id];
-      if (lightId.classList.length < 2) {
-        lightId.classList.add("labelLightOn");
-      } else {
-        lightId.classList.remove("labelLightOn");
-      }
-    },
+
     searchForKey: function(e) {
       let target = e.target.id;
       let ancestor = this.ancestor;
@@ -86,12 +72,12 @@ export default {
       let lightRow = this.$refs.light;
       lightRow.forEach(row => {
         row.classList.remove("labelLight");
-        console.log(row);
       });
     }
   },
   beforeUpdate: function() {
     this.removeLights();
+    this.lightArray = [];
   },
   updated: function() {
     if (this.selectedKey.lightArray) this.placeLights();

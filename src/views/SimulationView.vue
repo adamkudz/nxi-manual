@@ -12,13 +12,13 @@
         <PfdHsiDisplay2 />
       </div>
       <div id="pfdBezelRow">
-        <DynBezelRow
+        <component
+          :is="rowType"
           :selectedKey="selectedKey"
           :ancestor="ancestor"
           :pfdData="pfdData"
           @searchForKey="searchForKey"
-          @selectCurrentKey="selectCurrentKey"
-          @setCurrentLabel="setCurrentLabel"
+          @goBackOneLevel="goBackOneLevel"
         />
       </div>
 
@@ -41,6 +41,7 @@ import DmeInfoWindow from "../components/PFDComponents/DmeInfoWindow";
 
 import PfdHsiDisplay2 from "../components/PFDComponents/PfdHsiDisplay2";
 import DynBezelRow from "../components/PFDComponents/DynBezelRow";
+import XponderRow from "../components/PFDComponents/XponderRow";
 import { data } from "../../public/pfd";
 import { createNamespacedHelpers } from "vuex";
 const { mapState } = createNamespacedHelpers("pfdStore");
@@ -51,6 +52,7 @@ export default {
     PfdWindDataDisplay,
     PfdHsiDisplay2,
     DynBezelRow,
+    XponderRow,
     DmeInfoWindow
   },
   data() {
@@ -60,7 +62,8 @@ export default {
       label: "",
       keySearch: "",
       pfdWindData: "option1",
-      dmeWindowInfo: ""
+      dmeInfoWindow: "",
+      rowType: "DynBezelRow"
     };
   },
   created: function() {
@@ -83,39 +86,39 @@ export default {
     searchForKey: async function(payload) {
       try {
         let keyResults = await data.find(x => x.buttonName == payload[0]);
-        let current = payload[1];
-
-        let buttonType = keyResults.buttonType;
-        let buttonName = keyResults.buttonName;
-        let divId = keyResults.divId;
-        let imageClass = keyResults.imageClass;
-        if (buttonType !== "bezelMenu") {
+        let ancestor = payload[1];
+        let {
+          buttonType,
+          buttonName,
+          divId,
+          imageClass,
+          rowType
+        } = await keyResults;
+        if (buttonType == "menu") {
+          this.selectCurrentRow(keyResults, ancestor, "DynBezelRow");
+        } else if (buttonType == "display") {
           this[divId] = imageClass;
         } else {
-          this.selectCurrentKey(keyResults, current);
+          this[divId] = imageClass;
         }
       } catch (err) {
         console.log(err);
       }
     },
 
-    selectCurrentKey: function(keyResults, current) {
+    selectCurrentRow: function(keyResults, ancestor, rowType) {
       if (keyResults.buttonName == "Back") {
-        this.goBackOneLevel(current);
+        this.rowType = rowType;
+        this.goBackOneLevel(ancestor);
       } else {
+        this.rowType = rowType;
         this.label = keyResults.buttonName;
       }
     },
-    setCurrentLabel: function(keyResults, current) {
-      if (keyResults.buttonName == "Back") {
-        this.goBackOneLevel(current);
-      } else {
-        this.label = keyResults.buttonName;
-      }
-    },
+
     modifyDisplay: function(buttonName) {},
-    goBackOneLevel: function(current) {
-      this.label = current;
+    goBackOneLevel: function(ancestor) {
+      this.label = ancestor;
     },
     countUp: function() {
       this.count++;
