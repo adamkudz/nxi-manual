@@ -13,7 +13,11 @@
       </div>
     </div>
 
-    <div v-for="(bezelKey, index) in selectionArray" :key="bezelKey.index" class="bezelRows">
+    <div
+      v-for="(bezelKey, index) in selectionArray"
+      :key="bezelKey.index"
+      class="bezelRows"
+    >
       <TestBezelRow
         @selectCurrentKey="selectCurrentKey"
         :bezelKey="selectionArray[index]"
@@ -32,6 +36,7 @@
 
 <script>
 import TestBezelRow from "../components/TestBezelRow.vue";
+import pfdBezelRow from "../components/PFDComponents/pfdBezelRow.vue";
 import DescriptionWithLabel from "../components/DescriptionWithLabel";
 import PDFComponent from "../components/PDF/PDFComponent";
 
@@ -41,7 +46,8 @@ export default {
   components: {
     TestBezelRow,
     DescriptionWithLabel,
-    PDFComponent
+    PDFComponent,
+    pfdBezelRow
   },
   data() {
     return {

@@ -108,7 +108,6 @@ export default {
     },
 
     selectCurrentRow: function(keyResults, ancestor, rowType) {
-      debugger;
       if (keyResults.buttonName == "Back") {
         this.rowType = rowType;
         this.goBackOneLevel(ancestor);
