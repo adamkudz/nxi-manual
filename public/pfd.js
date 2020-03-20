@@ -248,7 +248,7 @@ export const data = [
     lightArray: [0, 1, 2]
   },
   {
-    buttonName: "LTNG Off",
+    buttonName: "LTNG OFF",
     level: 3,
     desc:
       "Disables lightning function on PFD Map. The softkey annunciator is green when the lightning function is off",
@@ -259,7 +259,7 @@ export const data = [
     ref: [172],
     unit: "pfd",
     id: 15,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "Datalink",
@@ -272,7 +272,7 @@ export const data = [
     ref: [172],
     unit: "pfd",
     id: 16,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "STRMSCP",
@@ -286,7 +286,7 @@ export const data = [
     ref: [172],
     unit: "pfd",
     id: 17,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "Wx Radar",
@@ -328,7 +328,7 @@ export const data = [
     id: 19,
     buttonType: "menu",
     rowType: "DynBezelRow",
-    lightArray: [3, 4, 5]
+    lightArray: ["", "", "", 3, 4, 5]
   },
   {
     buttonName: "Mode SEL",
@@ -369,7 +369,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 21,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "Weather",
@@ -382,7 +382,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 22,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "Ground",
@@ -395,7 +395,7 @@ export const data = [
     ref: [174],
     unit: "pfd",
     id: 23,
-    buttonType: "display"
+    buttonType: "bezelGroup"
   },
   {
     buttonName: "Gain -",
@@ -526,7 +526,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 31,
-    buttonType: "BezelMenu",
+    buttonType: "menu",
     rowType: "DynBezelRow",
     lightArray: [0, 1, 2, 3]
   },
@@ -541,7 +541,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 32,
-    buttonType: "bezelGroup"
+    buttonType: "display"
   },
   {
     buttonName: "Terrain",
@@ -554,7 +554,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 33,
-    buttonType: "bezelGroup"
+    buttonType: "display"
   },
   {
     buttonName: "HDG LBL",
@@ -567,7 +567,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 34,
-    buttonType: "bezelGroup"
+    buttonType: "display"
   },
   {
     buttonName: "APT Sign",
@@ -581,7 +581,7 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 35,
-    buttonType: "bezelGroup"
+    buttonType: "display"
   },
   {
     buttonName: "AOA",
@@ -1190,5 +1190,18 @@ export const data = [
     unit: "pfd",
     id: 73,
     buttonType: "menu"
+  },
+  {
+    buttonName: "Nearest",
+    level: 1,
+    desc: "Displays the Nearest Airports",
+    ancestors: ["Top"],
+    labels: null,
+    toggle: true,
+    toggleValues: [null],
+    ref: [169],
+    unit: "pfd",
+    id: 74,
+    buttonType: "display"
   }
 ];

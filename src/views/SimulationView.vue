@@ -67,13 +67,13 @@ export default {
     };
   },
   created: function() {
-    this.label = "Top";
+    this.currentKey = "Top";
     this.$store.dispatch("simulationStore/setPfdData");
   },
 
   computed: {
     selectedKey: function() {
-      return data.find(x => x.buttonName == this.label);
+      return data.find(x => x.buttonName == this.currentKey);
     },
     ancestor: function() {
       return this.selectedKey.ancestors[this.selectedKey.level - 1];
@@ -112,13 +112,13 @@ export default {
         this.goBackOneLevel(ancestor);
       } else {
         this.rowType = rowType;
-        this.label = keyResults.buttonName;
+        this.currentKey = keyResults.buttonName;
       }
     },
 
     modifyDisplay: function(buttonName) {},
     goBackOneLevel: function(ancestor) {
-      this.label = ancestor;
+      this.currentKey = ancestor;
     },
     countUp: function() {
       this.count++;
