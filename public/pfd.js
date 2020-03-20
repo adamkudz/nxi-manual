@@ -1189,7 +1189,8 @@ export const data = [
     ref: [201],
     unit: "pfd",
     id: 73,
-    buttonType: "menu"
+    buttonType: "menu",
+    rowType: "DynBezelRow"
   },
   {
     buttonName: "Nearest",

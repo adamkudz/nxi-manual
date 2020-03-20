@@ -110,7 +110,8 @@ export default {
     selectCurrentRow: function(keyResults, ancestor, rowType) {
       debugger;
       if (keyResults.buttonName == "Back") {
-        this.goBackOneLevel(ancestor, rowType);
+        this.rowType = rowType;
+        this.goBackOneLevel(ancestor);
       } else {
         this.rowType = rowType;
         this.currentKey = keyResults.buttonName;
@@ -118,8 +119,7 @@ export default {
     },
 
     modifyDisplay: function(buttonName) {},
-    goBackOneLevel: function(ancestor, rowType) {
-      this.rowType = rowType;
+    goBackOneLevel: function(ancestor) {
       this.currentKey = ancestor;
     },
     countUp: function() {
