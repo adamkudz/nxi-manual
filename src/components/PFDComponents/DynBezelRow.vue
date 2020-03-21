@@ -44,11 +44,11 @@ export default {
       if (this.localKey.buttonType == "bezelGroup") {
         this.lightArray = this.selectedKey.lightArray;
         let divId = this.$refs.light[e.target.firstElementChild.id];
-        console.log("hi");
         this.toggleBezelGroup(e, divId, this.lightArray);
         this.searchForKey(e);
       } else if (this.localKey.buttonType == "display") {
         this.toggleBezelLight(e);
+        this.searchForKey(e);
       } else {
         this.searchForKey(e);
       }

@@ -1,12 +1,13 @@
 <template>
   <div class="PFDINSETMAPDISPLAYCONTAINER">
-    <img src="../../../public/pfdImages/traffic.png" alt />
+    <div class="inset" :class="imageClass"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "PfdInsetMapDisplay"
+  name: "PfdInsetMapDisplay",
+  props: ["imageClass"]
 };
 </script>
 
@@ -14,5 +15,15 @@ export default {
 .PFDINSETMAPDISPLAYCONTAINER {
   height: 100%;
   width: 100%;
+}
+.inset {
+  height: 100px;
+  width: 100px;
+}
+.insetTraffic {
+  background: url("../../../src/assets/pfdImages/traffic.png");
+}
+.hidden {
+  display: none;
 }
 </style>

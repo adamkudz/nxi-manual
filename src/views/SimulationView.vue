@@ -5,7 +5,7 @@
     </header>
     <div class="simContainer">
       <div id="pfdMapWindow">
-        <PfdInsetMapDisplay />
+        <PfdInsetMapDisplay :imageClass="pfdMapWindow" />
       </div>
 
       <div id="hsiDisplay">
@@ -26,7 +26,7 @@
         <pfdWindDataDisplay :imageClass="pfdWindData" />
       </div>
       <div id="dmeInfoWindow">
-        <DmeInfoWindow :imageClass="dmeInfoWindow" />
+        <DmeInfoWindow v-if="dmeInfoWindow" :imageClass="dmeInfoWindow" />
       </div>
       <div id="pfdTransponder"></div>
     </div>
@@ -62,7 +62,8 @@ export default {
       label: "",
       keySearch: "",
       pfdWindData: "option1",
-      dmeInfoWindow: "",
+      pfdMapWindow: "insetTraffic",
+      dmeInfoWindow: true,
       rowType: "DynBezelRow"
     };
   },
@@ -92,15 +93,19 @@ export default {
           buttonName,
           divId,
           imageClass,
-          rowType
+          rowType,
+          toggle
         } = await keyResults;
 
         if (buttonType == "menu") {
           this.selectCurrentRow(keyResults, ancestor, rowType);
-        } else if (buttonType == "display") {
+        } else if (toggle) {
+          this.toggleDisplay(keyResults, divId);
+        } else if (imageClass) {
+          console.log(divId);
           this[divId] = imageClass;
         } else {
-          this[divId] = imageClass;
+          console.log("shouldn't be anything else");
         }
       } catch (err) {
         console.log(err);
@@ -117,7 +122,12 @@ export default {
       }
     },
 
-    modifyDisplay: function(buttonName) {},
+    toggleDisplay: function(keyResults, divId) {
+      if (keyResults.toggle) {
+        this[divId] ? (this[divId] = false) : (this[divId] = true);
+        console.log(this[divId]);
+      }
+    },
     goBackOneLevel: function(ancestor) {
       this.currentKey = ancestor;
     },

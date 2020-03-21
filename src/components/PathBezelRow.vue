@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: "TestBezelRow",
+  name: "PathBezelRow",
   props: ["bezelKey", "highlighted", "count", "selected"],
   data() {
     return {};

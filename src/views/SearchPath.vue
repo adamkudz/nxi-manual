@@ -18,7 +18,7 @@
       :key="bezelKey.index"
       class="bezelRows"
     >
-      <TestBezelRow
+      <PathBezelRow
         @selectCurrentKey="selectCurrentKey"
         :bezelKey="selectionArray[index]"
         :count="count"
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import TestBezelRow from "../components/TestBezelRow.vue";
+import PathBezelRow from "../components/PathBezelRow.vue";
 import pfdBezelRow from "../components/PFDComponents/pfdBezelRow.vue";
 import DescriptionWithLabel from "../components/DescriptionWithLabel";
 import PDFComponent from "../components/PDF/PDFComponent";
@@ -44,7 +44,7 @@ export default {
   name: "SearchPath",
 
   components: {
-    TestBezelRow,
+    PathBezelRow,
     DescriptionWithLabel,
     PDFComponent,
     pfdBezelRow
