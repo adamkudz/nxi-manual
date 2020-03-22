@@ -148,13 +148,13 @@ export default {
 }
 
 .simContainer {
-  background: url("../../public/pfdImages/pfdSimBackground.png");
-  width: 700px;
-  height: 363px;
+  background: url("../../src/assets/pfdImages/pfdSimBackground.svg");
+  width: 699.715px;
+  height: 370.5px;
   margin: auto;
   display: grid;
   grid-template-columns: 12px 165px 4px 31px 19px 202px 34px 89px 125px 11px 8px 34px;
-  grid-template-rows: 45px 222px 12px 83px;
+  grid-template-rows: 45px 222px 13px 83px;
   position: relative;
 }
 #pfdMapWindow {

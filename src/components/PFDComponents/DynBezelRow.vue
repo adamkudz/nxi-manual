@@ -110,7 +110,7 @@ export default {
   color: var(--brightWhite);
   font-family: "Segoe UI";
   font-weight: 700;
-  font-size: 0.6em;
+  font-size: 0.63em;
   text-align: center;
   height: calc(100% * 5);
 }

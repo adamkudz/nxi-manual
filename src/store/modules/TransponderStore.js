@@ -22,7 +22,18 @@ export default {
       return state.buttons;
     }
   },
-  mutations: {},
+  mutations: {
+    UPDATE_BUTTON: function(state, payload) {
+      state.buttons[1].lit = payload;
+    },
+    SWITCH_TRANSPONDER: function(state, payload) {
+      state.buttons[0].lit = false;
+    }
+  },
 
-  actions: {}
+  actions: {
+    updateButton: function({ commit }, payload) {
+      commit("UPDATE_BUTTON", payload);
+    }
+  }
 };

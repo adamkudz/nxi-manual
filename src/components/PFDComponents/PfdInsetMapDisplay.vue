@@ -17,11 +17,11 @@ export default {
   width: 100%;
 }
 .inset {
-  height: 100px;
-  width: 100px;
+  width: 164px;
+  height: 156px;
 }
 .insetTraffic {
-  background: url("../../../src/assets/pfdImages/traffic.png");
+  background: url("../../../src/assets/pfdImages/traffic.svg");
 }
 .hidden {
   display: none;

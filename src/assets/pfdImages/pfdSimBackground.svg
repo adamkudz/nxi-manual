@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="699.715" height="370.5">
+  <defs>
+    <clipPath id="o">
+      <use xlink:href="#a"/>
+    </clipPath>
+    <clipPath id="p">
+      <use xlink:href="#b"/>
+    </clipPath>
+    <clipPath id="q">
+      <use xlink:href="#c"/>
+    </clipPath>
+    <clipPath id="r">
+      <use xlink:href="#d"/>
+    </clipPath>
+    <clipPath id="s">
+      <use xlink:href="#e"/>
+    </clipPath>
+    <clipPath id="t">
+      <use xlink:href="#f"/>
+    </clipPath>
+    <clipPath id="u">
+      <use xlink:href="#g"/>
+    </clipPath>
+    <clipPath id="v">
+      <use xlink:href="#h"/>
+    </clipPath>
+    <clipPath id="w">
+      <use xlink:href="#i"/>
+    </clipPath>
+    <clipPath id="x">
+      <use xlink:href="#j"/>
+    </clipPath>
+    <clipPath id="y">
+      <use xlink:href="#k"/>
+    </clipPath>
+    <clipPath id="z">
+      <use xlink:href="#l"/>
+    </clipPath>
+    <filter id="A" x="55.5" y="304.5" width="85" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dy="11"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="C" x="109.5" y="304.5" width="85" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dy="11"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-2"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="D" x="164.5" y="304.5" width="85" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dy="11"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-3"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="E" x="219.5" y="304.5" width="85" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dy="11"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-4"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="F" x="274.5" y="304.5" width="85" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dy="11"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-5"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="G" x="328.5" y="304.5" width="85" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dy="11"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-6"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="H" x="384.5" y="304.5" width="85" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dy="11"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-7"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="I" x="439.5" y="304.5" width="85" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dy="11"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-8"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-8"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="J" x="494.5" y="304.5" width="85" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dy="11"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-9"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-9"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="K" x="549.5" y="304.5" width="85" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dy="11"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-10"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-10"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="L" x="0" y="307" width="83" height="61" filterUnits="userSpaceOnUse">
+      <feOffset dy="11"/>
+      <feGaussianBlur stdDeviation="7" result="blur-11"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-11"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="M" x="605" y="307" width="83" height="61" filterUnits="userSpaceOnUse">
+      <feOffset dy="11"/>
+      <feGaussianBlur stdDeviation="7" result="blur-12"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur-12"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="m" x1=".5" x2=".5" y2=".071" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a25c28"/>
+      <stop offset="1" stop-color="#644322"/>
+    </linearGradient>
+    <linearGradient id="n" x1=".5" y1=".112" x2=".5" y2=".221" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#35393a"/>
+      <stop offset=".528" stop-color="#999a9b"/>
+      <stop offset="1" stop-color="#383c3f"/>
+    </linearGradient>
+    <linearGradient id="B" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5a5e61"/>
+      <stop offset="1" stop-color="#3f4346"/>
+    </linearGradient>
+    <radialGradient id="N" cx=".5" cy=".05" r="1.078" gradientTransform="matrix(1 0 0 .133 0 .044)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e1eff9"/>
+      <stop offset="0" stop-color="#bbe2f2"/>
+      <stop offset="1" stop-color="#667884"/>
+    </radialGradient>
+  </defs>
+  <path data-name="Rectangle 41" d="M2 0h690v296H2z"/>
+  <g transform="translate(13 11)" stroke="#707070" fill="url(#m)">
+    <path stroke="none" d="M0 0h668v259H0z"/>
+    <path fill="none" d="M.5.5h667v258H.5z"/>
+  </g>
+  <path d="M693.906 363.449H2.114V247.361H258.75a93.645 93.645 0 0027.592 15.929 93.819 93.819 0 0032.52 5.768 93.8 93.8 0 0032.519-5.768 93.645 93.645 0 0027.592-15.929h313.141v58.585h.007v57.5h1.785z" fill="#070707"/>
+  <path d="M-2828.2 6301.21a11.476 11.476 0 00-4.99 2.333c-1.873 2.057-2.308 3.437-2.245 5.527.151 4.987 0 56.681 0 56.681l699.019-.451v-54.868a10.107 10.107 0 00-2.3-6.965c-2.783-3.722-5.085-3.464-5.085-3.464z" transform="translate(2836.104 -6002.457)" fill="url(#n)"/>
+  <g stroke="#35393a" stroke-width="3">
+    <g data-name="Rectangle 5" transform="translate(41 304)" fill="none">
+      <path id="a" stroke="none" d="M0 0h2v17H0z"/>
+      <path d="M0 1.5h2M1.5 0v17m.5-1.5H0M.5 17V0" clip-path="url(#o)"/>
+    </g>
+    <g data-name="Rectangle 5" transform="translate(97 304)" fill="#fff">
+      <path id="b" stroke="none" d="M0 0h2v17H0z"/>
+      <path d="M0 1.5h2M1.5 0v17m.5-1.5H0M.5 17V0" fill="none" clip-path="url(#p)"/>
+    </g>
+    <g data-name="Rectangle 5" transform="translate(151 304)" fill="#fff">
+      <path id="c" stroke="none" d="M0 0h2v17H0z"/>
+      <path d="M0 1.5h2M1.5 0v17m.5-1.5H0M.5 17V0" fill="none" clip-path="url(#q)"/>
+    </g>
+    <g data-name="Rectangle 5" transform="translate(206 304)" fill="#fff">
+      <path id="d" stroke="none" d="M0 0h2v17H0z"/>
+      <path d="M0 1.5h2M1.5 0v17m.5-1.5H0M.5 17V0" fill="none" clip-path="url(#r)"/>
+    </g>
+    <g data-name="Rectangle 5" transform="translate(261 304)" fill="#fff">
+      <path id="e" stroke="none" d="M0 0h2v17H0z"/>
+      <path d="M0 1.5h2M1.5 0v17m.5-1.5H0M.5 17V0" fill="none" clip-path="url(#s)"/>
+    </g>
+    <g data-name="Rectangle 5" transform="translate(316 304)" fill="#fff">
+      <path id="f" stroke="none" d="M0 0h2v17H0z"/>
+      <path d="M0 1.5h2M1.5 0v17m.5-1.5H0M.5 17V0" fill="none" clip-path="url(#t)"/>
+    </g>
+    <g data-name="Rectangle 5" transform="translate(371 304)" fill="#fff">
+      <path id="g" stroke="none" d="M0 0h2v17H0z"/>
+      <path d="M0 1.5h2M1.5 0v17m.5-1.5H0M.5 17V0" fill="none" clip-path="url(#u)"/>
+    </g>
+    <g data-name="Rectangle 5" transform="translate(427 304)" fill="#fff">
+      <path id="h" stroke="none" d="M0 0h2v17H0z"/>
+      <path d="M0 1.5h2M1.5 0v17m.5-1.5H0M.5 17V0" fill="none" clip-path="url(#v)"/>
+    </g>
+    <g data-name="Rectangle 5" transform="translate(481 304)" fill="#fff">
+      <path id="i" stroke="none" d="M0 0h2v17H0z"/>
+      <path d="M0 1.5h2M1.5 0v17m.5-1.5H0M.5 17V0" fill="none" clip-path="url(#w)"/>
+    </g>
+    <g data-name="Rectangle 5" transform="translate(534 304)" fill="#fff">
+      <path id="j" stroke="none" d="M0 0h2v17H0z"/>
+      <path d="M0 1.5h2M1.5 0v17m.5-1.5H0M.5 17V0" fill="none" clip-path="url(#x)"/>
+    </g>
+    <g data-name="Rectangle 5" transform="translate(590 304)" fill="#fff">
+      <path id="k" stroke="none" d="M0 0h2v17H0z"/>
+      <path d="M0 1.5h2M1.5 0v17m.5-1.5H0M.5 17V0" fill="none" clip-path="url(#y)"/>
+    </g>
+    <g data-name="Rectangle 5" transform="translate(645 304)" fill="#fff">
+      <path id="l" stroke="none" d="M0 0h2v17H0z"/>
+      <path d="M0 1.5h2M1.5 0v17m.5-1.5H0M.5 17V0" fill="none" clip-path="url(#z)"/>
+    </g>
+  </g>
+  <g data-name="BEZEL KEY">
+    <g filter="url(#A)">
+      <g data-name="Rectangle 8" transform="translate(79 317)" stroke="#393636" fill="url(#B)">
+        <path stroke="none" d="M0 0h38v19H0z"/>
+        <path fill="none" d="M-.5-.5h39v20h-39z"/>
+      </g>
+    </g>
+    <path data-name="Polygon 3" d="M98.5 323l5.5 7H93z" fill="#fff"/>
+  </g>
+  <g data-name="BEZEL KEY">
+    <g filter="url(#C)">
+      <g data-name="Rectangle 8" transform="translate(133 317)" stroke="#393636" fill="url(#B)">
+        <path stroke="none" d="M0 0h38v19H0z"/>
+        <path fill="none" d="M-.5-.5h39v20h-39z"/>
+      </g>
+    </g>
+    <path data-name="Polygon 3" d="M152.5 323l5.5 7h-11z" fill="#fff"/>
+  </g>
+  <g data-name="BEZEL KEY">
+    <g filter="url(#D)">
+      <g data-name="Rectangle 8" transform="translate(188 317)" stroke="#393636" fill="url(#B)">
+        <path stroke="none" d="M0 0h38v19H0z"/>
+        <path fill="none" d="M-.5-.5h39v20h-39z"/>
+      </g>
+    </g>
+    <path data-name="Polygon 3" d="M207.5 323l5.5 7h-11z" fill="#fff"/>
+  </g>
+  <g data-name="BEZEL KEY">
+    <g filter="url(#E)">
+      <g data-name="Rectangle 8" transform="translate(243 317)" stroke="#393636" fill="url(#B)">
+        <path stroke="none" d="M0 0h38v19H0z"/>
+        <path fill="none" d="M-.5-.5h39v20h-39z"/>
+      </g>
+    </g>
+    <path data-name="Polygon 3" d="M262.5 323l5.5 7h-11z" fill="#fff"/>
+  </g>
+  <g data-name="BEZEL KEY">
+    <g filter="url(#F)">
+      <g data-name="Rectangle 8" transform="translate(298 317)" stroke="#393636" fill="url(#B)">
+        <path stroke="none" d="M0 0h38v19H0z"/>
+        <path fill="none" d="M-.5-.5h39v20h-39z"/>
+      </g>
+    </g>
+    <path data-name="Polygon 3" d="M317.5 323l5.5 7h-11z" fill="#fff"/>
+  </g>
+  <g data-name="BEZEL KEY">
+    <g filter="url(#G)">
+      <g data-name="Rectangle 8" transform="translate(352 317)" stroke="#393636" fill="url(#B)">
+        <path stroke="none" d="M0 0h38v19H0z"/>
+        <path fill="none" d="M-.5-.5h39v20h-39z"/>
+      </g>
+    </g>
+    <path data-name="Polygon 3" d="M371.5 323l5.5 7h-11z" fill="#fff"/>
+  </g>
+  <g data-name="BEZEL KEY">
+    <g filter="url(#H)">
+      <g data-name="Rectangle 8" transform="translate(408 317)" stroke="#393636" fill="url(#B)">
+        <path stroke="none" d="M0 0h38v19H0z"/>
+        <path fill="none" d="M-.5-.5h39v20h-39z"/>
+      </g>
+    </g>
+    <path data-name="Polygon 3" d="M427.5 323l5.5 7h-11z" fill="#fff"/>
+  </g>
+  <g data-name="BEZEL KEY">
+    <g filter="url(#I)">
+      <g data-name="Rectangle 8" transform="translate(463 317)" stroke="#393636" fill="url(#B)">
+        <path stroke="none" d="M0 0h38v19H0z"/>
+        <path fill="none" d="M-.5-.5h39v20h-39z"/>
+      </g>
+    </g>
+    <path data-name="Polygon 3" d="M482.5 323l5.5 7h-11z" fill="#fff"/>
+  </g>
+  <g data-name="BEZEL KEY">
+    <g filter="url(#J)">
+      <g data-name="Rectangle 8" transform="translate(518 317)" stroke="#393636" fill="url(#B)">
+        <path stroke="none" d="M0 0h38v19H0z"/>
+        <path fill="none" d="M-.5-.5h39v20h-39z"/>
+      </g>
+    </g>
+    <path data-name="Polygon 3" d="M537.5 323l5.5 7h-11z" fill="#fff"/>
+  </g>
+  <g data-name="BEZEL KEY">
+    <g filter="url(#K)">
+      <g data-name="Rectangle 8" transform="translate(573 317)" stroke="#393636" fill="url(#B)">
+        <path stroke="none" d="M0 0h38v19H0z"/>
+        <path fill="none" d="M-.5-.5h39v20h-39z"/>
+      </g>
+    </g>
+    <path data-name="Polygon 3" d="M592.5 323l5.5 7h-11z" fill="#fff"/>
+  </g>
+  <g data-name="BEZEL LEFT KEY">
+    <g filter="url(#L)">
+      <path data-name="Rectangle 6" d="M9.5 0H41v19H9.5A9.5 9.5 0 010 9.5 9.5 9.5 0 019.5 0z" transform="translate(21 317)" fill="url(#B)"/>
+    </g>
+    <path data-name="Polygon 4" d="M41.5 322l5.5 7H36z" fill="#fff"/>
+    <path data-name="Polygon 5" d="M41.5 322l5.5 7H36z" fill="#fff"/>
+  </g>
+  <g data-name="BEZEL RIGHT KEY">
+    <g filter="url(#M)">
+      <path data-name="Rectangle 6" d="M0 0h31.5A9.5 9.5 0 0141 9.5a9.5 9.5 0 01-9.5 9.5H0V0z" transform="translate(626 317)" fill="url(#B)"/>
+    </g>
+    <path data-name="Polygon 6" d="M646.5 323l5.5 7h-11z" fill="#fff"/>
+  </g>
+  <g>
+    <g data-name="Rectangle 9" transform="translate(14.999 280)" stroke="#707070" fill="url(#N)">
+      <path d="M10 0h35a10 10 0 0110 10v10H0V10A10 10 0 0110 0z" stroke="none"/>
+      <path d="M10 .5h35a9.5 9.5 0 019.5 9.5v9a.5.5 0 01-.5.5H1a.5.5 0 01-.5-.5v-9A9.5 9.5 0 0110 .5z" fill="none"/>
+    </g>
+    <g data-name="Rectangle 9" transform="translate(69.999 280)" stroke="#707070" fill="url(#N)">
+      <path d="M10 0h36a10 10 0 0110 10v10H0V10A10 10 0 0110 0z" stroke="none"/>
+      <path d="M10 .5h36a9.5 9.5 0 019.5 9.5v9a.5.5 0 01-.5.5H1a.5.5 0 01-.5-.5v-9A9.5 9.5 0 0110 .5z" fill="none"/>
+    </g>
+    <g data-name="Rectangle 9" transform="translate(124.999 280)" stroke="#707070" fill="url(#N)">
+      <path d="M10 0h35a10 10 0 0110 10v10H0V10A10 10 0 0110 0z" stroke="none"/>
+      <path d="M10 .5h35a9.5 9.5 0 019.5 9.5v9a.5.5 0 01-.5.5H1a.5.5 0 01-.5-.5v-9A9.5 9.5 0 0110 .5z" fill="none"/>
+    </g>
+    <g data-name="Rectangle 9" transform="translate(179.999 280)" stroke="#707070" fill="url(#N)">
+      <path d="M10 0h35a10 10 0 0110 10v10H0V10A10 10 0 0110 0z" stroke="none"/>
+      <path d="M10 .5h35a9.5 9.5 0 019.5 9.5v9a.5.5 0 01-.5.5H1a.5.5 0 01-.5-.5v-9A9.5 9.5 0 0110 .5z" fill="none"/>
+    </g>
+    <g data-name="Rectangle 9" transform="translate(234.999 280)" stroke="#707070" fill="url(#N)">
+      <path d="M10 0h36a10 10 0 0110 10v10H0V10A10 10 0 0110 0z" stroke="none"/>
+      <path d="M10 .5h36a9.5 9.5 0 019.5 9.5v9a.5.5 0 01-.5.5H1a.5.5 0 01-.5-.5v-9A9.5 9.5 0 0110 .5z" fill="none"/>
+    </g>
+    <g data-name="Rectangle 9" transform="translate(290.999 280)" stroke="#707070" fill="url(#N)">
+      <path d="M10 0h34a10 10 0 0110 10v10H0V10A10 10 0 0110 0z" stroke="none"/>
+      <path d="M10 .5h34a9.5 9.5 0 019.5 9.5v9a.5.5 0 01-.5.5H1a.5.5 0 01-.5-.5v-9A9.5 9.5 0 0110 .5z" fill="none"/>
+    </g>
+    <g data-name="Rectangle 9" transform="translate(344.999 280)" stroke="#707070" fill="url(#N)">
+      <path d="M10 0h35a10 10 0 0110 10v10H0V10A10 10 0 0110 0z" stroke="none"/>
+      <path d="M10 .5h35a9.5 9.5 0 019.5 9.5v9a.5.5 0 01-.5.5H1a.5.5 0 01-.5-.5v-9A9.5 9.5 0 0110 .5z" fill="none"/>
+    </g>
+    <g data-name="Rectangle 9" transform="translate(399.999 280)" stroke="#707070" fill="url(#N)">
+      <path d="M10 0h34a10 10 0 0110 10v10H0V10A10 10 0 0110 0z" stroke="none"/>
+      <path d="M10 .5h34a9.5 9.5 0 019.5 9.5v9a.5.5 0 01-.5.5H1a.5.5 0 01-.5-.5v-9A9.5 9.5 0 0110 .5z" fill="none"/>
+    </g>
+    <g data-name="Rectangle 9" transform="translate(453.999 280)" stroke="#707070" fill="url(#N)">
+      <path d="M10 0h36a10 10 0 0110 10v10H0V10A10 10 0 0110 0z" stroke="none"/>
+      <path d="M10 .5h36a9.5 9.5 0 019.5 9.5v9a.5.5 0 01-.5.5H1a.5.5 0 01-.5-.5v-9A9.5 9.5 0 0110 .5z" fill="none"/>
+    </g>
+    <g data-name="Rectangle 9" transform="translate(509.999 280)" stroke="#707070" fill="url(#N)">
+      <path d="M10 0h35a10 10 0 0110 10v10H0V10A10 10 0 0110 0z" stroke="none"/>
+      <path d="M10 .5h35a9.5 9.5 0 019.5 9.5v9a.5.5 0 01-.5.5H1a.5.5 0 01-.5-.5v-9A9.5 9.5 0 0110 .5z" fill="none"/>
+    </g>
+    <g data-name="Rectangle 9" transform="translate(563.999 280)" stroke="#707070" fill="url(#N)">
+      <path d="M10 0h35a10 10 0 0110 10v10H0V10A10 10 0 0110 0z" stroke="none"/>
+      <path d="M10 .5h35a9.5 9.5 0 019.5 9.5v9a.5.5 0 01-.5.5H1a.5.5 0 01-.5-.5v-9A9.5 9.5 0 0110 .5z" fill="none"/>
+    </g>
+    <g data-name="Rectangle 9" transform="translate(618.999 280)" stroke="#707070" fill="url(#N)">
+      <path d="M10 0h36a10 10 0 0110 10v10H0V10A10 10 0 0110 0z" stroke="none"/>
+      <path d="M10 .5h36a9.5 9.5 0 019.5 9.5v9a.5.5 0 01-.5.5H1a.5.5 0 01-.5-.5v-9A9.5 9.5 0 0110 .5z" fill="none"/>
+    </g>
+    <path data-name="Rectangle 10" d="M24.999 281h35a10 10 0 0110 10v8h-55v-8a10 10 0 0110-10zM79.999 281h35a10 10 0 0110 10v8h-55v-8a10 10 0 0110-10zM134.999 281h35a10 10 0 0110 10v8h-55v-8a10 10 0 0110-10zM189.999 281h35a10 10 0 0110 10v8h-55v-8a10 10 0 0110-10zM244.999 281h36a10 10 0 0110 10v8h-56v-8a10 10 0 0110-10zM300.999 281h34a10 10 0 0110 10v8h-54v-8a10 10 0 0110-10zM354.999 281h35a10 10 0 0110 10v8h-55v-8a10 10 0 0110-10zM409.999 281h34a10 10 0 0110 10v8h-54v-8a10 10 0 0110-10zM463.999 281h36a10 10 0 0110 10v8h-56v-8a10 10 0 0110-10zM519.999 281h34a10 10 0 0110 10v8h-54v-8a10 10 0 0110-10zM573.999 281h35a10 10 0 0110 10v8h-55v-8a10 10 0 0110-10zM628.999 281h36a10 10 0 0110 10v8h-56v-8a10 10 0 0110-10z" fill="#151515"/>
+  </g>
+</svg>
