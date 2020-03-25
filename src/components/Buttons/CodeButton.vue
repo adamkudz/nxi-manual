@@ -1,7 +1,7 @@
 <template>
   <div @click="selectLocalKey" class="label">
     <div>
-      <p>{{ button.name }}</p>
+      <p>{{ button }}</p>
     </div>
     <div
       v-if="button.light"
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "BaseButton",
+  name: "CodeButton",
   props: ["button"],
   methods: {
     selectLocalKey(e) {

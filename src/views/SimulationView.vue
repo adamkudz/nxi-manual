@@ -44,6 +44,7 @@ import DmeInfoWindow from "../components/PFDComponents/DmeInfoWindow";
 import PfdHsiDisplay2 from "../components/PFDComponents/PfdHsiDisplay2";
 import DynBezelRow from "../components/PFDComponents/DynBezelRow";
 import XponderRow from "../components/PFDComponents/XponderRow";
+import CodeRow from "../components/PFDComponents/CodeRow";
 import { data } from "../../public/pfd";
 import { createNamespacedHelpers } from "vuex";
 const { mapState } = createNamespacedHelpers("pfdStore");
@@ -55,7 +56,8 @@ export default {
     PfdHsiDisplay2,
     DynBezelRow,
     XponderRow,
-    DmeInfoWindow
+    DmeInfoWindow,
+    CodeRow
   },
   data() {
     return {
@@ -66,7 +68,8 @@ export default {
       pfdWindData: "option1",
       pfdMapWindow: "insetTraffic",
       dmeInfoWindow: true,
-      rowType: "DynBezelRow"
+      rowType: "DynBezelRow",
+      transponderCode: ["1", "2", "0", "0"]
     };
   },
   created: function() {
@@ -192,5 +195,9 @@ export default {
   grid-row: 2/3;
   align-self: end;
   margin-bottom: 34%;
+}
+#pfdTransponder {
+  grid-column: 8/9;
+  grid-row: 3/4;
 }
 </style>

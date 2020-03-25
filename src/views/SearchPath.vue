@@ -1,7 +1,7 @@
 <template>
   <div class="TESTCOMPONENTCONTAINER">
     <div v-if="showPDF" class="pdfContainer">
-      <PDFComponent @togglePDF="togglePDF" />
+      <PDFComponent @togglePDF="togglePDF" :selected="selected" />
     </div>
     <header>
       <h2>Search Results</h2>
@@ -29,7 +29,7 @@
     </div>
     <div v-if="displayDescription" class="buttonContainer">
       <button class="navButton" @click="goHome">Search Again</button>
-      <button class="navButton" @click="goSimulate">Simulate</button>
+      <button class="navButton" @click="togglePDF">See Docs</button>
     </div>
   </div>
 </template>

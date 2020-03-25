@@ -1,6 +1,10 @@
 <template>
   <div class="PDFCONTAINER">
-    <img src="../../assets/pdfPages/page66.jpg" width="700px" />
+    <img
+      :src="require(`../../assets/pdfPages/${this.selected.ref[0]}`)"
+      width="700px"
+      alt="docs"
+    />
     <div class="backButton">
       <button @click="togglePDF" class="navButton">CLOSE</button>
     </div>
@@ -10,7 +14,12 @@
 <script>
 export default {
   name: "PDFComponent",
+  props: ["selected"],
+  data() {
+    return {};
+  },
   components: {},
+  computed: {},
   methods: {
     togglePDF: function() {
       this.$emit("togglePDF");

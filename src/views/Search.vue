@@ -7,7 +7,12 @@
       <div class="searchBox">
         <div class="searchItems">
           <p>What can I help you find?</p>
-          <input v-focus v-model="searchText" type="text" placeholder="ex. radar, traffic, wind..." />
+          <input
+            v-focus
+            v-model="searchText"
+            type="text"
+            placeholder="ex. radar, traffic, wind..."
+          />
         </div>
       </div>
     </div>
@@ -80,12 +85,12 @@ export default {
         tokenize: true,
         matchAllTokens: true,
         findAllMatches: true,
-        threshold: 0.3,
+        threshold: 0.1,
         location: 0,
         distance: 100,
         maxPatternLength: 20,
-        minMatchCharLength: 1,
-        keys: ["desc"]
+        minMatchCharLength: 4,
+        keys: ["desc", "buttonName"]
       };
       const fuse = new Fuse(this.pfdData, options);
       return fuse.search(this.searchText);

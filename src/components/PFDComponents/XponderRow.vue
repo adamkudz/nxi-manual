@@ -3,13 +3,12 @@
     <div class="pfdBezelRow">
       <div class="labelGrid">
         <div
+          class="buttons"
           v-for="(button, index) in buttons"
           :key="index"
-          class="label"
-          :id="button.name"
           ref="light"
         >
-          <BaseButton
+          <XponderButton
             @selectLocalKey="selectLocalKey"
             :button="button"
             :id="button.name"
@@ -22,13 +21,13 @@
 
 <script>
 import { toggleLights } from "../../mixins/toggleLights";
-import BaseButton from "../Buttons/BaseButton";
+import XponderButton from "../Buttons/XponderButton";
 export default {
   name: "XponderRow",
   mixins: [toggleLights],
 
   components: {
-    BaseButton
+    XponderButton
   },
   props: ["selectedKey", "ancestor", "pfdData"],
   data() {
@@ -56,18 +55,17 @@ export default {
   computed: {},
 
   methods: {
-    searchForLocalKey: function(e) {
-      let target = e.target.id;
-      let keyResults = this.pfdData.find(data => data.buttonName == target);
-      let ancestor = keyResults.ancestors[keyResults.level - 1];
-      return { keyResults, target, ancestor };
-    },
-
     selectLocalKey: function(e) {
       let { keyResults, target, ancestor } = this.searchForLocalKey(e);
       keyResults.buttonName == "Back" || keyResults.buttonName == "Code"
         ? this.$emit("searchForKey", [target, ancestor])
         : this.checkButton(keyResults, e);
+    },
+    searchForLocalKey: function(e) {
+      let target = e.target.id;
+      let keyResults = this.pfdData.find(data => data.buttonName == target);
+      let ancestor = keyResults.ancestors[keyResults.level - 1];
+      return { keyResults, target, ancestor };
     },
 
     checkButton: function(payload, e) {
@@ -84,10 +82,6 @@ export default {
       payload.name !== "Back"
         ? this.updateButton(payload)
         : this.searchForKey(payload.name);
-    },
-
-    updateButton: function(payload) {
-      this.$store.commit("TransponderStore/UPDATE_BUTTON", payload);
     },
 
     switchTransponder: function(payload) {
@@ -134,24 +128,7 @@ export default {
   padding-left: 2%;
   padding-right: 3.5%;
 }
-// .label {
-//   color: var(--brightWhite);
-//   font-family: "Segoe UI";
-//   font-weight: 700;
-//   font-size: 0.63em;
-//   text-align: center;
-//   height: calc(100% * 5);
-// }
-
-// .labelLight {
-//   height: 2.3%;
-//   width: 35%;
-//   border-radius: 1px;
-//   background: var(--bezelLightOff);
-//   margin-left: calc(100% - 67.5%);
-//   margin-top: calc(100% - 97%);
-// }
-// .labelLightOn {
-//   background: var(--mainGreen);
-// }
+.buttons {
+  height: 7vh;
+}
 </style>

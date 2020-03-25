@@ -250,7 +250,7 @@ export const data = [
     ],
     toggle: false,
     toggleValues: [null],
-    ref: [172],
+    ref: ["pfdInsetLightning.webp"],
     unit: "pfd",
     id: 14,
     buttonType: "menu",
@@ -533,7 +533,7 @@ export const data = [
     ],
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["svt.webp"],
     unit: "pfd",
     id: 31,
     buttonType: "menu",
@@ -602,7 +602,7 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: ["Auto", "Off"],
-    ref: [201],
+    ref: ["aoa.webp"],
     unit: "pfd",
     id: 36,
     buttonType: "display"
@@ -628,7 +628,7 @@ export const data = [
     ],
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["windData.webp"],
     unit: "pfd",
     id: 37,
     buttonType: "menu",
@@ -950,7 +950,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["obs.webp"],
     unit: "pfd",
     id: 57,
     buttonType: "display"
@@ -963,7 +963,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["cdi.webp"],
     unit: "pfd",
     id: 58,
     buttonType: "display"
@@ -977,7 +977,7 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-    ref: [201],
+    ref: ["dmeTuning.webp"],
     unit: "pfd",
     id: 59,
     buttonType: "display"
@@ -1003,7 +1003,7 @@ export const data = [
     ],
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["transponder.webp"],
     unit: "pfd",
     id: 60,
     buttonType: "menu",
@@ -1059,7 +1059,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["transponderOn.webp"],
     unit: "pfd",
     id: 64,
     buttonType: "display"
@@ -1073,7 +1073,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["transponderAlt.webp"],
     unit: "pfd",
     id: 65,
     buttonType: "display"
@@ -1086,7 +1086,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["transponderVfr.webp"],
     unit: "pfd",
     id: 66,
     buttonType: "display"
@@ -1107,17 +1107,16 @@ export const data = [
       "7",
       "Ident",
       "BKSP",
-
       "Back",
       "Alerts"
     ],
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["transponderCode.webp"],
     unit: "pfd",
     id: 67,
     buttonType: "menu",
-    rowType: "DynBezelRow"
+    rowType: "codeRow"
   },
   {
     buttonName: "BKSP",
@@ -1141,7 +1140,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["transponderIdent.webp"],
     unit: "pfd",
     id: 69,
     buttonType: "display"
@@ -1155,7 +1154,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["transponderIdent.webp"],
     unit: "pfd",
     id: 70,
     buttonType: "display"
