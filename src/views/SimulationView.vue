@@ -12,14 +12,16 @@
         <PfdHsiDisplay2 />
       </div>
       <div id="pfdBezelRow">
-        <component
-          :is="rowType"
-          :selectedKey="selectedKey"
-          :ancestor="ancestor"
-          :pfdData="pfdData"
-          @searchForKey="searchForKey"
-          @goBackOneLevel="goBackOneLevel"
-        />
+        <keep-alive>
+          <component
+            :is="rowType"
+            :selectedKey="selectedKey"
+            :ancestor="ancestor"
+            :pfdData="pfdData"
+            @searchForKey="searchForKey"
+            @goBackOneLevel="goBackOneLevel"
+          />
+        </keep-alive>
       </div>
 
       <div id="pfdWindData">

@@ -7,7 +7,7 @@
           :key="index"
           class="label"
           :id="button.name"
-          ref="labelLight"
+          ref="light"
         >
           <BaseButton
             @selectLocalKey="selectLocalKey"
@@ -25,6 +25,7 @@ import { toggleLights } from "../../mixins/toggleLights";
 import BaseButton from "../Buttons/BaseButton";
 export default {
   name: "XponderRow",
+  mixins: [toggleLights],
 
   components: {
     BaseButton
@@ -43,7 +44,7 @@ export default {
         { name: "On", status: false, light: true, lit: false },
         { name: "ALT", status: true, light: true, lit: true },
         { name: "", status: false, light: false },
-        { name: "VFR", status: true, light: false },
+        { name: "VFR", status: true, light: true, lit: false },
         { name: "Code", status: true, light: false },
         { name: "Ident", status: true, light: false },
         { name: "", status: false, light: false },
@@ -66,12 +67,14 @@ export default {
       let { keyResults, target, ancestor } = this.searchForLocalKey(e);
       keyResults.buttonName == "Back" || keyResults.buttonName == "Code"
         ? this.$emit("searchForKey", [target, ancestor])
-        : this.checkButton(keyResults);
+        : this.checkButton(keyResults, e);
     },
 
-    checkButton: function(payload) {
+    checkButton: function(payload, e) {
       if (payload.buttonName.includes("X")) {
         this.switchTransponder(payload);
+      } else if (payload.buttonName == "VFR") {
+        this.buttons[6].lit = !this.buttons[6].lit;
       } else {
         this.switchMode(payload);
       }
@@ -108,22 +111,6 @@ export default {
 
     displayLit: function() {}
   }
-  // toggleBezelGroup: function(e, divId, lightArray) {
-  //   let lightRow = this.$refs.light;
-  //   lightArray.forEach(light => {
-  //     lightRow[light].classList.remove("labelLightOn");
-  //   });
-  //   lightRow[divId.id].classList.add("labelLightOn");
-  //   this.searchForKey(e);
-  // },
-  // toggleBezelLight: function(e) {
-  //   let lightId = this.$refs.light[e.target.firstElementChild.id];
-  //   if (lightId.classList.length < 2) {
-  //     lightId.classList.add("labelLightOn");
-  //   } else {
-  //     lightId.classList.remove("labelLightOn");
-  //   }
-  // }
 };
 </script>
 

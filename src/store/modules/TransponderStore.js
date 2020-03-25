@@ -9,7 +9,7 @@ export default {
       { name: "On", status: false, light: true, lit: false },
       { name: "ALT", status: true, light: true, lit: true },
       { name: "", status: false, light: false },
-      { name: "VFR", status: true, light: false },
+      { name: "VFR", status: true, light: true, lit: true },
       { name: "Code", status: true, light: false },
       { name: "Ident", status: true, light: false },
       { name: "", status: false, light: false },
