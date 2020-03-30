@@ -29,7 +29,9 @@
     </div>
     <div v-if="displayDescription" class="buttonContainer">
       <button class="navButton" @click="goHome">Search Again</button>
-      <button class="navButton" @click="togglePDF">See Docs</button>
+      <button v-if="selected.ref" class="navButton" @click="togglePDF">
+        See Docs
+      </button>
     </div>
   </div>
 </template>

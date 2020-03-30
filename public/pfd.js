@@ -19,7 +19,7 @@ export const data = [
       "Alerts"
     ],
     toggle: false,
-    ref: [123, 143],
+
     unit: "pfd",
     id: 0,
     buttonType: "menu",
@@ -45,7 +45,7 @@ export const data = [
       "Alerts"
     ],
     toggle: false,
-    ref: [123, 143],
+
     unit: "pfd",
     id: 1,
     buttonType: "menu",
@@ -85,7 +85,7 @@ export const data = [
     ancestors: ["Top", "MAP/HSI", "Layout"],
     labels: null,
     toggle: false,
-    ref: [169],
+
     unit: "pfd",
     id: 3,
     buttonType: "bezelGroup",
@@ -113,7 +113,7 @@ export const data = [
     ancestors: ["Top", "MAP/HSI", "Layout"],
     labels: null,
     toggle: false,
-    ref: [169],
+
     unit: "pfd",
     id: 5,
     buttonType: "bezelGroup",
@@ -127,7 +127,7 @@ export const data = [
     ancestors: ["Top", "MAP/HSI", "Layout"],
     labels: null,
     toggle: false,
-    ref: [169],
+    ref: ["trafficData_Page_1.webp"],
     unit: "pfd",
     id: 6,
     buttonType: "bezelGroup",
@@ -141,7 +141,7 @@ export const data = [
     ancestors: ["Top", "MAP/HSI", "Layout"],
     labels: null,
     toggle: false,
-    ref: [169],
+
     unit: "pfd",
     id: 7,
     buttonType: "bezelGroup",
@@ -156,7 +156,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: ["All", "Detail 3", "Detail 2", "Detail 1"],
-    ref: [169],
+
     unit: "pfd",
     id: 8,
     buttonType: "toggle"
@@ -169,7 +169,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [169],
+    ref: ["trafficData_Page_2.webp"],
     unit: "pfd",
     id: 9,
     buttonType: "display"
@@ -182,7 +182,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: ["Off", "Topo", "REL"],
-    ref: [169],
+
     unit: "pfd",
     id: 10,
     buttonType: "display"
@@ -196,7 +196,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [170],
+
     unit: "pfd",
     id: 11,
     buttonType: "display"
@@ -209,7 +209,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [171],
+
     unit: "pfd",
     id: 12,
     buttonType: "display"
@@ -222,7 +222,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [172],
+
     unit: "pfd",
     id: 13,
     buttonType: "display"
@@ -266,7 +266,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [172],
+
     unit: "pfd",
     id: 15,
     buttonType: "bezelGroup"
@@ -279,7 +279,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [172],
+
     unit: "pfd",
     id: 16,
     buttonType: "bezelGroup"
@@ -293,7 +293,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [172],
+
     unit: "pfd",
     id: 17,
     buttonType: "bezelGroup"
@@ -307,7 +307,7 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-    ref: [172],
+
     unit: "pfd",
     id: 18,
     buttonType: "display"
@@ -333,7 +333,7 @@ export const data = [
     ],
     toggle: false,
     toggleValues: [null],
-    ref: [174],
+
     unit: "pfd",
     id: 19,
     buttonType: "menu",
@@ -361,7 +361,7 @@ export const data = [
     ],
     toggle: false,
     toggleValues: [null],
-    ref: [174],
+
     unit: "pfd",
     id: 20,
     buttonType: "menu",
@@ -376,7 +376,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [174],
+
     unit: "pfd",
     id: 21,
     buttonType: "bezelGroup"
@@ -389,7 +389,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [174],
+
     unit: "pfd",
     id: 22,
     buttonType: "bezelGroup"
@@ -402,7 +402,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [174],
+
     unit: "pfd",
     id: 23,
     buttonType: "bezelGroup"
@@ -415,7 +415,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [174],
+
     unit: "pfd",
     id: 24,
     buttonType: "display"
@@ -428,7 +428,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [174],
+
     unit: "pfd",
     id: 25,
     buttonType: "display"
@@ -441,7 +441,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [174],
+
     unit: "pfd",
     id: 26,
     buttonType: "display"
@@ -454,7 +454,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [174],
+
     unit: "pfd",
     id: 27,
     buttonType: "display"
@@ -467,7 +467,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [174],
+
     unit: "pfd",
     id: 28,
     buttonType: "display"
@@ -480,7 +480,7 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-    ref: [174],
+    ref: ["trafficData_Page_1.webp"],
     unit: "pfd",
     id: 29,
     buttonType: "display"
@@ -506,7 +506,7 @@ export const data = [
     ],
     toggle: false,
     toggleValues: [null],
-    ref: [200],
+    ref: ["bearing.webp"],
     unit: "pfd",
     id: 30,
     buttonType: "menu",
@@ -515,7 +515,7 @@ export const data = [
   {
     buttonName: "SVT",
     level: 2,
-    desc: "Displays additional SVT overlay softkeys.",
+    desc: "Displays additional SVT (synthetic vision) overlay softkeys.",
     ancestors: ["Top", "PFD Opt"],
     labels: [
       "Pathways",
@@ -548,7 +548,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 32,
     buttonType: "display"
@@ -561,7 +561,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 33,
     buttonType: "display"
@@ -574,7 +574,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 34,
     buttonType: "display"
@@ -588,7 +588,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 35,
     buttonType: "display"
@@ -643,7 +643,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 38,
     buttonType: "bezelGroup",
@@ -658,7 +658,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 39,
     buttonType: "bezelGroup",
@@ -673,7 +673,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 40,
     buttonType: "bezelGroup",
@@ -688,7 +688,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 41,
     buttonType: "bezelGroup",
@@ -703,7 +703,7 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 42,
     buttonType: "display",
@@ -719,7 +719,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["bearing.webp"],
     unit: "pfd",
     id: 43,
     buttonType: "display"
@@ -732,7 +732,7 @@ export const data = [
     labels: ["", "ADC", "", "", "AHRS", "", "", "", "", "", "Back", "Alerts"],
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 44,
     buttonType: "menu",
@@ -759,7 +759,7 @@ export const data = [
     ],
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["adc.webp"],
     unit: "pfd",
     id: 45,
     buttonType: "menu",
@@ -774,7 +774,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 46,
     buttonType: "bezelGroup"
@@ -787,7 +787,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 47,
     buttonType: "bezelGroup"
@@ -813,7 +813,7 @@ export const data = [
     ],
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["ahrs.webp"],
     unit: "pfd",
     id: 48,
     buttonType: "menu",
@@ -828,7 +828,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 49,
     buttonType: "bezelGroup"
@@ -841,7 +841,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 50,
     buttonType: "bezelGroup"
@@ -855,7 +855,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["bearing.webp"],
     unit: "pfd",
     id: 51,
     buttonType: "display"
@@ -881,7 +881,7 @@ export const data = [
     ],
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["altUnits"],
     unit: "pfd",
     id: 52,
     buttonType: "menu",
@@ -896,7 +896,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["altUnits"],
     unit: "pfd",
     id: 53,
     buttonType: "bezelGroup"
@@ -909,7 +909,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["altUnits"],
     unit: "pfd",
     id: 54,
     buttonType: "bezelGroup"
@@ -922,7 +922,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+    ref: ["altUnits"],
     unit: "pfd",
     id: 55,
     buttonType: "bezelGroup"
@@ -936,7 +936,7 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-    ref: [201],
+    ref: ["altUnits"],
     unit: "pfd",
     id: 56,
     buttonType: "display"
@@ -1018,7 +1018,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 61,
     buttonType: "bezelGroup"
@@ -1031,7 +1031,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 62,
     buttonType: "bezelGroup"
@@ -1045,7 +1045,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 63,
     buttonType: "display"
@@ -1126,7 +1126,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 68,
     buttonType: "display"
@@ -1167,7 +1167,7 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-    ref: [201],
+    ref: ["pfdTimer"],
     unit: "pfd",
     id: 71,
     buttonType: "display"
@@ -1181,7 +1181,7 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-    ref: [201],
+    ref: ["pfdAlerts.webp"],
     unit: "pfd",
     id: 72,
     buttonType: "display"
@@ -1195,7 +1195,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: [201],
+
     unit: "pfd",
     id: 73,
     buttonType: "menu",
@@ -1209,7 +1209,7 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-    ref: [169],
+    ref: ["nearest.webp"],
     unit: "pfd",
     id: 74,
     buttonType: "display"
