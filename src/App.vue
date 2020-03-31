@@ -15,6 +15,9 @@
   --lightFont: #e4e4e4;
   --labelDeselected: #8a8a8a;
   --bezelLightOff: #e9ffff;
+  --daysFont: "Days One", sans-serif;
+  --mainYellow: hsla(57, 87%, 59%, 0.9);
+  --mainFont: "Segoe UI", sans-serif;
 
   --bezelGreen: #80ff6a;
 }
