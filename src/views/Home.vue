@@ -17,7 +17,7 @@
             v-focus
             v-model="searchText"
             type="text"
-            placeholder="ex. wind, traffic,"
+            placeholder="ex. wind, traffic, AHRS"
           />
         </div>
       </div>
@@ -87,14 +87,17 @@ export default {
   computed: {
     searchResults: function() {
       const options = {
+        tokenize: true,
+        matchAllTokens: true,
+        includeScore: false,
         shouldSort: true,
-        tokenize: false,
-        matchAllTokens: false,
+        maxPatternLength: 4,
+        minMatchCharLength: 1,
         findAllMatches: false,
-
-        maxPatternLength: 20,
-        minMatchCharLength: 4,
-        keys: ["desc", "buttonName"]
+        keys: ["desc", "buttonName"],
+        location: 0,
+        threshold: 0.3,
+        distance: 3
       };
       const fuse = new Fuse(this.pfdData, options);
       return fuse.search(this.searchText);
@@ -202,7 +205,11 @@ hr {
   width: 100%;
   border-radius: 10px;
   border: 1px solid #707070;
+  &::selction {
+    border: 2px solid var(--mainYellow);
+  }
 }
+
 .resultsButtonName {
   background: url("../assets/singleLabel.svg") no-repeat;
   background-size: 80%;

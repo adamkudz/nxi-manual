@@ -658,7 +658,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-
+    ref: ["windData.webp"],
     unit: "pfd",
     id: 39,
     buttonType: "bezelGroup",
@@ -673,7 +673,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-
+    ref: ["windData.webp"],
     unit: "pfd",
     id: 40,
     buttonType: "bezelGroup",
@@ -688,7 +688,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-
+    ref: ["windData.webp"],
     unit: "pfd",
     id: 41,
     buttonType: "bezelGroup",
@@ -703,7 +703,7 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-
+    ref: ["dmeTuning.webp"],
     unit: "pfd",
     id: 42,
     buttonType: "display",

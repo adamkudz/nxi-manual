@@ -8,9 +8,9 @@
     </header>
     <div class="featureDescription">
       <DescriptionWithLabel :selected="selected" :count="count" />
-      <div class="fullPathButton">
+      <!-- <div class="fullPathButton">
         <button @click="showFullPath">SHOW FULL PATH</button>
-      </div>
+      </div> -->
     </div>
 
     <div
