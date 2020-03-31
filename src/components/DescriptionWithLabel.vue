@@ -8,9 +8,6 @@
         <p>{{ selectionArray[count].buttonName }}</p>
       </div>
       <p class="resultsDesc">{{ selected.desc }}</p>
-      <!-- 
-      <button @click="getPath" :data-pathid="results.id" class="smallButton">PATH</button>
-      <button @click="simulate" :data-pathid="results.id" class="smallButton">SIM</button>-->
     </div>
   </div>
 </template>
@@ -23,16 +20,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .resultsContainer {
-//   width: 90%;
-//   margin: 1em auto;
-//   display: grid;
-//   padding: 1em;
-//   grid-template-columns: 180px 180px 1fr;
-//   background: rgb(0, 0, 0);
-//   border: var(--darkGreen) solid 1px;
-//   border-radius: 10px;
-// }
 .resultsContainer {
   display: grid;
   grid-template-columns: 2fr 8fr;
@@ -52,6 +39,8 @@ export default {
     padding: 10px;
     text-align: center;
     color: var(--brightWhite);
+    font-weight: 700;
+    font-size: 0.85em;
   }
 }
 .resultsDesc {

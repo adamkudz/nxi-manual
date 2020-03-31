@@ -40,7 +40,6 @@ export default {
 
   methods: {
     selectLocalKey: function(e) {
-      console.log(e);
       e.target.innerText == "Back"
         ? this.searchForLocalKey(e)
         : this.checkButton(e);
@@ -53,7 +52,6 @@ export default {
     },
 
     checkButton: function(e) {
-      console.log(e.target.innerText);
       this.code.push(e.target.innerText);
     },
 

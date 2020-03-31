@@ -32,7 +32,6 @@ export default {
   methods: {
     selectCurrentKey: function(e) {
       if (this.highlighted !== e.target.id) {
-        console.log("Wrong Button");
       } else if (this.selected.buttonName == e.target.id) {
         this.$emit("selectCurrentKey", false);
       } else {

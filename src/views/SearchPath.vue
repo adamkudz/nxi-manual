@@ -75,7 +75,6 @@ export default {
       } else {
         this.displayDescription = true;
       }
-      console.log(payload);
     },
     goHome: function() {
       this.$router.push("/");

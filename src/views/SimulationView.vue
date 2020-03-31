@@ -107,7 +107,6 @@ export default {
         } else if (toggle) {
           this.toggleDisplay(keyResults, divId);
         } else if (imageClass) {
-          console.log(divId);
           this[divId] = imageClass;
         } else {
           console.log("shouldn't be anything else");
@@ -130,7 +129,6 @@ export default {
     toggleDisplay: function(keyResults, divId) {
       if (keyResults.toggle) {
         this[divId] ? (this[divId] = false) : (this[divId] = true);
-        console.log(this[divId]);
       }
     },
     goBackOneLevel: function(ancestor) {

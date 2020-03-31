@@ -774,7 +774,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-
+    ref: ["adc.webp"],
     unit: "pfd",
     id: 46,
     buttonType: "bezelGroup"
@@ -787,7 +787,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-
+    ref: ["adc.webp"],
     unit: "pfd",
     id: 47,
     buttonType: "bezelGroup"
@@ -828,7 +828,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-
+    ref: ["ahrs.webp"],
     unit: "pfd",
     id: 49,
     buttonType: "bezelGroup"
@@ -841,7 +841,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-
+    ref: ["ahrs.webp"],
     unit: "pfd",
     id: 50,
     buttonType: "bezelGroup"
@@ -1018,7 +1018,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-
+    ref: ["transponder.webp"],
     unit: "pfd",
     id: 61,
     buttonType: "bezelGroup"
@@ -1031,7 +1031,7 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-
+    ref: ["transponder.webp"],
     unit: "pfd",
     id: 62,
     buttonType: "bezelGroup"

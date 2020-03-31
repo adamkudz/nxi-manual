@@ -54,9 +54,7 @@ export default {
     ...mapState(["pfdData", "selected", "selectionArray", "highlightArray"])
   },
   methods: {
-    selectCurrentKey: function(payload) {
-      console.log(payload);
-    },
+    selectCurrentKey: function(payload) {},
     countUp: function() {
       this.count++;
     }
