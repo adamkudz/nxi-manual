@@ -17,12 +17,13 @@
   --bezelLightOff: #e9ffff;
   --daysFont: "Days One", sans-serif;
   --mainYellow: hsla(57, 87%, 59%, 0.9);
-  --mainFont: "Segoe UI", sans-serif;
+  --mainFont: "Segoe UI", "Open Sans";
+  --backupFont: "Open Sans";
 
   --bezelGreen: #80ff6a;
 }
 html {
-  font-family: "Segoe UI";
+  font-family: "Open Sans";
 
   font-size: 16px;
   word-spacing: 1px;
