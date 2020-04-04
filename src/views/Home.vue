@@ -4,10 +4,6 @@
       <h1>Not Available for use on Phones. Please use a tablet or desktop.</h1>
     </div>
     <div class="titleBox">
-      <h1 class="smallTitle">The</h1>
-      <h1 class="titleText">Automatic</h1>
-      <h1 class="titleText">Manual</h1>
-      <hr />
       <p>Garmin G1000 NXi</p>
     </div>
     <div class="searchContainer">
@@ -53,39 +49,39 @@ export default {
   data() {
     return {
       searchText: "",
-      pfdData: []
+      pfdData: [],
     };
   },
   directives: {
     focus: {
-      inserted: function(input) {
+      inserted: function (input) {
         input.focus();
-      }
-    }
+      },
+    },
   },
-  created: function() {
+  created: function () {
     this.$store.dispatch("pfdStore/setPfdData", { self: this });
     this.$store.dispatch("systemMessagesStore/setSystemMessages");
     this.$store.dispatch("CASMessageStore/setCASMessages");
   },
   methods: {
-    getPath: function(e) {
+    getPath: function (e) {
       this.$store.dispatch("pfdStore/setSelected", e.target.id);
       this.$router.push(`/SearchPath`);
     },
-    getInfo: function(e) {
+    getInfo: function (e) {
       this.$store.dispatch("pfdStore/setSelected", e.target.dataset.pathid);
       this.$router.push(`/info/${e.target.dataset.pathid}`);
     },
-    setPfdData: function() {
+    setPfdData: function () {
       this.pfdData = this.$store.getters["pfdStore/getPfdData"];
     },
-    simulate: function() {
+    simulate: function () {
       this.$router.push("/simulate");
-    }
+    },
   },
   computed: {
-    searchResults: function() {
+    searchResults: function () {
       const options = {
         tokenize: true,
         matchAllTokens: true,
@@ -97,12 +93,12 @@ export default {
         keys: ["desc", "buttonName"],
         location: 0,
         threshold: 0.3,
-        distance: 3
+        distance: 3,
       };
       const fuse = new Fuse(this.pfdData, options);
       return fuse.search(this.searchText);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -111,7 +107,8 @@ export default {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 40vh 10vh 1fr;
+  grid-template-rows: 15vh 10vh 38vh;
+
   overflow: hidden;
   position: relative;
 }
@@ -192,8 +189,9 @@ hr {
   display: grid;
   grid-auto-rows: min-content;
   gap: 0.5em;
+  overflow: scroll;
 
-  height: 100%;
+  padding: 10px;
 }
 .resultsItems {
   position: relative;

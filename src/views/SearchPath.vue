@@ -49,7 +49,7 @@ export default {
     PathBezelRow,
     DescriptionWithLabel,
     PDFComponent,
-    pfdBezelRow
+    pfdBezelRow,
   },
   data() {
     return {
@@ -58,15 +58,15 @@ export default {
       selected: this.$store.getters["pfdStore/getSelected"],
       count: 0,
       displayDescription: false,
-      showPDF: false
+      showPDF: false,
     };
   },
   mounted() {},
   methods: {
-    countUp: function() {
+    countUp: function () {
       this.count++;
     },
-    countDown: function() {
+    countDown: function () {
       this.count--;
     },
     selectCurrentKey(payload) {
@@ -76,20 +76,20 @@ export default {
         this.displayDescription = true;
       }
     },
-    goHome: function() {
+    goHome: function () {
       this.$router.push("/");
     },
-    goSimulate: function() {
+    goSimulate: function () {
       this.$router.push("/simulationview");
     },
-    showFullPath: function() {
+    showFullPath: function () {
       this.count = 5;
       this.displayDescription = true;
     },
-    togglePDF: function() {
+    togglePDF: function () {
       this.showPDF = !this.showPDF;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -123,10 +123,11 @@ header {
   width: 100%;
   display: grid;
   grid-gap: 2em;
-  padding: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   grid-auto-rows: 10vh;
 
-  max-width: 700px;
+  max-width: 750px;
 }
 .buttonContainer {
   width: 100%;

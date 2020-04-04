@@ -30,20 +30,20 @@ export default {
     return {};
   },
   methods: {
-    selectCurrentKey: function(e) {
+    selectCurrentKey: function (e) {
       if (this.highlighted !== e.target.id) {
       } else if (this.selected.buttonName == e.target.id) {
         this.$emit("selectCurrentKey", false);
       } else {
         this.$emit("selectCurrentKey", e.target.id);
       }
-    }
+    },
   },
   computed: {
-    labels: function() {
+    labels: function () {
       return this.bezelKey.labels;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -70,7 +70,7 @@ export default {
     color: var(--brightWhite);
     font-family: "Segoe UI";
     font-weight: 700;
-    font-size: 0.6em;
+    font-size: 0.7em;
     text-align: center;
   }
 }
