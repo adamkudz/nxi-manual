@@ -21,10 +21,10 @@ export default {
   components: {},
   computed: {},
   methods: {
-    togglePDF: function() {
+    togglePDF: function () {
       this.$emit("togglePDF");
-    }
-  }
+    },
+  },
 };
 </script>
 

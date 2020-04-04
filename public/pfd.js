@@ -16,14 +16,14 @@ export const data = [
       "Ident",
       "Tmr/Ref",
       "Nearest",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
 
     unit: "pfd",
     id: 0,
     buttonType: "menu",
-    rowType: "DynBezelRow"
+    rowType: "DynBezelRow",
   },
   {
     buttonName: "MAP/HSI",
@@ -42,14 +42,14 @@ export const data = [
       "Wx Radar",
       "RDR Opt",
       "Back",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
 
     unit: "pfd",
     id: 1,
     buttonType: "menu",
-    rowType: "DynBezelRow"
+    rowType: "DynBezelRow",
   },
   {
     buttonName: "Layout",
@@ -68,7 +68,7 @@ export const data = [
       "",
       "",
       "Back",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
     ref: [169],
@@ -76,7 +76,7 @@ export const data = [
     id: 2,
     lightArray: [0, 1, 2, 3, 4],
     buttonType: "menu",
-    rowType: "DynBezelRow"
+    rowType: "DynBezelRow",
   },
   {
     buttonName: "Map Off",
@@ -90,7 +90,7 @@ export const data = [
     id: 3,
     buttonType: "bezelGroup",
     divId: "pfdMapWindow",
-    imageClass: "hidden"
+    imageClass: "hidden",
   },
   {
     buttonName: "Inset Map",
@@ -104,7 +104,7 @@ export const data = [
     id: 4,
     buttonType: "bezelGroup",
     divId: "pfdMapWindow",
-    imageClass: "InsetMap"
+    imageClass: "InsetMap",
   },
   {
     buttonName: "HSI Map",
@@ -118,7 +118,7 @@ export const data = [
     id: 5,
     buttonType: "bezelGroup",
     divId: "pfdMapWindow",
-    imageClass: "hsiMap"
+    imageClass: "hsiMap",
   },
   {
     buttonName: "Inset Trfc",
@@ -127,12 +127,12 @@ export const data = [
     ancestors: ["Top", "MAP/HSI", "Layout"],
     labels: null,
     toggle: false,
-    ref: ["trafficData_Page_1.webp"],
+    ref: ["trafficData_Page_1.jpg"],
     unit: "pfd",
     id: 6,
     buttonType: "bezelGroup",
     divId: "pfdMapWindow",
-    imageClass: "insetTraffic"
+    imageClass: "insetTraffic",
   },
   {
     buttonName: "HSI Trfc",
@@ -146,7 +146,7 @@ export const data = [
     id: 7,
     buttonType: "bezelGroup",
     divId: "pfdMapWindow",
-    imageClass: "hsiTraffic"
+    imageClass: "hsiTraffic",
   },
   {
     buttonName: "Detail",
@@ -159,7 +159,7 @@ export const data = [
 
     unit: "pfd",
     id: 8,
-    buttonType: "toggle"
+    buttonType: "toggle",
   },
   {
     buttonName: "Traffic",
@@ -169,10 +169,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["trafficData_Page_2.webp"],
+    ref: ["trafficData_Page_2.jpg"],
     unit: "pfd",
     id: 9,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "TER",
@@ -185,7 +185,7 @@ export const data = [
 
     unit: "pfd",
     id: 10,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "WX LGND",
@@ -199,7 +199,7 @@ export const data = [
 
     unit: "pfd",
     id: 11,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "NEXRAD",
@@ -212,7 +212,7 @@ export const data = [
 
     unit: "pfd",
     id: 12,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "METAR",
@@ -225,7 +225,7 @@ export const data = [
 
     unit: "pfd",
     id: 13,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "Lightning",
@@ -246,16 +246,16 @@ export const data = [
       "",
 
       "Back",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
     toggleValues: [null],
-    ref: ["pfdInsetLightning.webp"],
+    ref: ["pfdInsetLightning.jpg"],
     unit: "pfd",
     id: 14,
     buttonType: "menu",
     rowType: "DynBezelRow",
-    lightArray: [0, 1, 2]
+    lightArray: [0, 1, 2],
   },
   {
     buttonName: "LTNG OFF",
@@ -269,7 +269,7 @@ export const data = [
 
     unit: "pfd",
     id: 15,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "Datalink",
@@ -282,7 +282,7 @@ export const data = [
 
     unit: "pfd",
     id: 16,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "STRMSCP",
@@ -296,7 +296,7 @@ export const data = [
 
     unit: "pfd",
     id: 17,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "Wx Radar",
@@ -310,7 +310,7 @@ export const data = [
 
     unit: "pfd",
     id: 18,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "RDR Opt",
@@ -329,7 +329,7 @@ export const data = [
       "",
       "",
       "Back",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
     toggleValues: [null],
@@ -338,7 +338,7 @@ export const data = [
     id: 19,
     buttonType: "menu",
     rowType: "DynBezelRow",
-    lightArray: ["", "", "", 3, 4, 5]
+    lightArray: ["", "", "", 3, 4, 5],
   },
   {
     buttonName: "Mode SEL",
@@ -357,7 +357,7 @@ export const data = [
       "",
       "",
       "Back",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
     toggleValues: [null],
@@ -366,7 +366,7 @@ export const data = [
     id: 20,
     buttonType: "menu",
     rowType: "DynBezelRow",
-    lightArray: [0, 1, 2]
+    lightArray: [0, 1, 2],
   },
   {
     buttonName: "Standby",
@@ -379,7 +379,7 @@ export const data = [
 
     unit: "pfd",
     id: 21,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "Weather",
@@ -392,7 +392,7 @@ export const data = [
 
     unit: "pfd",
     id: 22,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "Ground",
@@ -405,7 +405,7 @@ export const data = [
 
     unit: "pfd",
     id: 23,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "Gain -",
@@ -418,7 +418,7 @@ export const data = [
 
     unit: "pfd",
     id: 24,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "Gain +",
@@ -431,7 +431,7 @@ export const data = [
 
     unit: "pfd",
     id: 25,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "WX ALRT",
@@ -444,7 +444,7 @@ export const data = [
 
     unit: "pfd",
     id: 26,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "STAB",
@@ -457,7 +457,7 @@ export const data = [
 
     unit: "pfd",
     id: 27,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "ACT",
@@ -470,7 +470,7 @@ export const data = [
 
     unit: "pfd",
     id: 28,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "TFC Map",
@@ -480,10 +480,10 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-    ref: ["trafficData_Page_1.webp"],
+    ref: ["trafficData_Page_1.jpg"],
     unit: "pfd",
     id: 29,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "PFD Opt",
@@ -502,15 +502,15 @@ export const data = [
       "STD Baro",
       "",
       "Back",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
     toggleValues: [null],
-    ref: ["bearing.webp"],
+    ref: ["bearing.jpg"],
     unit: "pfd",
     id: 30,
     buttonType: "menu",
-    rowType: "DynBezelRow"
+    rowType: "DynBezelRow",
   },
   {
     buttonName: "SVT",
@@ -529,16 +529,16 @@ export const data = [
       "",
       "",
       "Back",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
     toggleValues: [null],
-    ref: ["svt.webp"],
+    ref: ["svt.jpg"],
     unit: "pfd",
     id: 31,
     buttonType: "menu",
     rowType: "DynBezelRow",
-    lightArray: [0, 1, 2, 3]
+    lightArray: [0, 1, 2, 3],
   },
   {
     buttonName: "Pathways",
@@ -551,7 +551,7 @@ export const data = [
 
     unit: "pfd",
     id: 32,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "Terrain",
@@ -564,7 +564,7 @@ export const data = [
 
     unit: "pfd",
     id: 33,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "HDG LBL",
@@ -577,7 +577,7 @@ export const data = [
 
     unit: "pfd",
     id: 34,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "APT Sign",
@@ -591,7 +591,7 @@ export const data = [
 
     unit: "pfd",
     id: 35,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "AOA",
@@ -602,10 +602,10 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: ["Auto", "Off"],
-    ref: ["aoa.webp"],
+    ref: ["aoa.jpg"],
     unit: "pfd",
     id: 36,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "Wind",
@@ -624,16 +624,16 @@ export const data = [
       "",
       "",
       "Back",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
     toggleValues: [null],
-    ref: ["windData.webp"],
+    ref: ["windData.jpg"],
     unit: "pfd",
     id: 37,
     buttonType: "menu",
     rowType: "DynBezelRow",
-    lightArray: [0, 1, 2, 3]
+    lightArray: [0, 1, 2, 3],
   },
   {
     buttonName: "Off",
@@ -648,7 +648,7 @@ export const data = [
     id: 38,
     buttonType: "bezelGroup",
     divId: "pfdWindData",
-    imageClass: "hidden"
+    imageClass: "hidden",
   },
   {
     buttonName: "Option 1",
@@ -658,12 +658,12 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["windData.webp"],
+    ref: ["windData.jpg"],
     unit: "pfd",
     id: 39,
     buttonType: "bezelGroup",
     divId: "pfdWindData",
-    imageClass: "option1"
+    imageClass: "option1",
   },
   {
     buttonName: "Option 2",
@@ -673,12 +673,12 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["windData.webp"],
+    ref: ["windData.jpg"],
     unit: "pfd",
     id: 40,
     buttonType: "bezelGroup",
     divId: "pfdWindData",
-    imageClass: "option2"
+    imageClass: "option2",
   },
   {
     buttonName: "Option 3",
@@ -688,12 +688,12 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["windData.webp"],
+    ref: ["windData.jpg"],
     unit: "pfd",
     id: 41,
     buttonType: "bezelGroup",
     divId: "pfdWindData",
-    imageClass: "option3"
+    imageClass: "option3",
   },
   {
     buttonName: "DME",
@@ -703,12 +703,12 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-    ref: ["dmeTuning.webp"],
+    ref: ["dmeTuning.jpg"],
     unit: "pfd",
     id: 42,
     buttonType: "display",
     divId: "dmeInfoWindow",
-    imageClass: "dmeImage"
+    imageClass: "dmeImage",
   },
   {
     buttonName: "Bearing 1",
@@ -719,10 +719,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["bearing.webp"],
+    ref: ["bearing.jpg"],
     unit: "pfd",
     id: 43,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "Sensors",
@@ -736,7 +736,7 @@ export const data = [
     unit: "pfd",
     id: 44,
     buttonType: "menu",
-    rowType: "DynBezelRow"
+    rowType: "DynBezelRow",
   },
   {
     buttonName: "ADC",
@@ -755,16 +755,16 @@ export const data = [
       "",
       "",
       "Back",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
     toggleValues: [null],
-    ref: ["adc.webp"],
+    ref: ["adc.jpg"],
     unit: "pfd",
     id: 45,
     buttonType: "menu",
     rowType: "DynBezelRow",
-    lightArray: [0, 1]
+    lightArray: [0, 1],
   },
   {
     buttonName: "ADC 1",
@@ -774,10 +774,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["adc.webp"],
+    ref: ["adc.jpg"],
     unit: "pfd",
     id: 46,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "ADC 2",
@@ -787,10 +787,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["adc.webp"],
+    ref: ["adc.jpg"],
     unit: "pfd",
     id: 47,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "AHRS",
@@ -809,16 +809,16 @@ export const data = [
       "",
       "",
       "Back",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
     toggleValues: [null],
-    ref: ["ahrs.webp"],
+    ref: ["ahrs.jpg"],
     unit: "pfd",
     id: 48,
     buttonType: "menu",
     rowType: "DynBezelRow",
-    lightArray: [0, 1]
+    lightArray: [0, 1],
   },
   {
     buttonName: "AHRS 1",
@@ -828,10 +828,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["ahrs.webp"],
+    ref: ["ahrs.jpg"],
     unit: "pfd",
     id: 49,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "AHRS 2",
@@ -841,10 +841,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["ahrs.webp"],
+    ref: ["ahrs.jpg"],
     unit: "pfd",
     id: 50,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "Bearing 2",
@@ -855,10 +855,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["bearing.webp"],
+    ref: ["bearing.jpg"],
     unit: "pfd",
     id: 51,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "ALT Units",
@@ -877,7 +877,7 @@ export const data = [
       "",
       "",
       "Back",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
     toggleValues: [null],
@@ -886,7 +886,7 @@ export const data = [
     id: 52,
     buttonType: "menu",
     rowType: "DynBezelRow",
-    lightArray: [0, 1, 2]
+    lightArray: [0, 1, 2],
   },
   {
     buttonName: "Meters",
@@ -899,7 +899,7 @@ export const data = [
     ref: ["altUnits"],
     unit: "pfd",
     id: 53,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "IN",
@@ -912,7 +912,7 @@ export const data = [
     ref: ["altUnits"],
     unit: "pfd",
     id: 54,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "HPA",
@@ -925,7 +925,7 @@ export const data = [
     ref: ["altUnits"],
     unit: "pfd",
     id: 55,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "STD Baro",
@@ -939,7 +939,7 @@ export const data = [
     ref: ["altUnits"],
     unit: "pfd",
     id: 56,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "OBS",
@@ -950,10 +950,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["obs.webp"],
+    ref: ["obs.jpg"],
     unit: "pfd",
     id: 57,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "CDI",
@@ -963,10 +963,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["cdi.webp"],
+    ref: ["cdi.jpg"],
     unit: "pfd",
     id: 58,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "DME",
@@ -977,10 +977,10 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-    ref: ["dmeTuning.webp"],
+    ref: ["dmeTuning.jpg"],
     unit: "pfd",
     id: 59,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "XPDR",
@@ -999,16 +999,16 @@ export const data = [
       "Ident",
       "",
       "Back",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
     toggleValues: [null],
-    ref: ["transponder.webp"],
+    ref: ["transponder.jpg"],
     unit: "pfd",
     id: 60,
     buttonType: "menu",
     rowType: "XponderRow",
-    lightArray: [0, 1, 2, 3, 4, 7]
+    lightArray: [0, 1, 2, 3, 4, 7],
   },
   {
     buttonName: "XPDR 1",
@@ -1018,10 +1018,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["transponder.webp"],
+    ref: ["transponder.jpg"],
     unit: "pfd",
     id: 61,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "XPDR 2",
@@ -1031,10 +1031,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["transponder.webp"],
+    ref: ["transponder.jpg"],
     unit: "pfd",
     id: 62,
-    buttonType: "bezelGroup"
+    buttonType: "bezelGroup",
   },
   {
     buttonName: "Standby",
@@ -1048,7 +1048,7 @@ export const data = [
 
     unit: "pfd",
     id: 63,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "On",
@@ -1059,10 +1059,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["transponderOn.webp"],
+    ref: ["transponderOn.jpg"],
     unit: "pfd",
     id: 64,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "ALT",
@@ -1073,10 +1073,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["transponderAlt.webp"],
+    ref: ["transponderAlt.jpg"],
     unit: "pfd",
     id: 65,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "VFR",
@@ -1086,10 +1086,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["transponderVfr.webp"],
+    ref: ["transponderVfr.jpg"],
     unit: "pfd",
     id: 66,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "Code",
@@ -1108,15 +1108,15 @@ export const data = [
       "Ident",
       "BKSP",
       "Back",
-      "Alerts"
+      "Alerts",
     ],
     toggle: false,
     toggleValues: [null],
-    ref: ["transponderCode.webp"],
+    ref: ["transponderCode.jpg"],
     unit: "pfd",
     id: 67,
     buttonType: "menu",
-    rowType: "codeRow"
+    rowType: "codeRow",
   },
   {
     buttonName: "BKSP",
@@ -1129,7 +1129,7 @@ export const data = [
 
     unit: "pfd",
     id: 68,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "Ident",
@@ -1140,10 +1140,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["transponderIdent.webp"],
+    ref: ["transponderIdent.jpg"],
     unit: "pfd",
     id: 69,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "Ident",
@@ -1154,10 +1154,10 @@ export const data = [
     labels: null,
     toggle: false,
     toggleValues: [null],
-    ref: ["transponderIdent.webp"],
+    ref: ["transponderIdent.jpg"],
     unit: "pfd",
     id: 70,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "Tmr/Ref",
@@ -1170,7 +1170,7 @@ export const data = [
     ref: ["pfdTimer"],
     unit: "pfd",
     id: 71,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "Alerts",
@@ -1181,10 +1181,10 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-    ref: ["pfdAlerts.webp"],
+    ref: ["pfdAlerts.jpg"],
     unit: "pfd",
     id: 72,
-    buttonType: "display"
+    buttonType: "display",
   },
   {
     buttonName: "Back",
@@ -1199,7 +1199,7 @@ export const data = [
     unit: "pfd",
     id: 73,
     buttonType: "menu",
-    rowType: "DynBezelRow"
+    rowType: "DynBezelRow",
   },
   {
     buttonName: "Nearest",
@@ -1209,9 +1209,9 @@ export const data = [
     labels: null,
     toggle: true,
     toggleValues: [null],
-    ref: ["nearest.webp"],
+    ref: ["nearest.jpg"],
     unit: "pfd",
     id: 74,
-    buttonType: "display"
-  }
+    buttonType: "display",
+  },
 ];
