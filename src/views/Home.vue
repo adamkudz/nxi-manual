@@ -3,6 +3,9 @@
     <div class="noPhoneMessage">
       <h1>Not Available for use on Phones. Please use a tablet or desktop.</h1>
     </div>
+    <!-- <div class="noLaptopMessage">
+      <h1>Horizontal Mode Not Currently Supported</h1>
+    </div> -->
     <div class="titleBox">
       <h1 class="smallTitle">PathFinder</h1>
       <p>Garmin G1000 NXi</p>
@@ -33,7 +36,7 @@
           <p>{{ results.buttonName }}</p>
         </div>
 
-        <p class="resultsDesc">{{ results.desc }}</p>
+        <p class="resultsDesc">{{ results.desc | limitLength }}</p>
       </div>
     </div>
   </div>
@@ -52,6 +55,15 @@ export default {
       searchText: "",
       pfdData: [],
     };
+  },
+  filters: {
+    limitLength: function (value) {
+      if (value.length > 150) {
+        return value.toString().slice(0, 150) + "...";
+      } else {
+        return value;
+      }
+    },
   },
   directives: {
     focus: {
@@ -108,7 +120,7 @@ export default {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 15vh 10vh 38vh;
+  grid-template-rows: 15vh 10vh 60vh;
 
   overflow: hidden;
   position: relative;
@@ -191,7 +203,7 @@ hr {
   display: grid;
   grid-auto-rows: min-content;
   gap: 0.5em;
-  overflow: scroll;
+  overflow: hidden;
 
   padding: 10px;
 }

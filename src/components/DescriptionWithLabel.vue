@@ -15,7 +15,7 @@
 <script>
 export default {
   name: "DescriptionWithLabel",
-  props: ["selectionArray", "count", "selected"]
+  props: ["selectionArray", "count", "selected"],
 };
 </script>
 
@@ -25,7 +25,7 @@ export default {
   grid-template-columns: 2fr 8fr;
   margin-top: 1em;
   background: #2c2a2a;
-  height: 50px;
+  height: 100%;
   width: 100%;
   border-radius: 10px;
   border: 1px solid #707070;
@@ -35,9 +35,12 @@ export default {
   background: url("../assets/singleLabel.svg") no-repeat;
   background-size: 70%;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 50px;
   p {
-    padding: 10px;
-    text-align: center;
     color: var(--brightWhite);
     font-weight: 700;
     font-size: 0.85em;
