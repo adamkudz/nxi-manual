@@ -28,18 +28,18 @@ export default {
     return {
       localKey: "",
       lightArray: "",
-      buttonType: ""
+      buttonType: "",
     };
   },
   computed: {
-    labels: function() {
+    labels: function () {
       return this.selectedKey.labels;
-    }
+    },
   },
   methods: {
-    selectLocalKey: function(e) {
+    selectLocalKey: function (e) {
       let target = e.target.id;
-      this.localKey = this.pfdData.find(data => data.buttonName == target);
+      this.localKey = this.pfdData.find((data) => data.buttonName == target);
       this.buttonType = this.localKey.buttonType;
       if (this.localKey.buttonType == "bezelGroup") {
         this.lightArray = this.selectedKey.lightArray;
@@ -54,35 +54,35 @@ export default {
       }
     },
 
-    searchForKey: function(e) {
+    searchForKey: function (e) {
       let target = e.target.id;
       let ancestor = this.ancestor;
       this.$emit("searchForKey", [target, ancestor]);
     },
 
-    placeLights: function() {
+    placeLights: function () {
       let lightRow = this.$refs.light;
       let lightArray = this.selectedKey.lightArray;
-      lightRow.forEach(row => {
+      lightRow.forEach((row) => {
         if (row.id == lightArray[row.id]) {
           lightRow[row.id].classList.add("labelLight");
         }
       });
     },
-    removeLights: function() {
+    removeLights: function () {
       let lightRow = this.$refs.light;
-      lightRow.forEach(row => {
+      lightRow.forEach((row) => {
         row.classList.remove("labelLight");
       });
-    }
+    },
   },
-  beforeUpdate: function() {
+  beforeUpdate: function () {
     this.removeLights();
     this.lightArray = [];
   },
-  updated: function() {
+  updated: function () {
     if (this.selectedKey.lightArray) this.placeLights();
-  }
+  },
 };
 </script>
 
@@ -108,7 +108,7 @@ export default {
 }
 .label {
   color: var(--brightWhite);
-  font-family: "Segoe UI";
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 0.63em;
   text-align: center;

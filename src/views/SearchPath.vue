@@ -4,13 +4,13 @@
       <PDFComponent @togglePDF="togglePDF" :selected="selected" />
     </div>
     <header>
-      <h2>Search Results</h2>
+      <h1>Pathfinder</h1>
+      <div class="fullPathButton">
+        <button class="navButton" @click="showFullPath">SHOW FULL PATH</button>
+      </div>
     </header>
     <div class="featureDescription">
       <DescriptionWithLabel :selected="selected" :count="count" />
-      <!-- <div class="fullPathButton">
-        <button @click="showFullPath">SHOW FULL PATH</button>
-      </div> -->
     </div>
 
     <div
@@ -28,10 +28,10 @@
       />
     </div>
     <div v-if="displayDescription" class="buttonContainer">
-      <button class="navButton" @click="goHome">Search Again</button>
       <button v-if="selected.ref" class="navButton" @click="togglePDF">
         See Docs
       </button>
+      <button class="navButton" @click="goHome">Search Again</button>
     </div>
   </div>
 </template>

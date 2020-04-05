@@ -17,7 +17,7 @@
   --bezelLightOff: #e9ffff;
   --daysFont: "Days One", sans-serif;
   --mainYellow: hsla(57, 87%, 59%, 0.9);
-  --mainFont: "Segoe UI", "Open Sans";
+  --mainFont: "Open Sans";
   --backupFont: "Open Sans";
 
   --bezelGreen: #80ff6a;
@@ -39,6 +39,10 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+h1 {
+  color: var(--mainYellow);
+  font-family: var(--daysFont);
 }
 .background {
   background: radial-gradient(

@@ -4,6 +4,7 @@
       <h1>Not Available for use on Phones. Please use a tablet or desktop.</h1>
     </div>
     <div class="titleBox">
+      <h1 class="smallTitle">PathFinder</h1>
       <p>Garmin G1000 NXi</p>
     </div>
     <div class="searchContainer">
@@ -13,7 +14,7 @@
             v-focus
             v-model="searchText"
             type="text"
-            placeholder="ex. wind, traffic, AHRS"
+            placeholder="Search PFD functions"
           />
         </div>
       </div>
@@ -130,6 +131,7 @@ export default {
 }
 .smallTitle {
   font-size: 49px;
+  text-align: center;
 }
 hr {
   border: 1px solid var(--lightWhite);

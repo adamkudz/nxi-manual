@@ -68,7 +68,7 @@ export default {
   padding-right: 3.5%;
   p {
     color: var(--brightWhite);
-    font-family: "Segoe UI";
+    font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-size: 0.7em;
     text-align: center;

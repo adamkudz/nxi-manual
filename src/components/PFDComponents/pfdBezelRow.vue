@@ -24,19 +24,19 @@ export default {
   },
 
   methods: {
-    selectCurrentKey: function(e) {
+    selectCurrentKey: function (e) {
       if (this.highlighted !== e.target.id) {
       } else if (this.selected.buttonName == e.target.id) {
       } else {
         this.$emit("countUp");
       }
-    }
+    },
   },
   computed: {
-    labels: function() {
+    labels: function () {
       return this.currentKey.labels;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -60,7 +60,7 @@ export default {
   padding-right: 3.5%;
   p {
     color: var(--brightWhite);
-    font-family: "Segoe UI";
+    font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-size: 0.7em;
     text-align: center;
