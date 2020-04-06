@@ -43,22 +43,22 @@ export default {
     PfdInsetMapDisplay,
 
     PfdHsiDisplay2,
-    pfdBezelRow
+    pfdBezelRow,
   },
   data() {
     return {
-      count: 0
+      count: 0,
     };
   },
   computed: {
-    ...mapState(["pfdData", "selected", "selectionArray", "highlightArray"])
+    ...mapState(["pfdData", "selected", "selectionArray", "highlightArray"]),
   },
   methods: {
-    selectCurrentKey: function(payload) {},
-    countUp: function() {
+    selectCurrentKey: function (payload) {},
+    countUp: function () {
       this.count++;
-    }
-  }
+    },
+  },
 };
 </script>
 

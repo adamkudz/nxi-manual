@@ -80,7 +80,7 @@ export default {
   methods: {
     getPath: function (e) {
       this.$store.dispatch("pfdStore/setSelected", e.target.id);
-      this.$router.push(`/SearchPath`);
+      this.$router.push(`/path2`);
     },
     getInfo: function (e) {
       this.$store.dispatch("pfdStore/setSelected", e.target.dataset.pathid);

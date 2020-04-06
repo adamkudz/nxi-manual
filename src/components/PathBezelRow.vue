@@ -48,39 +48,80 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.DYNBEZELROWCONTAINER {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.pfdBezelRow {
-  background: url("../assets/totalBezelKeys.png") no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-}
-.labelGrid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  width: 100%;
-  height: 85px;
-  padding-left: 2%;
-  padding-right: 3.5%;
-  p {
-    color: var(--brightWhite);
-    font-family: "Open Sans", sans-serif;
-    font-weight: 700;
-    font-size: 0.7em;
-    text-align: center;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .DYNBEZELROWCONTAINER {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .pfdBezelRow {
+    background: url("../assets/PFD-Bezel-Row.svg") no-repeat;
+    background-size: contain;
+
+    width: 100%;
+    height: 100%;
+  }
+  .labelGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    height: 85px;
+    padding-left: 2%;
+    padding-right: 3.5%;
+    p {
+      color: var(--brightWhite);
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+      font-size: 0.7em;
+      text-align: center;
+    }
+  }
+  .labelItems {
+    border: transparent;
+  }
+  .labelName {
+    border: transparent;
+  }
+  .highlighted {
+    border: var(--mainGreen) solid 1px;
   }
 }
-.labelItems {
-  border: transparent;
-}
-.labelName {
-  border: transparent;
-}
-.highlighted {
-  border: var(--mainGreen) solid 1px;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .DYNBEZELROWCONTAINER {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .pfdBezelRow {
+    background: url("../assets/PFD-Bezel-Row.svg") no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+  }
+  .labelGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    height: 85px;
+    padding-left: 2%;
+    padding-right: 3.5%;
+    p {
+      color: var(--brightWhite);
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+      font-size: 0.63em;
+      text-align: center;
+    }
+  }
+  .labelItems {
+    border: transparent;
+  }
+  .labelName {
+    border: transparent;
+  }
+  .highlighted {
+    border: var(--mainGreen) solid 1px;
+  }
 }
 </style>

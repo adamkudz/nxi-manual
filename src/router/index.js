@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Search from "../views/Search.vue";
 import SearchPath from "../views/SearchPath.vue";
 import Home from "../views/Home.vue";
+import Path2 from "../views/Path2.vue";
 
 import SimulationView from "../views/SimulationView.vue";
 import viewpdf from "../views/viewpdf.vue";
@@ -13,34 +14,39 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
   },
   {
     path: "/search",
     name: "Search",
-    component: Search
+    component: Search,
   },
   {
     path: "/SearchPath",
     name: "SearchPath",
-    component: SearchPath
+    component: SearchPath,
+  },
+  {
+    path: "/path2",
+    name: "Path2",
+    component: Path2,
   },
 
   {
     path: "/simulationview",
     name: "SimulationView",
-    component: SimulationView
+    component: SimulationView,
   },
   {
     path: "/viewpdf",
     name: "viewpdf",
-    component: viewpdf
-  }
+    component: viewpdf,
+  },
 ];
 
 const router = new VueRouter({
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;
