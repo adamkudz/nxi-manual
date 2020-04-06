@@ -95,55 +95,55 @@ export default {
 
 <style lang="scss" scoped>
 /* Portrait */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  .TESTCOMPONENTCONTAINER {
-    height: 100vh;
-    width: 100vw;
-    color: var(--lightWhite);
-  }
-  header {
-    text-align: center;
-    padding: 1em;
-    button {
-      margin-top: 1em;
-    }
-  }
-  .pdfContainer {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: #2c2a2a;
-    padding: 2em;
-  }
-  .featureDescription {
-    padding: 20px;
-    max-width: 700px;
-    margin: auto;
-  }
-  .bezelRows {
-    margin: auto;
-    width: 100%;
-    display: grid;
-    grid-gap: 2em;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    grid-auto-rows: 10vh;
-    // background: url("../assets/PFD-Bezel-Row.svg") no-repeat;
-    // background-size: contain;
-  }
-  .buttonContainer {
-    width: 100%;
-    display: grid;
-    grid-gap: 1.3em;
-    grid-template-rows: 1fr 1fr;
-    place-content: center;
-    padding-top: 2em;
-  }
-  .fullPathButton {
-    text-align: center;
+.TESTCOMPONENTCONTAINER {
+  height: 100vh;
+  width: 100vw;
+  color: var(--lightWhite);
+}
+header {
+  text-align: center;
+  padding: 1em;
+  button {
     margin-top: 1em;
   }
 }
+.pdfContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #2c2a2a;
+  padding: 2em;
+}
+.featureDescription {
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+.bezelRows {
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-gap: 2em;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  grid-auto-rows: 10vh;
+  max-width: 900px;
+  // background: url("../assets/PFD-Bezel-Row.svg") no-repeat;
+  // background-size: contain;
+}
+.buttonContainer {
+  width: 100%;
+  display: grid;
+  grid-gap: 1.3em;
+  grid-template-rows: 1fr 1fr;
+  place-content: center;
+  padding-top: 2em;
+}
+.fullPathButton {
+  text-align: center;
+  margin-top: 1em;
+}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
   .TESTCOMPONENTCONTAINER {
     height: 100vh;
@@ -253,6 +253,11 @@ export default {
 
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .featureDescription {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
 }
 
 /* Portrait */
@@ -265,5 +270,62 @@ export default {
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .featureDescription {
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+  .bezelRows {
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-gap: 2em;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    grid-auto-rows: 10vh;
+
+    max-width: 900px;
+  }
+}
+
+/*LAPTOPS */
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .featureDescription {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  .bezelRows {
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-gap: 2em;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    grid-auto-rows: 10vh;
+
+    max-width: 1100px;
+  }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .featureDescription {
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+  .bezelRows {
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-gap: 2em;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    grid-auto-rows: 10vh;
+
+    max-width: 900px;
+  }
 }
 </style>

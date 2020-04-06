@@ -132,7 +132,7 @@ export default {
   p {
     text-align: center;
     font-family: var(--mainFont);
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 25px;
 
     color: hsla(88, 87%, 60%, 0.9);
@@ -153,6 +153,7 @@ hr {
   height: 100%;
   width: 100%;
   place-content: center;
+  margin-top: 10px;
 }
 .buttons {
   text-align: center;
