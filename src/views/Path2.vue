@@ -159,7 +159,7 @@ export default {
     padding-top: 10px;
     grid-auto-rows: 10vh;
 
-    max-width: 700px;
+    max-width: 900px;
   }
   header {
     text-align: center;
@@ -188,5 +188,82 @@ export default {
     max-width: 700px;
     margin: auto;
   }
+}
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .TESTCOMPONENTCONTAINER {
+    height: 100vh;
+    width: 100vw;
+    color: var(--lightWhite);
+  }
+  .bezelRows {
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-gap: 2em;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    grid-auto-rows: 10vh;
+
+    max-width: 900px;
+  }
+  header {
+    text-align: center;
+
+    button {
+      margin-top: 0.5em;
+    }
+  }
+  .buttonContainer {
+    width: 100%;
+    display: grid;
+    grid-gap: 1.3em;
+    grid-template-rows: 1fr 1fr;
+    place-content: center;
+    padding-top: 1em;
+  }
+  .pdfContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #2c2a2a;
+    padding: 2em;
+  }
+  .featureDescription {
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+}
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 }
 </style>
