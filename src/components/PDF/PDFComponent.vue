@@ -1,10 +1,6 @@
 <template>
   <div class="PDFCONTAINER">
-    <img
-      :src="require(`../../assets/pdfPages/${this.selected.ref[0]}`)"
-      width="700px"
-      alt="docs"
-    />
+    <img :src="image" width="700px" alt="docs" />
     <div class="backButton">
       <button @click="togglePDF" class="navButton">CLOSE</button>
     </div>
@@ -16,7 +12,9 @@ export default {
   name: "PDFComponent",
   props: ["selected"],
   data() {
-    return {};
+    return {
+      image: `https://nxi-jpegs.s3.amazonaws.com/pfd-docs/${this.selected.ref[0]}`,
+    };
   },
   components: {},
   computed: {},

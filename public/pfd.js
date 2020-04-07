@@ -881,7 +881,7 @@ export const data = [
     ],
     toggle: false,
     toggleValues: [null],
-    ref: ["altUnits"],
+    ref: ["altUnits.jpg"],
     unit: "pfd",
     id: 52,
     buttonType: "menu",
