@@ -1,8 +1,19 @@
 <template>
   <div id="app" class="background">
+    <AppHeader />
     <router-view />
   </div>
 </template>
+
+<script>
+import AppHeader from "../src/components/Elements/AppHeader";
+export default {
+  name: "App",
+  components: {
+    AppHeader,
+  },
+};
+</script>
 
 <style lang="scss">
 :root {
@@ -50,7 +61,7 @@ h1 {
     rgba(77, 92, 128, 1) 0%,
     rgba(24, 24, 22, 1) 100%
   );
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 .navButton {

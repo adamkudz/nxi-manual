@@ -5,9 +5,6 @@
     </div>
     <header>
       <h1>Pathfinder</h1>
-      <div class="fullPathButton">
-        <button class="navButton" @click="showFullPath">SHOW FULL PATH</button>
-      </div>
     </header>
     <div class="featureDescription">
       <DescriptionWithLabel :selected="selected" :count="count" />
@@ -63,10 +60,10 @@ export default {
   },
   mounted() {},
   methods: {
-    countUp: function () {
+    countUp: function() {
       this.count++;
     },
-    countDown: function () {
+    countDown: function() {
       this.count--;
     },
     selectCurrentKey(payload) {
@@ -76,17 +73,17 @@ export default {
         this.displayDescription = true;
       }
     },
-    goHome: function () {
+    goHome: function() {
       this.$router.push("/");
     },
-    goSimulate: function () {
+    goSimulate: function() {
       this.$router.push("/simulationview");
     },
-    showFullPath: function () {
+    showFullPath: function() {
       this.count = 5;
       this.displayDescription = true;
     },
-    togglePDF: function () {
+    togglePDF: function() {
       this.showPDF = !this.showPDF;
     },
   },
@@ -102,7 +99,7 @@ export default {
 }
 header {
   text-align: center;
-  padding: 1em;
+
   button {
     margin-top: 1em;
   }

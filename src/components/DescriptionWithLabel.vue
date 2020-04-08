@@ -23,7 +23,7 @@ export default {
 .resultsContainer {
   display: grid;
   grid-template-columns: 2fr 8fr;
-  margin-top: 1em;
+
   background: #2c2a2a;
   height: 100%;
   width: 100%;

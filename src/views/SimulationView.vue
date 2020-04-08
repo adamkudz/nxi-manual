@@ -1,7 +1,7 @@
 <template>
   <div class="BEZELKEYSIMCONTAINER">
     <header>
-      <h1>Bezel Key Simulation</h1>
+      <h2>Bezel Key Simulation</h2>
     </header>
     <div class="simContainer">
       <div id="pfdMapWindow">
@@ -57,7 +57,7 @@ export default {
     DynBezelRow,
     XponderRow,
     DmeInfoWindow,
-    CodeRow
+    CodeRow,
   },
   data() {
     return {
@@ -69,7 +69,7 @@ export default {
       pfdMapWindow: "insetTraffic",
       dmeInfoWindow: true,
       rowType: "DynBezelRow",
-      transponderCode: ["1", "2", "0", "0"]
+      transponderCode: ["1", "2", "0", "0"],
     };
   },
   created: function() {
@@ -79,19 +79,19 @@ export default {
 
   computed: {
     selectedKey: function() {
-      return data.find(x => x.buttonName == this.currentKey);
+      return data.find((x) => x.buttonName == this.currentKey);
     },
     ancestor: function() {
       return this.selectedKey.ancestors[this.selectedKey.level - 1];
     },
     pfdData: function() {
       return this.$store.getters["simulationStore/getPfdData"];
-    }
+    },
   },
   methods: {
     searchForKey: async function(payload) {
       try {
-        let keyResults = await data.find(x => x.buttonName == payload[0]);
+        let keyResults = await data.find((x) => x.buttonName == payload[0]);
         let ancestor = payload[1];
         let {
           buttonType,
@@ -99,7 +99,7 @@ export default {
           divId,
           imageClass,
           rowType,
-          toggle
+          toggle,
         } = await keyResults;
 
         if (buttonType == "menu") {
@@ -136,17 +136,17 @@ export default {
     },
     countUp: function() {
       this.count++;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .BEZELKEYSIMCONTAINER {
-  height: 100%;
+  height: 85vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 30vh 3fr 1fr;
+  grid-template-rows: 15vh 1fr;
   color: var(--lightWhite);
 }
 

@@ -1,12 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Search from "../views/Search.vue";
-import SearchPath from "../views/SearchPath.vue";
-import Home from "../views/Home.vue";
-import Path2 from "../views/Path2.vue";
 
+import Home from "../views/Home.vue";
+import PathfinderView from "../views/PathfinderView";
+import Path2 from "../views/Path2.vue";
 import SimulationView from "../views/SimulationView.vue";
 import viewpdf from "../views/viewpdf.vue";
+import CasMessagesView from "../views/CasMessagesView";
 
 Vue.use(VueRouter);
 
@@ -17,15 +17,11 @@ const routes = [
     component: Home,
   },
   {
-    path: "/search",
-    name: "Search",
-    component: Search,
+    path: "/pathfinder",
+    name: "PathfinderView",
+    component: PathfinderView,
   },
-  {
-    path: "/SearchPath",
-    name: "SearchPath",
-    component: SearchPath,
-  },
+
   {
     path: "/path2",
     name: "Path2",
@@ -41,6 +37,11 @@ const routes = [
     path: "/viewpdf",
     name: "viewpdf",
     component: viewpdf,
+  },
+  {
+    path: "/casmessages",
+    name: "CasMessagesView",
+    component: CasMessagesView,
   },
 ];
 
