@@ -11,7 +11,7 @@
             v-focus
             v-model="searchText"
             type="text"
-            placeholder="Search CAS Messages"
+            placeholder="Search System Messages"
           />
         </div>
       </div>
@@ -41,14 +41,12 @@ import Fuse from "fuse.js";
 import store from "../store/store";
 
 export default {
-  name: "CasMessagesView",
+  name: "SystemMessagesView",
   components: {},
   data() {
     return {
       searchText: "",
-      cautionMessages: "",
-      warningMessages: "",
-      allMessages: ""
+      systemMessages: ""
     };
   },
 
@@ -60,13 +58,9 @@ export default {
     }
   },
   mounted: function() {
-    this.warningMessages = this.$store.getters[
-      "CASMessageStore/getWarningMessages"
+    this.systemMessages = this.$store.getters[
+      "SystemMessagesStore/getSystemMessages"
     ];
-    this.cautionMessages = this.$store.getters[
-      "CASMessageStore/getCautionMessages"
-    ];
-    this.allMessages = this.cautionMessages.concat(this.warningMessages);
   },
 
   computed: {
@@ -84,7 +78,7 @@ export default {
         threshold: 0.3,
         distance: 3
       };
-      const fuse = new Fuse(this.allMessages, options);
+      const fuse = new Fuse(this.systemMessages, options);
       return fuse.search(this.searchText);
     }
   }

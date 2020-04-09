@@ -22,7 +22,7 @@
       <div @click="gotoCasMessages" class="optionBox" id="casMessagesBox">
         <h2>CAS Messages</h2>
       </div>
-      <div @click="gotoSimulation" class="optionBox" id="systemMessagesBox">
+      <div @click="gotoSystemMessages" class="optionBox" id="systemMessagesBox">
         <h2>System Messages</h2>
       </div>
     </div>
@@ -40,13 +40,13 @@ export default {
   data() {
     return {
       searchText: "",
-      pfdData: [],
+      pfdData: []
     };
   },
 
   created: function() {
     this.$store.dispatch("pfdStore/setPfdData", { self: this });
-    this.$store.dispatch("systemMessagesStore/setSystemMessages");
+    this.$store.dispatch("SystemMessagesStore/setSystemMessages");
     this.$store.dispatch("CASMessageStore/setCASMessages");
   },
   methods: {
@@ -56,10 +56,13 @@ export default {
     gotoCasMessages: function() {
       this.$router.push(`/casmessages`);
     },
+    gotoSystemMessages: function() {
+      this.$router.push(`/systemmessages`);
+    },
     gotoSimulation: function() {
       this.$router.push(`/simulationview`);
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -6,27 +6,27 @@ export default {
     selected: "",
     ancestors: "",
     selectionArray: [],
-    highlightArray: []
+    highlightArray: [],
   },
   getters: {
-    getPfdData: state => {
+    getPfdData: (state) => {
       return state.pfdData;
     },
-    getAncestors: state => {
+    getAncestors: (state) => {
       return state.ancestors;
     },
-    getLabels: state => {
+    getLabels: (state) => {
       if (state.selected) return state.selected.labels;
     },
-    getSelected: state => {
+    getSelected: (state) => {
       return state.selected;
     },
-    getSelectionArray: state => {
+    getSelectionArray: (state) => {
       return state.selectionArray;
     },
-    getHighlightArray: state => {
+    getHighlightArray: (state) => {
       return state.highlightArray;
-    }
+    },
   },
   mutations: {
     SET_PFD_DATA: (state, payload) => {
@@ -44,18 +44,17 @@ export default {
     SET_HIGHLIGHT_ARRAY: (state, payload) => {
       state.highlightArray = payload;
     },
-    CLEAR_STORE_DATA: state => {
+    CLEAR_STORE_DATA: (state) => {
       state.pfdData = "";
       state.selected = "";
       state.ancestors = "";
       state.selectionArray = [];
-    }
+    },
   },
   actions: {
     setPfdData: async function({ commit }, { self }) {
       try {
         await commit("SET_PFD_DATA", data);
-        self.setPfdData();
       } catch (err) {
         console.log(err);
       }
@@ -63,30 +62,30 @@ export default {
 
     setSelected: async function({ commit, state }, payload) {
       try {
-        let selected = state.pfdData.find(data => data.id == payload);
-        let top = state.pfdData.find(data => data.buttonName == "Top");
+        let selected = state.pfdData.find((data) => data.id == payload);
+        let top = state.pfdData.find((data) => data.buttonName == "Top");
         let ancestors = selected.ancestors;
         const lvlArray = [];
         const highlightArray = [];
         const lvl1 = state.pfdData.find(
-          data => data.buttonName == ancestors[0]
+          (data) => data.buttonName == ancestors[0]
         );
         const lvl2 = state.pfdData.find(
-          data => data.buttonName == ancestors[1]
+          (data) => data.buttonName == ancestors[1]
         );
         const lvl3 = state.pfdData.find(
-          data => data.buttonName == ancestors[2]
+          (data) => data.buttonName == ancestors[2]
         );
         const lvl4 = state.pfdData.find(
-          data => data.buttonName == ancestors[3]
+          (data) => data.buttonName == ancestors[3]
         );
 
         lvlArray.push(lvl1, lvl2, lvl3, lvl4, selected);
-        const newArray = lvlArray.filter(x => {
+        const newArray = lvlArray.filter((x) => {
           return x !== undefined;
         });
 
-        newArray.forEach(x => {
+        newArray.forEach((x) => {
           if (x.buttonName !== "Top") {
             highlightArray.push(x.buttonName);
           }
@@ -98,6 +97,6 @@ export default {
       } catch (err) {
         console.log(err);
       }
-    }
-  }
+    },
+  },
 };

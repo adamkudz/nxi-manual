@@ -5,7 +5,11 @@ export default {
   state: {
     systemMessages: ""
   },
-  getters: {},
+  getters: {
+    getSystemMessages: function(state) {
+      return state.systemMessages;
+    }
+  },
   mutations: {
     SET_SYSTEM_MESSAGES(state, payload) {
       state.systemMessages = payload;
