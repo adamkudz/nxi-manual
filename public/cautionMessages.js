@@ -1,189 +1,224 @@
 export const cautionMessages = [
   {
     id: 0,
-    Message: "CARGO DOOR",
-    Description: "Forward cargo door open"
+    message: "CARGO DOOR",
+    description: "Forward cargo door open",
+    messageType: "caution"
   },
   {
     id: 1,
-    Message: "CHIP",
-    Description: "Oil chip detector on (if installed)"
+    message: "CHIP",
+    description: "Oil chip detector on (if installed)",
+    messageType: "caution"
   },
   {
     id: 2,
-    Message: "ESP DEGRADED -AOA",
-    Description:
-      "Electronic Stability and Protection (ESP?ll) angle of attack (AOA) mode is inoperative.  The system should be serviced"
+    message: "ESP DEGRADED -AOA",
+    description:
+      "Electronic Stability and Protection (ESP?ll) angle of attack (AOA) mode is inoperative.  The system should be serviced",
+    messageType: "caution"
   },
   {
     id: 3,
-    Message: "ESP DEGRADED - IAS",
-    Description:
-      "Electronic Stability and Protection (ESP?ll) indicated air speed (IAS) mode is inoperative.  The system should be serviced"
+    message: "ESP DEGRADED - IAS",
+    description:
+      "Electronic Stability and Protection (ESP?ll) indicated air speed (IAS) mode is inoperative.  The system should be serviced",
+    messageType: "caution"
   },
   {
     id: 4,
-    Message: "ESP FAIL",
-    Description:
-      "The ESP function has failed and is inoperative. The system should be serviced"
+    message: "ESP FAIL",
+    description:
+      "The ESP function has failed and is inoperative. The system should be serviced",
+    messageType: "caution"
   },
   {
     id: 5,
-    Message: "FUEL IMIBALANCE",
-    Description: "Fuel tanks imbalanced by more than 15 USGAL for >30 seconds"
+    message: "FUEL IMIBALANCE",
+    description: "Fuel tanks imbalanced by more than 15 USGAL for >30 seconds",
+    messageType: "caution"
   },
   {
     id: 6,
-    Message: "FUEL LOW L-R*",
-    Description:
-      "Fuel quantity less than or equal to 9.1 USGAL in specified tank"
+    message: "FUEL LOW L-R*",
+    description:
+      "Fuel quantity less than or equal to 9.1 USGAL in specified tank",
+    messageType: "caution"
   },
   {
     id: 7,
-    Message: "GAS EVENT",
-    Description: "Global Air System needs servicing"
+    message: "GAS EVENT",
+    description: "Global Air System needs servicing",
+    messageType: "caution"
   },
   {
     id: 8,
-    Message: "GAS DEGRADED",
-    Description: "Global Air System failure.  The system should be serviced."
+    message: "GAS DEGRADED",
+    description: "Global Air System failure.  The system should be serviced.",
+    messageType: "caution"
   },
   {
     id: 9,
-    Message: "GPU DOOR",
-    Description: "GPU receptacle door not closed"
+    message: "GPU DOOR",
+    description: "GPU receptacle door not closed",
+    messageType: "caution"
   },
   {
     id: 10,
-    Message: "GWX FAIL",
-    Description:
-      "The GDU is not receiving status packet from the GWX 68/GWX 70 is reporting a fault. The GWX 68/GWX 70 radar system should be serviced"
+    message: "GWX FAIL",
+    description:
+      "The GDU is not receiving status packet from the GWX 68/GWX 70 is reporting a fault. The GWX 68/GWX 70 radar system should be serviced",
+    messageType: "caution"
   },
   {
     id: 11,
-    Message: "IGNITION",
-    Description: "Ignition exciter running"
+    message: "IGNITION",
+    description: "Ignition exciter running",
+    messageType: "caution"
   },
   {
     id: 12,
-    Message: "INERT SEP FAIL",
-    Description: "Inertial separator failure"
+    message: "INERT SEP FAIL",
+    description: "Inertial separator failure",
+    messageType: "caution"
   },
   {
     id: 13,
-    Message: "LOW LVL FAIL L-R*",
-    Description: "Low fuel level sensor failure for specified tank"
+    message: "LOW LVL FAIL L-R*",
+    description: "Low fuel level sensor failure for specified tank",
+    messageType: "caution"
   },
   {
     id: 14,
-    Message: "LOW VOLTAGE",
-    Description: "Battery voltage below 26 V"
+    message: "LOW VOLTAGE",
+    description: "Battery voltage below 26 V",
+    messageType: "caution"
   },
   {
     id: 15,
-    Message: "MAIN GEN",
-    Description: "Starter generator unconnected"
+    message: "MAIN GEN",
+    description: "Starter generator unconnected",
+    messageType: "caution"
   },
   {
     id: 16,
-    Message: "NG HI",
-    Description: "Generator speed is more than 103%"
+    message: "NG HI",
+    description: "Generator speed is more than 103%",
+    messageType: "caution"
   },
   {
     id: 17,
-    Message: "OIL PRESS",
-    Description: "Oil pressure between 60 and 100 psi"
+    message: "OIL PRESS",
+    description: "Oil pressure between 60 and 100 psi",
+    messageType: "caution"
   },
   {
     id: 18,
-    Message: "OIL TEMP",
-    Description: "Oil temperature below 0�C or above 104�c"
+    message: "OIL TEMP",
+    description: "Oil temperature below 0�C or above 104�c",
+    messageType: "caution"
   },
   {
     id: 19,
-    Message: "PITOT HT ON L-R*",
-    Description: "Specified pitot heat (left or right) on while engine off"
+    message: "PITOT HT ON L-R*",
+    description: "Specified pitot heat (left or right) on while engine off",
+    messageType: "caution"
   },
   {
     id: 20,
-    Message: "PITOT NO HT L R*",
-    Description: "Specified pitot heat (left or right) off"
+    message: "PITOT NO HT L R*",
+    description: "Specified pitot heat (left or right) off",
+    messageType: "caution"
   },
   {
     id: 21,
-    Message: "PRfSSU BACKUP",
-    Description:
-      "GASC cannot compute optimal cabin altitude (cabin altitude default value is set at 9800 feet)"
+    message: "PRfSSU BACKUP",
+    description:
+      "GASC cannot compute optimal cabin altitude (cabin altitude default value is set at 9800 feet)",
+    messageType: "caution"
   },
   {
     id: 22,
-    Message: "PROP DEICE FAIL",
-    Description: "Prop deice selected and not on"
+    message: "PROP DEICE FAIL",
+    description: "Prop deice selected and not on",
+    messageType: "caution"
   },
   {
     id: 23,
-    Message: "PROP DEICE O\\J",
-    Description: "Prop deice on while engine off"
+    message: "PROP DEICE O\\J",
+    description: "Prop deice on while engine off",
+    messageType: "caution"
   },
   {
     id: 24,
-    Message: "REAR CARGO DOOR",
-    Description: "The rear cargo door is open"
+    message: "REAR CARGO DOOR",
+    description: "The rear cargo door is open",
+    messageType: "caution"
   },
   {
     id: 25,
-    Message: "STALL HEAT ON",
-    Description: "Stall heat on while engine off"
+    message: "STALL HEAT ON",
+    description: "Stall heat on while engine off",
+    messageType: "caution"
   },
   {
     id: 26,
-    Message: "STALL NO HEAT",
-    Description: "Stall warning heat off"
+    message: "STALL NO HEAT",
+    description: "Stall warning heat off",
+    messageType: "caution"
   },
   {
     id: 27,
-    Message: "fCAS  AIL",
-    Description:
-      "TCAS has failed and is inoperative.  The system should be serviced"
+    message: "TCAS FAIL",
+    description:
+      "TCAS has failed and is inoperative.  The system should be serviced",
+    messageType: "caution"
   },
   {
     id: 28,
-    Message: "TRAFFIC FAIL",
-    Description:
-      "Traffic has failed and is inoperative.  The system should be serviced"
+    message: "TRAFFIC FAIL",
+    description:
+      "Traffic has failed and is inoperative.  The system should be serviced",
+    messageType: "caution"
   },
   {
     id: 29,
-    Message: "VACUUM LOW",
-    Description: "Vacuum pressure less than 3.75 in Hg"
+    message: "VACUUM LOW",
+    description: "Vacuum pressure less than 3.75 in Hg",
+    messageType: "caution"
   },
   {
     id: 30,
-    Message: "USE OXYGEN MASK",
-    Description: "Cabin altitude high"
+    message: "USE OXYGEN MASK",
+    description: "Cabin altitude high",
+    messageType: "caution"
   },
   {
     id: 31,
-    Message: "XPDR1 ADS- B FAIL",
-    Description:
-      "ADS-B of XPDR1 is inoperative. The transponder may not be receiving a valid GPS position. Other transponder functions may be available. Service when possible."
+    message: "XPDR1 ADS- B FAIL",
+    description:
+      "ADS-B of XPDR1 is inoperative. The transponder may not be receiving a valid GPS position. Other transponder functions may be available. Service when possible.",
+    messageType: "caution"
   },
   {
     id: 32,
-    Message: "XPDR1 FAIL",
-    Description:
-      "XPDR1 has failed and is inoperative. The system should be serviced"
+    message: "XPDR1 FAIL",
+    description:
+      "XPDR1 has failed and is inoperative. The system should be serviced",
+    messageType: "caution"
   },
   {
     id: 33,
-    Message: "XPDR2 ADS-B FAIL",
-    Description:
-      "ADS-B of XPDR2 is inoperative. The transponder may not be receiving a valid GPS position. Other transponder functions may be available. Service when possible."
+    message: "XPDR2 ADS-B FAIL",
+    description:
+      "ADS-B of XPDR2 is inoperative. The transponder may not be receiving a valid GPS position. Other transponder functions may be available. Service when possible.",
+    messageType: "caution"
   },
   {
     id: 34,
-    Message: "XPDR2 FAIL",
-    Description:
-      "XPDR2 has failed and is inoperative. The system should be serviced"
+    message: "XPDR2 FAIL",
+    description:
+      "XPDR2 has failed and is inoperative. The system should be serviced",
+    messageType: "caution"
   }
 ];

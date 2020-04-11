@@ -48,7 +48,7 @@ export default {
   data() {
     return {
       searchText: "",
-      pfdData: [],
+      pfdData: ""
     };
   },
   filters: {
@@ -58,19 +58,17 @@ export default {
       } else {
         return value;
       }
-    },
+    }
   },
   directives: {
     focus: {
       inserted: function(input) {
         input.focus();
-      },
-    },
+      }
+    }
   },
   created: function() {
-    this.$store.dispatch("pfdStore/setPfdData", { self: this });
-    this.$store.dispatch("systemMessagesStore/setSystemMessages");
-    this.$store.dispatch("CASMessageStore/setCASMessages");
+    this.pfdData = this.$store.getters["pfdStore/getPfdData"];
   },
   methods: {
     getPath: function(e) {
@@ -86,7 +84,7 @@ export default {
     },
     simulate: function() {
       this.$router.push("/simulate");
-    },
+    }
   },
   computed: {
     searchResults: function() {
@@ -101,12 +99,12 @@ export default {
         keys: ["desc", "buttonName"],
         location: 0,
         threshold: 0.3,
-        distance: 3,
+        distance: 3
       };
       const fuse = new Fuse(this.pfdData, options);
       return fuse.search(this.searchText);
-    },
-  },
+    }
+  }
 };
 </script>
 

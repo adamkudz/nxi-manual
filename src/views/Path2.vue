@@ -40,13 +40,13 @@ import DescriptionWithLabel from "../components/DescriptionWithLabel";
 import PDFComponent from "../components/PDF/PDFComponent";
 
 export default {
-  name: "SearchPath",
+  name: "Path2",
 
   components: {
     PathBezelRow,
     DescriptionWithLabel,
     PDFComponent,
-    pfdBezelRow,
+    pfdBezelRow
   },
   data() {
     return {
@@ -55,7 +55,7 @@ export default {
       selected: this.$store.getters["pfdStore/getSelected"],
       count: 0,
       displayDescription: false,
-      showPDF: false,
+      showPDF: false
     };
   },
   mounted() {},
@@ -85,8 +85,8 @@ export default {
     },
     togglePDF: function() {
       this.showPDF = !this.showPDF;
-    },
-  },
+    }
+  }
 };
 </script>
 

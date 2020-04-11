@@ -30,20 +30,20 @@ export default {
     return {};
   },
   methods: {
-    selectCurrentKey: function (e) {
+    selectCurrentKey: function(e) {
       if (this.highlighted !== e.target.id) {
       } else if (this.selected.buttonName == e.target.id) {
         this.$emit("selectCurrentKey", false);
       } else {
         this.$emit("selectCurrentKey", e.target.id);
       }
-    },
+    }
   },
   computed: {
-    labels: function () {
+    labels: function() {
       return this.bezelKey.labels;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -52,6 +52,7 @@ export default {
   width: 100%;
   height: 100%;
   position: relative;
+  z-index: 2;
 }
 .pfdBezelRow {
   background: url("../assets/PFD-Bezel-Row.svg") no-repeat;

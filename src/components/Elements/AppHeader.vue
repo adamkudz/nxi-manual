@@ -1,6 +1,6 @@
 <template>
   <div class="titleBox">
-    <h1 class="smallTitle">Avionics Companion</h1>
+    <h1 class="mainTitle">Avionics Companion</h1>
     <p>Garmin G1000 NXi</p>
     <br />
     <hr />
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "AppHeader",
+  name: "AppHeader"
 };
 </script>
 
@@ -17,27 +17,34 @@ export default {
 .titleBox {
   font-family: var(--daysFont);
   color: var(--mainYellow);
-  padding: 3%;
-  margin: auto;
-  width: 85%;
+  text-align: center;
+  padding: 4%;
+  height: 17vh;
+
   p {
-    text-align: center;
     font-family: var(--mainFont);
-    margin-top: 10px;
-    font-size: 25px;
+    font-weight: 400;
+
+    font-size: 1.625em;
+    line-height: 1.4;
     font-style: italic;
 
     color: var(--lightFont);
+    padding: 0.3em;
   }
   hr {
     color: var(--mainYellow);
+    width: 70%;
+    margin: auto;
   }
 }
-.titleText {
-  font-size: 49px;
+.mainTitle {
+  font-size: 3em;
+  line-height: 1.3;
+  letter-spacing: -1.03px;
 }
 .smallTitle {
-  font-size: 29px;
+  font-size: 60px;
   text-align: center;
 }
 </style>

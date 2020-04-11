@@ -3,7 +3,8 @@
     <div class="noPhoneMessage">
       <h1>Not Available for use on Phones. Please use a tablet or desktop.</h1>
     </div>
-
+    <PageTitle :title="title" />
+    <MasterWarningAndCaution />
     <div class="searchContainer">
       <div class="searchBox">
         <div class="searchItems">
@@ -16,7 +17,16 @@
         </div>
       </div>
     </div>
-
+    <div v-if="showWarnings">
+      <div v-for="(warnings, index) in warningMessages" :key="index">
+        <CasWarningList class="warningList" :warnings="warnings" />
+      </div>
+    </div>
+    <div v-if="showCautions">
+      <div v-for="(cautions, index) in cautionMessages" :key="index">
+        <CasCautionList class="warningList" :cautions="cautions" />
+      </div>
+    </div>
     <div v-if="searchText" class="resultsContainer">
       <div
         :id="searchResults.id"
@@ -24,14 +34,7 @@
         v-for="(results, index) in searchResults"
         :key="index"
         ref="list"
-      >
-        <div class="bezelRowCover" :id="index"></div>
-        <div class="resultsButtonName">
-          <p>{{ results.message }}</p>
-        </div>
-
-        <p class="resultsDesc">{{ results.description }}</p>
-      </div>
+      ></div>
     </div>
   </div>
 </template>
@@ -39,16 +42,28 @@
 <script>
 import Fuse from "fuse.js";
 import store from "../store/store";
+import MasterWarningAndCaution from "../components/Elements/MasterWarningAndCaution";
+import PageTitle from "../components/Elements/PageTitle";
+import CasWarningList from "../components/Lists/CasWarningList";
+import CasCautionList from "../components/Lists/CasCautionList";
 
 export default {
   name: "CasMessagesView",
-  components: {},
+  components: {
+    MasterWarningAndCaution,
+    PageTitle,
+    CasWarningList,
+    CasCautionList
+  },
   data() {
     return {
+      title: "CAS Messages",
       searchText: "",
       cautionMessages: "",
       warningMessages: "",
-      allMessages: ""
+      allMessages: "",
+      showWarnings: false,
+      showCautions: true
     };
   },
 
@@ -93,10 +108,10 @@ export default {
 
 <style lang="scss" scoped>
 .CASMESSAGESCONTAINER {
-  height: 100vh;
+  height: 85vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 15vh 60vh;
+  grid-template-rows: min-content 10vh 10vh 1fr;
 
   overflow: hidden;
   position: relative;
@@ -123,6 +138,12 @@ export default {
 }
 hr {
   border: 1px solid var(--lightWhite);
+}
+
+.warningList {
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 0.5em;
 }
 
 .searchContainer {

@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="background">
+    <div class="pageOutline"></div>
     <AppHeader />
     <router-view />
   </div>
@@ -10,8 +11,8 @@ import AppHeader from "../src/components/Elements/AppHeader";
 export default {
   name: "App",
   components: {
-    AppHeader,
-  },
+    AppHeader
+  }
 };
 </script>
 
@@ -27,9 +28,10 @@ export default {
   --labelDeselected: #8a8a8a;
   --bezelLightOff: #e9ffff;
   --daysFont: "Days One", sans-serif;
-  --mainYellow: hsla(57, 87%, 59%, 0.9);
+  --mainYellow: hsla(57, 87%, 59%, 0.808);
   --mainFont: "Open Sans";
   --backupFont: "Open Sans";
+  --cautionText: #f6e700;
 
   --bezelGreen: #80ff6a;
 }
@@ -63,6 +65,7 @@ h1 {
   );
   height: 100%;
   width: 100vw;
+  position: relative;
 }
 .navButton {
   width: 200px;
@@ -103,5 +106,16 @@ h1 {
   top: 0;
   left: 0;
   z-index: 5;
+}
+.pageOutline {
+  height: 97%;
+  width: 97%;
+  border: solid var(--mainYellow) 2px;
+  border-radius: 10px;
+  background: transparent;
+  position: absolute;
+  margin-left: 1.5%;
+  margin-top: 1.5%;
+  z-index: -1;
 }
 </style>
