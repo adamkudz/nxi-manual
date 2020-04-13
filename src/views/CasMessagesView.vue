@@ -4,7 +4,10 @@
       <h1>Not Available for use on Phones. Please use a tablet or desktop.</h1>
     </div>
     <PageTitle :title="title" />
-    <MasterWarningAndCaution />
+    <MasterWarningAndCaution
+      @toggleWarning="toggleWarning"
+      @toggleCaution="toggleCaution"
+    />
     <div class="searchContainer">
       <div class="searchBox">
         <div class="searchItems">
@@ -17,12 +20,12 @@
         </div>
       </div>
     </div>
-    <div v-if="showWarnings">
+    <div v-if="!searchText && showWarnings">
       <div v-for="(warnings, index) in warningMessages" :key="index">
         <CasWarningList class="warningList" :warnings="warnings" />
       </div>
     </div>
-    <div v-if="showCautions">
+    <div v-if="!searchText && showCautions">
       <div v-for="(cautions, index) in cautionMessages" :key="index">
         <CasCautionList class="warningList" :cautions="cautions" />
       </div>
@@ -30,11 +33,13 @@
     <div v-if="searchText" class="resultsContainer">
       <div
         :id="searchResults.id"
-        class="resultsItems"
+        class="warningList"
         v-for="(results, index) in searchResults"
         :key="index"
         ref="list"
-      ></div>
+      >
+        <BaseCasList :results="results" />
+      </div>
     </div>
   </div>
 </template>
@@ -46,6 +51,7 @@ import MasterWarningAndCaution from "../components/Elements/MasterWarningAndCaut
 import PageTitle from "../components/Elements/PageTitle";
 import CasWarningList from "../components/Lists/CasWarningList";
 import CasCautionList from "../components/Lists/CasCautionList";
+import BaseCasList from "../components/Lists/BaseCasList";
 
 export default {
   name: "CasMessagesView",
@@ -53,7 +59,8 @@ export default {
     MasterWarningAndCaution,
     PageTitle,
     CasWarningList,
-    CasCautionList
+    CasCautionList,
+    BaseCasList
   },
   data() {
     return {
@@ -65,6 +72,16 @@ export default {
       showWarnings: false,
       showCautions: true
     };
+  },
+  methods: {
+    toggleWarning: function() {
+      this.showWarnings = true;
+      this.showCautions = false;
+    },
+    toggleCaution: function() {
+      this.showWarnings = false;
+      this.showCautions = true;
+    }
   },
 
   directives: {

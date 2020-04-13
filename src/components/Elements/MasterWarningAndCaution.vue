@@ -1,11 +1,11 @@
 <template>
   <div class="MASTERWARNINGANDCAUTIONCONTAINER">
     <div class="masterBox">
-      <div class="casButton" id="warning">
+      <div @click="$emit('toggleWarning', true)" class="casButton" id="warning">
         <p>MASTER</p>
         <p>WARNINGS</p>
       </div>
-      <div class="casButton" id="caution">
+      <div @click="$emit('toggleCaution', true)" class="casButton" id="caution">
         <p>MASTER</p>
         <p>CAUTIONS</p>
       </div>
