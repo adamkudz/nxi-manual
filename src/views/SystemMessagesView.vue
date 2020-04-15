@@ -3,7 +3,7 @@
     <div class="noPhoneMessage">
       <h1>Not Available for use on Phones. Please use a tablet or desktop.</h1>
     </div>
-
+    <PageTitle :title="title" />
     <div class="searchContainer">
       <div class="searchBox">
         <div class="searchItems">
@@ -39,14 +39,18 @@
 <script>
 import Fuse from "fuse.js";
 import store from "../store/store";
+import PageTitle from "../components/Elements/PageTitle";
 
 export default {
   name: "SystemMessagesView",
-  components: {},
+  components: {
+    PageTitle,
+  },
   data() {
     return {
+      title: "System Messages",
       searchText: "",
-      systemMessages: ""
+      systemMessages: "",
     };
   },
 
@@ -54,8 +58,8 @@ export default {
     focus: {
       inserted: function(input) {
         input.focus();
-      }
-    }
+      },
+    },
   },
   mounted: function() {
     this.systemMessages = this.$store.getters[
@@ -76,12 +80,12 @@ export default {
         keys: ["message"],
         location: 0,
         threshold: 0.3,
-        distance: 3
+        distance: 3,
       };
       const fuse = new Fuse(this.systemMessages, options);
       return fuse.search(this.searchText);
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="CAUTIONCONTAINER">
+  <div class="BASECASCONTAINER">
     <div class="cautionBox">
       <div :class="messageType">
         <p>{{ results.message }}</p>
@@ -13,18 +13,18 @@
 
 <script>
 export default {
-  name: "CasCautionList",
+  name: "BaseCasList",
   props: ["results"],
   computed: {
     messageType: function() {
       return this.results.messageType + "Name";
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.CAUTIONCONTAINER {
+.BASECASCONTAINER {
   width: 100%;
   height: 4em;
   background: transparent

@@ -1,11 +1,11 @@
 <template>
-  <div class="HOMECONTAINER">
+  <div class="PATHFINDERCONTAINER">
     <div class="noPhoneMessage">
       <h1>Not Available for use on Phones. Please use a tablet or desktop.</h1>
     </div>
 
     <div class="searchContainer">
-      <h2>Pathfinder</h2>
+      <PageTitle :title="title" />
       <div class="searchBox">
         <div class="searchItems">
           <input
@@ -41,14 +41,18 @@
 // import pfdData from "../static/javascript/pfd";
 import Fuse from "fuse.js";
 import store from "../store/store";
+import PageTitle from "../components/Elements/PageTitle";
 
 export default {
   name: "PathfinderView",
-  components: {},
+  components: {
+    PageTitle,
+  },
   data() {
     return {
+      title: "PathFinder",
       searchText: "",
-      pfdData: ""
+      pfdData: "",
     };
   },
   filters: {
@@ -58,14 +62,14 @@ export default {
       } else {
         return value;
       }
-    }
+    },
   },
   directives: {
     focus: {
       inserted: function(input) {
         input.focus();
-      }
-    }
+      },
+    },
   },
   created: function() {
     this.pfdData = this.$store.getters["pfdStore/getPfdData"];
@@ -84,7 +88,7 @@ export default {
     },
     simulate: function() {
       this.$router.push("/simulate");
-    }
+    },
   },
   computed: {
     searchResults: function() {
@@ -99,23 +103,24 @@ export default {
         keys: ["desc", "buttonName"],
         location: 0,
         threshold: 0.3,
-        distance: 3
+        distance: 3,
       };
       const fuse = new Fuse(this.pfdData, options);
       return fuse.search(this.searchText);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.HOMECONTAINER {
+.PATHFINDERCONTAINER {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 15vh 60vh;
+  grid-template-rows: 15vh 1fr;
 
-  overflow: hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
   position: relative;
 }
 .titleBox {

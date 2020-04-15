@@ -1,11 +1,21 @@
 <template>
   <div class="MASTERWARNINGANDCAUTIONCONTAINER">
     <div class="masterBox">
-      <div @click="$emit('toggleWarning', true)" class="casButton" id="warning">
+      <div
+        @click="toggleWarning"
+        :class="warningClass"
+        class="casButton"
+        id="warning"
+      >
         <p>MASTER</p>
         <p>WARNINGS</p>
       </div>
-      <div @click="$emit('toggleCaution', true)" class="casButton" id="caution">
+      <div
+        @click="toggleCaution"
+        :class="cautionClass"
+        class="casButton"
+        id="caution"
+      >
         <p>MASTER</p>
         <p>CAUTIONS</p>
       </div>
@@ -15,7 +25,25 @@
 
 <script>
 export default {
-  name: "MasterWarningAndCaution"
+  name: "MasterWarningAndCaution",
+  data() {
+    return {
+      warningClass: "dark",
+      cautionClass: ""
+    };
+  },
+  methods: {
+    toggleWarning: function(e) {
+      this.$emit("toggleWarning");
+      this.warningClass = "";
+      this.cautionClass = "dark";
+    },
+    toggleCaution: function(e) {
+      this.$emit("toggleCaution");
+      this.cautionClass = "";
+      this.warningClass = "dark";
+    }
+  }
 };
 </script>
 
@@ -48,5 +76,8 @@ export default {
 }
 #caution {
   background: #d1c200;
+}
+.dark {
+  opacity: 0.6;
 }
 </style>

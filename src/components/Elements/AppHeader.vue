@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "AppHeader"
+  name: "AppHeader",
 };
 </script>
 
@@ -20,6 +20,7 @@ export default {
   text-align: center;
   padding: 4%;
   height: 17vh;
+  max-width: var(--maxWidth);
 
   p {
     font-family: var(--mainFont);

@@ -12,6 +12,7 @@
       <br />
       <hr />
     </div> -->
+    <AppHeader />
     <div class="messageBox">
       <p>Please choose an option</p>
     </div>
@@ -33,14 +34,17 @@
 // import pfdData from "../static/javascript/pfd";
 import Fuse from "fuse.js";
 import store from "../store/store";
+import AppHeader from "../components/Elements/AppHeader";
 
 export default {
   name: "Home",
-  components: {},
+  components: {
+    AppHeader,
+  },
   data() {
     return {
       searchText: "",
-      pfdData: []
+      pfdData: [],
     };
   },
 
@@ -61,8 +65,8 @@ export default {
     },
     gotoSimulation: function() {
       this.$router.push(`/simulationview`);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -70,8 +74,9 @@ export default {
 .HOMECONTAINER {
   height: 100vh;
   width: 100vw;
+  max-width: var(--maxWidth);
   display: grid;
-  grid-template-rows: 10vh 40vh;
+  grid-template-rows: 20vh 15vh 40vh;
 
   overflow: hidden;
   position: relative;
@@ -86,6 +91,7 @@ export default {
 .OPTIONSCONTAINER {
   display: grid;
   width: 90%;
+
   margin-left: 5%;
   grid-template-columns: repeat(3, 1fr);
 }

@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="background">
     <div class="pageOutline"></div>
-    <AppHeader />
+
     <router-view />
   </div>
 </template>
@@ -11,8 +11,8 @@ import AppHeader from "../src/components/Elements/AppHeader";
 export default {
   name: "App",
   components: {
-    AppHeader
-  }
+    AppHeader,
+  },
 };
 </script>
 
@@ -32,6 +32,7 @@ export default {
   --mainFont: "Open Sans";
   --backupFont: "Open Sans";
   --cautionText: #f6e700;
+  --maxWidth: 1000px;
 
   --bezelGreen: #80ff6a;
 }
@@ -45,6 +46,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -63,9 +65,13 @@ h1 {
     rgba(77, 92, 128, 1) 0%,
     rgba(24, 24, 22, 1) 100%
   );
-  height: 100%;
   width: 100vw;
+  height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .navButton {
   width: 200px;

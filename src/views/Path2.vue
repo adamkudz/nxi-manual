@@ -4,7 +4,7 @@
       <PDFComponent @togglePDF="togglePDF" :selected="selected" />
     </div>
     <header>
-      <h1>Pathfinder</h1>
+      <PageTitle :title="title" />
     </header>
     <div class="featureDescription">
       <DescriptionWithLabel :selected="selected" :count="count" />
@@ -28,7 +28,7 @@
       <button v-if="selected.ref" class="navButton" @click="togglePDF">
         See Docs
       </button>
-      <button class="navButton" @click="goHome">Search Again</button>
+      <button class="navButton" @click="searchAgain">Search Again</button>
     </div>
   </div>
 </template>
@@ -38,6 +38,7 @@ import PathBezelRow from "../components/PathBezelRow.vue";
 import pfdBezelRow from "../components/PFDComponents/pfdBezelRow.vue";
 import DescriptionWithLabel from "../components/DescriptionWithLabel";
 import PDFComponent from "../components/PDF/PDFComponent";
+import PageTitle from "../components/Elements/PageTitle";
 
 export default {
   name: "Path2",
@@ -46,16 +47,18 @@ export default {
     PathBezelRow,
     DescriptionWithLabel,
     PDFComponent,
-    pfdBezelRow
+    pfdBezelRow,
+    PageTitle,
   },
   data() {
     return {
+      title: "PathFinder",
       selectionArray: this.$store.getters["pfdStore/getSelectionArray"],
       highlightArray: this.$store.getters["pfdStore/getHighlightArray"],
       selected: this.$store.getters["pfdStore/getSelected"],
       count: 0,
       displayDescription: false,
-      showPDF: false
+      showPDF: false,
     };
   },
   mounted() {},
@@ -73,8 +76,8 @@ export default {
         this.displayDescription = true;
       }
     },
-    goHome: function() {
-      this.$router.push("/");
+    searchAgain: function() {
+      this.$router.push("/pathfinder");
     },
     goSimulate: function() {
       this.$router.push("/simulationview");
@@ -85,8 +88,8 @@ export default {
     },
     togglePDF: function() {
       this.showPDF = !this.showPDF;
-    }
-  }
+    },
+  },
 };
 </script>
 

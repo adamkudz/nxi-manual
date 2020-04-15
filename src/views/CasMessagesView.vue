@@ -20,14 +20,14 @@
         </div>
       </div>
     </div>
-    <div v-if="!searchText && showWarnings">
+    <div v-if="!searchText && showWarnings" class="messageList">
       <div v-for="(warnings, index) in warningMessages" :key="index">
-        <CasWarningList class="warningList" :warnings="warnings" />
+        <BaseCasList class="warningList" :results="warnings" />
       </div>
     </div>
-    <div v-if="!searchText && showCautions">
+    <div v-if="!searchText && showCautions" class="messageList">
       <div v-for="(cautions, index) in cautionMessages" :key="index">
-        <CasCautionList class="warningList" :cautions="cautions" />
+        <BaseCasList class="warningList" :results="cautions" />
       </div>
     </div>
     <div v-if="searchText" class="resultsContainer">
@@ -49,8 +49,7 @@ import Fuse from "fuse.js";
 import store from "../store/store";
 import MasterWarningAndCaution from "../components/Elements/MasterWarningAndCaution";
 import PageTitle from "../components/Elements/PageTitle";
-import CasWarningList from "../components/Lists/CasWarningList";
-import CasCautionList from "../components/Lists/CasCautionList";
+
 import BaseCasList from "../components/Lists/BaseCasList";
 
 export default {
@@ -58,9 +57,8 @@ export default {
   components: {
     MasterWarningAndCaution,
     PageTitle,
-    CasWarningList,
-    CasCautionList,
-    BaseCasList
+
+    BaseCasList,
   },
   data() {
     return {
@@ -70,7 +68,7 @@ export default {
       warningMessages: "",
       allMessages: "",
       showWarnings: false,
-      showCautions: true
+      showCautions: true,
     };
   },
   methods: {
@@ -81,15 +79,15 @@ export default {
     toggleCaution: function() {
       this.showWarnings = false;
       this.showCautions = true;
-    }
+    },
   },
 
   directives: {
     focus: {
       inserted: function(input) {
         input.focus();
-      }
-    }
+      },
+    },
   },
   mounted: function() {
     this.warningMessages = this.$store.getters[
@@ -114,23 +112,25 @@ export default {
         keys: ["message"],
         location: 0,
         threshold: 0.3,
-        distance: 3
+        distance: 3,
       };
       const fuse = new Fuse(this.allMessages, options);
       return fuse.search(this.searchText);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .CASMESSAGESCONTAINER {
-  height: 85vh;
+  height: 100vh;
   width: 100vw;
+  max-width: 1000px;
   display: grid;
-  grid-template-rows: min-content 10vh 10vh 1fr;
+  grid-template-rows: min-content 10vh 10vh 15fr 1fr;
 
-  overflow: hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
   position: relative;
 }
 .titleBox {
@@ -155,6 +155,10 @@ export default {
 }
 hr {
   border: 1px solid var(--lightWhite);
+}
+.messageList {
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .warningList {
@@ -211,72 +215,7 @@ hr {
     color: white;
   }
 }
-.resultsContainer {
-  width: 90%;
-  margin: 1em auto;
-  max-width: 864px;
-  display: grid;
-  grid-auto-rows: min-content;
-  gap: 0.5em;
-  overflow: hidden;
 
-  padding: 10px;
-}
-.resultsItems {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.7fr 8fr;
-
-  background: #2c2a2a;
-  height: 50px;
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid #707070;
-  &::selction {
-    border: 2px solid var(--mainYellow);
-  }
-}
-
-.resultsButtonName {
-  background: url("../assets/singleLabel.svg") no-repeat;
-  background-size: 80%;
-  background-position: center;
-  p {
-    padding: 10px;
-    text-align: center;
-    color: var(--brightWhite);
-    font-size: 0.9em;
-    font-weight: 700;
-  }
-}
-.resultsDesc {
-  align-self: center;
-  justify-self: center;
-  font-size: 0.85em;
-  color: var(--lightWhite);
-}
-.smallButton {
-  padding: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(52, 59, 65, 1) 0%,
-    rgba(13, 14, 15, 1) 23%
-  );
-  width: 48px;
-  height: 28px;
-  text-decoration: none;
-  border: #4d4b4b solid 0.5px;
-  border-radius: 3px;
-  margin: auto;
-  color: var(--lightWhite);
-  font-size: 0.6em;
-  font-weight: bold;
-  box-shadow: 0px 1px 2px rgba(01, 01, 01, 1);
-
-  text-align: center;
-  padding: 0.8em;
-  color: rgb(179, 179, 179);
-}
 .noPhoneMessage {
   height: 100vh;
   width: 100vw;
