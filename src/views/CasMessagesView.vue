@@ -3,6 +3,9 @@
     <div class="noPhoneMessage">
       <h1>Not Available for use on Phones. Please use a tablet or desktop.</h1>
     </div>
+    <div class="topMenu">
+      <TopMenu />
+    </div>
     <PageTitle :title="title" />
     <MasterWarningAndCaution
       @toggleWarning="toggleWarning"
@@ -12,7 +15,6 @@
       <div class="searchBox">
         <div class="searchItems">
           <input
-            v-focus
             v-model="searchText"
             type="text"
             placeholder="Search CAS Messages"
@@ -22,12 +24,12 @@
     </div>
     <div v-if="!searchText && showWarnings" class="messageList">
       <div v-for="(warnings, index) in warningMessages" :key="index">
-        <BaseCasList class="warningList" :results="warnings" />
+        <BaseCasItem class="warningList" :results="warnings" />
       </div>
     </div>
     <div v-if="!searchText && showCautions" class="messageList">
       <div v-for="(cautions, index) in cautionMessages" :key="index">
-        <BaseCasList class="warningList" :results="cautions" />
+        <BaseCasItem class="warningList" :results="cautions" />
       </div>
     </div>
     <div v-if="searchText" class="resultsContainer">
@@ -38,7 +40,7 @@
         :key="index"
         ref="list"
       >
-        <BaseCasList :results="results" />
+        <BaseCasItem :results="results" />
       </div>
     </div>
   </div>
@@ -49,16 +51,17 @@ import Fuse from "fuse.js";
 import store from "../store/store";
 import MasterWarningAndCaution from "../components/Elements/MasterWarningAndCaution";
 import PageTitle from "../components/Elements/PageTitle";
-
-import BaseCasList from "../components/Lists/BaseCasList";
+import TopMenu from "../components/Elements/TopMenu";
+import BaseCasItem from "../components/Lists/BaseCasItem";
 
 export default {
   name: "CasMessagesView",
+
   components: {
     MasterWarningAndCaution,
     PageTitle,
-
-    BaseCasList,
+    TopMenu,
+    BaseCasItem,
   },
   data() {
     return {
@@ -82,13 +85,6 @@ export default {
     },
   },
 
-  directives: {
-    focus: {
-      inserted: function(input) {
-        input.focus();
-      },
-    },
-  },
   mounted: function() {
     this.warningMessages = this.$store.getters[
       "CASMessageStore/getWarningMessages"
@@ -127,8 +123,7 @@ export default {
   width: 100vw;
   max-width: 1000px;
   display: grid;
-  grid-template-rows: min-content 10vh 10vh 15fr 1fr;
-
+  grid-template-rows: min-content 5vh 15vh 7vh 13fr 1fr;
   overflow-x: scroll;
   overflow-y: hidden;
   position: relative;

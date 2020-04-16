@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "BaseCasList",
+  name: "BaseCasItem",
   props: ["results"],
   computed: {
     messageType: function() {

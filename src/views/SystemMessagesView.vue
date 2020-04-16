@@ -3,6 +3,9 @@
     <div class="noPhoneMessage">
       <h1>Not Available for use on Phones. Please use a tablet or desktop.</h1>
     </div>
+    <div class="topMenu">
+      <TopMenu />
+    </div>
     <PageTitle :title="title" />
     <div class="searchContainer">
       <div class="searchBox">
@@ -40,11 +43,14 @@
 import Fuse from "fuse.js";
 import store from "../store/store";
 import PageTitle from "../components/Elements/PageTitle";
+import TopMenu from "../components/Elements/TopMenu";
 
 export default {
   name: "SystemMessagesView",
+
   components: {
     PageTitle,
+    TopMenu,
   },
   data() {
     return {
@@ -94,7 +100,7 @@ export default {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 15vh 60vh;
+  grid-template-rows: 5vh 7vh 5vh 13fr 1fr;
 
   overflow: hidden;
   position: relative;

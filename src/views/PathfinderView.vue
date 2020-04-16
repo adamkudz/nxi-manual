@@ -3,9 +3,12 @@
     <div class="noPhoneMessage">
       <h1>Not Available for use on Phones. Please use a tablet or desktop.</h1>
     </div>
+    <div class="topMenu">
+      <TopMenu />
+    </div>
 
+    <PageTitle :title="title" />
     <div class="searchContainer">
-      <PageTitle :title="title" />
       <div class="searchBox">
         <div class="searchItems">
           <input
@@ -20,18 +23,13 @@
 
     <div v-if="searchText" class="resultsContainer">
       <div
+        @click="getPath"
         :id="results.id"
         class="resultsItems"
         v-for="results in searchResults"
         :key="results.id"
-        ref="list"
       >
-        <div @click="getPath" class="bezelRowCover" :id="results.id"></div>
-        <div class="resultsButtonName">
-          <p>{{ results.buttonName }}</p>
-        </div>
-
-        <p class="resultsDesc">{{ results.desc | limitLength }}</p>
+        <BaseBezelItem :results="results" />
       </div>
     </div>
   </div>
@@ -42,11 +40,16 @@
 import Fuse from "fuse.js";
 import store from "../store/store";
 import PageTitle from "../components/Elements/PageTitle";
+import TopMenu from "../components/Elements/TopMenu";
+import BaseBezelItem from "../components/Lists/BaseBezelItem";
 
 export default {
   name: "PathfinderView",
+
   components: {
     PageTitle,
+    TopMenu,
+    BaseBezelItem,
   },
   data() {
     return {
@@ -75,8 +78,15 @@ export default {
     this.pfdData = this.$store.getters["pfdStore/getPfdData"];
   },
   methods: {
+    // goBack: function() {
+    //   console.log(this.$router.go(-1));
+    // },
+    // getHelp: function() {
+    //   console.log("get help");
+    // },
     getPath: function(e) {
       this.$store.dispatch("pfdStore/setSelected", e.target.id);
+
       this.$router.push(`/path2`);
     },
     getInfo: function(e) {
@@ -117,25 +127,13 @@ export default {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 15vh 1fr;
+  grid-template-rows: 5vh 7vh 5vh 13fr 1fr;
 
   overflow-x: scroll;
   overflow-y: hidden;
   position: relative;
 }
-.titleBox {
-  font-family: var(--daysFont);
-  color: var(--mainYellow);
-  margin: auto;
-  p {
-    text-align: center;
-    font-family: var(--mainFont);
-    margin-top: 10px;
-    font-size: 25px;
 
-    color: hsla(88, 87%, 60%, 0.9);
-  }
-}
 .titleText {
   font-size: 66px;
 }
@@ -159,20 +157,11 @@ hr {
     margin: 1em;
   }
 }
-.buttons {
-  text-align: center;
-  margin-bottom: 2em;
-  height: 10vh;
-  display: grid;
-  grid-template-rows: 1fr 2fr;
-  button {
-    height: 50px;
-    justify-self: center;
-  }
-  h3 {
-    color: var(--lightWhite);
-    font-style: italic;
-  }
+
+.resultsItems {
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 0.5em;
 }
 .searchItems {
   height: 100%;
@@ -201,72 +190,7 @@ hr {
     color: white;
   }
 }
-.resultsContainer {
-  width: 90%;
-  margin: 1em auto;
-  max-width: 864px;
-  display: grid;
-  grid-auto-rows: min-content;
-  gap: 0.5em;
-  overflow: hidden;
 
-  padding: 10px;
-}
-.resultsItems {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.7fr 8fr;
-
-  background: #2c2a2a;
-  height: 50px;
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid #707070;
-  &::selction {
-    border: 2px solid var(--mainYellow);
-  }
-}
-
-.resultsButtonName {
-  background: url("../assets/singleLabel.svg") no-repeat;
-  background-size: 80%;
-  background-position: center;
-  p {
-    padding: 10px;
-    text-align: center;
-    color: var(--brightWhite);
-    font-size: 0.9em;
-    font-weight: 700;
-  }
-}
-.resultsDesc {
-  align-self: center;
-  justify-self: center;
-  font-size: 0.85em;
-  color: var(--lightWhite);
-}
-.smallButton {
-  padding: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(52, 59, 65, 1) 0%,
-    rgba(13, 14, 15, 1) 23%
-  );
-  width: 48px;
-  height: 28px;
-  text-decoration: none;
-  border: #4d4b4b solid 0.5px;
-  border-radius: 3px;
-  margin: auto;
-  color: var(--lightWhite);
-  font-size: 0.6em;
-  font-weight: bold;
-  box-shadow: 0px 1px 2px rgba(01, 01, 01, 1);
-
-  text-align: center;
-  padding: 0.8em;
-  color: rgb(179, 179, 179);
-}
 .noPhoneMessage {
   height: 100vh;
   width: 100vw;

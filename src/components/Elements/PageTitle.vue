@@ -1,6 +1,7 @@
 <template>
   <div class="pageTitle">
     <h2>{{ title }}</h2>
+    <hr />
   </div>
 </template>
 
@@ -17,5 +18,10 @@ export default {
   font-size: 1.3em;
   color: var(--mainYellow);
   text-align: center;
+}
+hr {
+  color: var(--mainYellow);
+  width: 50%;
+  margin: 3% auto;
 }
 </style>

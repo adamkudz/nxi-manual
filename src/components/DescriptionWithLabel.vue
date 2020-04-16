@@ -32,18 +32,17 @@ export default {
 }
 
 .resultsButtonName {
-  background: url("../assets/singleLabel.svg") no-repeat;
+  background: url("../assets/totalBezelKey.svg") no-repeat;
   background-size: 70%;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-position: left 50% top -13%;
+
   width: 100%;
   min-height: 50px;
   p {
     color: var(--brightWhite);
     font-weight: 700;
-    font-size: 0.85em;
+    text-align: center;
+    margin-top: 3%;
   }
 }
 .resultsDesc {

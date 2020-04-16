@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="102" height="112.5">
+  <defs>
+    <linearGradient id="a" x1=".5" x2=".5" y1=".112" y2=".221" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#35393a"/>
+      <stop offset=".528" stop-color="#999a9b"/>
+      <stop offset="1" stop-color="#383c3f"/>
+    </linearGradient>
+    <linearGradient id="c" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5a5e61"/>
+      <stop offset="1" stop-color="#3f4346"/>
+    </linearGradient>
+    <radialGradient id="d" cx=".5" cy=".05" r="1.078" gradientTransform="matrix(1 0 0 .133 0 .044)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e1eff9"/>
+      <stop offset="0" stop-color="#bbe2f2"/>
+      <stop offset="1" stop-color="#667884"/>
+    </radialGradient>
+    <filter id="b" width="102" height="73" x="0" y="39.5" filterUnits="userSpaceOnUse">
+      <feOffset dy="11"/>
+      <feGaussianBlur result="d" stdDeviation="7.5"/>
+      <feFlood/>
+      <feComposite in2="d" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path fill="url(#a)" d="M-2834.554 6301.279a6.633 6.633 0 00-.614 2.464 47.59 47.59 0 00-.276 5.837c.019 5.268 0 59.872 0 59.872l86-.477v-57.955s.059-3.427-.283-7.357-.625-3.659-.625-3.659z" transform="translate(2842.945 -6271.671)"/>
+  <g fill="#fff" stroke="#35393a" stroke-width="3">
+    <path stroke="none" d="M49.5 29h4v25h-4z"/>
+    <path fill="none" d="M51 30.5h1v22h-1z"/>
+  </g>
+  <g filter="url(#b)">
+    <g fill="url(#c)" stroke="#393636" transform="translate(23.5 52)">
+      <path stroke="none" d="M0 0h55v26H0z"/>
+      <path fill="none" d="M-.5-.5h56v27h-56z"/>
+    </g>
+  </g>
+  <path fill="#fff" d="M51.5 60l10 10h-20z"/>
+  <g fill="url(#d)" stroke="#707070" transform="translate(7.5)">
+    <path stroke="none" d="M10 0h66a10 10 0 0110 10v22H0V10A10 10 0 0110 0z"/>
+    <path fill="none" d="M10 .5h66a9.5 9.5 0 019.5 9.5v21a.5.5 0 01-.5.5H1a.5.5 0 01-.5-.5V10A9.5 9.5 0 0110 .5z"/>
+  </g>
+  <path fill="#151515" d="M17.5 2h65a10 10 0 0110 10v19h-85V12a10 10 0 0110-10z"/>
+  <g>
+    <path fill="#f5f8f5" d="M36.5 22h30v5h-30z"/>
+  </g>
+</svg>

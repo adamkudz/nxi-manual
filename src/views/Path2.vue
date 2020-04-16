@@ -1,11 +1,12 @@
 <template>
-  <div class="TESTCOMPONENTCONTAINER">
+  <div class="PATH2CONTAINER">
     <div v-if="showPDF" class="pdfContainer">
       <PDFComponent @togglePDF="togglePDF" :selected="selected" />
     </div>
-    <header>
-      <PageTitle :title="title" />
-    </header>
+    <TopMenu />
+
+    <PageTitle :title="title" />
+
     <div class="featureDescription">
       <DescriptionWithLabel :selected="selected" :count="count" />
     </div>
@@ -39,6 +40,7 @@ import pfdBezelRow from "../components/PFDComponents/pfdBezelRow.vue";
 import DescriptionWithLabel from "../components/DescriptionWithLabel";
 import PDFComponent from "../components/PDF/PDFComponent";
 import PageTitle from "../components/Elements/PageTitle";
+import TopMenu from "../components/Elements/TopMenu";
 
 export default {
   name: "Path2",
@@ -49,6 +51,7 @@ export default {
     PDFComponent,
     pfdBezelRow,
     PageTitle,
+    TopMenu,
   },
   data() {
     return {
@@ -95,9 +98,10 @@ export default {
 
 <style lang="scss" scoped>
 /* Portrait */
-.TESTCOMPONENTCONTAINER {
+.PATH2CONTAINER {
   height: 100vh;
   width: 100vw;
+  max-width: 1000px;
   color: var(--lightWhite);
 }
 header {
