@@ -13,7 +13,6 @@
       <div class="searchBox">
         <div class="searchItems">
           <input
-            v-focus
             v-model="searchText"
             type="text"
             placeholder="Search PFD functions"

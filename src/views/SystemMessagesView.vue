@@ -134,6 +134,7 @@ hr {
 
 .resultsContainer {
   overflow: scroll;
+  overflow-y: hidden;
   width: 95%;
   margin-left: 2.5%;
 }
