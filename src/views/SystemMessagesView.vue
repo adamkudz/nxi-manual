@@ -1,5 +1,5 @@
 <template>
-  <div class="CASMESSAGESCONTAINER">
+  <div class="SYSTEMMESSAGESCONTAINER">
     <div class="noPhoneMessage">
       <h1>Not Available for use on Phones. Please use a tablet or desktop.</h1>
     </div>
@@ -28,12 +28,7 @@
         :key="index"
         ref="list"
       >
-        <div class="bezelRowCover" :id="index"></div>
-        <div class="resultsButtonName">
-          <p>{{ results.message }}</p>
-        </div>
-
-        <p class="resultsDesc">{{ results.description }}</p>
+        <BaseSystemItem :results="results" />
       </div>
     </div>
   </div>
@@ -44,6 +39,7 @@ import Fuse from "fuse.js";
 import store from "../store/store";
 import PageTitle from "../components/Elements/PageTitle";
 import TopMenu from "../components/Elements/TopMenu";
+import BaseSystemItem from "../components/Lists/BaseSystemItem";
 
 export default {
   name: "SystemMessagesView",
@@ -51,6 +47,7 @@ export default {
   components: {
     PageTitle,
     TopMenu,
+    BaseSystemItem,
   },
   data() {
     return {
@@ -96,13 +93,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.CASMESSAGESCONTAINER {
+.SYSTEMMESSAGESCONTAINER {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 5vh 7vh 5vh 13fr 1fr;
+  grid-template-rows: 5vh 7vh 7vh 13fr 1fr;
 
-  overflow: hidden;
   position: relative;
 }
 .titleBox {
@@ -135,20 +131,14 @@ hr {
   place-content: center;
   margin-top: 10px;
 }
-.buttons {
-  text-align: center;
-  margin-bottom: 2em;
-  height: 10vh;
-  display: grid;
-  grid-template-rows: 1fr 2fr;
-  button {
-    height: 50px;
-    justify-self: center;
-  }
-  h3 {
-    color: var(--lightWhite);
-    font-style: italic;
-  }
+
+.resultsContainer {
+  overflow: scroll;
+  width: 95%;
+  margin-left: 2.5%;
+}
+.resultsItems {
+  margin-top: 1em;
 }
 .searchItems {
   height: 100%;
@@ -177,72 +167,14 @@ hr {
     color: white;
   }
 }
-.resultsContainer {
-  width: 90%;
-  margin: 1em auto;
-  max-width: 864px;
-  display: grid;
-  grid-auto-rows: min-content;
-  gap: 0.5em;
-  overflow: hidden;
 
-  padding: 10px;
-}
-.resultsItems {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.7fr 8fr;
-
-  background: #2c2a2a;
-  height: 50px;
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid #707070;
-  &::selction {
-    border: 2px solid var(--mainYellow);
-  }
-}
-
-.resultsButtonName {
-  background: url("../assets/singleLabel.svg") no-repeat;
-  background-size: 80%;
-  background-position: center;
-  p {
-    padding: 10px;
-    text-align: center;
-    color: var(--brightWhite);
-    font-size: 0.9em;
-    font-weight: 700;
-  }
-}
 .resultsDesc {
   align-self: center;
   justify-self: center;
   font-size: 0.85em;
   color: var(--lightWhite);
 }
-.smallButton {
-  padding: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(52, 59, 65, 1) 0%,
-    rgba(13, 14, 15, 1) 23%
-  );
-  width: 48px;
-  height: 28px;
-  text-decoration: none;
-  border: #4d4b4b solid 0.5px;
-  border-radius: 3px;
-  margin: auto;
-  color: var(--lightWhite);
-  font-size: 0.6em;
-  font-weight: bold;
-  box-shadow: 0px 1px 2px rgba(01, 01, 01, 1);
 
-  text-align: center;
-  padding: 0.8em;
-  color: rgb(179, 179, 179);
-}
 .noPhoneMessage {
   height: 100vh;
   width: 100vw;

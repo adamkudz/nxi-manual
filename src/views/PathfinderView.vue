@@ -8,6 +8,7 @@
     </div>
 
     <PageTitle :title="title" />
+
     <div class="searchContainer">
       <div class="searchBox">
         <div class="searchItems">
@@ -27,6 +28,17 @@
         :id="results.id"
         class="resultsItems"
         v-for="results in searchResults"
+        :key="results.id"
+      >
+        <BaseBezelItem :results="results" />
+      </div>
+    </div>
+    <div v-else class="resultsContainer">
+      <div
+        @click="getPath"
+        :id="results.id"
+        class="resultsItems"
+        v-for="results in pfdData"
         :key="results.id"
       >
         <BaseBezelItem :results="results" />
@@ -58,15 +70,15 @@ export default {
       pfdData: "",
     };
   },
-  filters: {
-    limitLength: function(value) {
-      if (value.length > 150) {
-        return value.toString().slice(0, 150) + "...";
-      } else {
-        return value;
-      }
-    },
-  },
+  // filters: {
+  //   limitLength: function(value) {
+  //     if (value.length > 150) {
+  //       return value.toString().slice(0, 150) + "...";
+  //     } else {
+  //       return value;
+  //     }
+  //   },
+  // },
   directives: {
     focus: {
       inserted: function(input) {
@@ -127,7 +139,7 @@ export default {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 5vh 7vh 5vh 13fr 1fr;
+  grid-template-rows: 5vh 7vh 7vh 13fr 1fr;
 
   overflow-x: scroll;
   overflow-y: hidden;
@@ -156,6 +168,9 @@ hr {
     color: var(--mainYellow);
     margin: 1em;
   }
+}
+.resultsContainer {
+  overflow: scroll;
 }
 
 .resultsItems {

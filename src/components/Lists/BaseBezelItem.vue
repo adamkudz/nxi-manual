@@ -6,7 +6,7 @@
         <p>{{ results.buttonName }}</p>
       </div>
       <div class="bezelDesc">
-        <p>{{ results.desc }}</p>
+        <p>{{ results.desc | limitLength }}</p>
       </div>
     </div>
   </div>
@@ -29,6 +29,7 @@ export default {
   border: 0.5px solid #f2ec3fab;
   border-radius: 10px;
   position: relative;
+  overflow: hidden;
 }
 .bezelCover {
   position: absolute;
@@ -60,5 +61,8 @@ export default {
   color: var(--lightWhite);
   justify-self: center;
   align-self: center;
+  p {
+    margin: 0.5em;
+  }
 }
 </style>

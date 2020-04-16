@@ -1,11 +1,11 @@
 <template>
-  <div class="BASECASCONTAINER">
-    <div class="cautionBox">
-      <div :class="messageType">
+  <div class="BASESYSTEMCONTAINER">
+    <div class="systemBox">
+      <div class="systemMessage">
         <p>{{ results.message }}</p>
       </div>
-      <div class="cautionDesc">
-        <p>{{ results.description | limitLength }}</p>
+      <div class="messageDesc">
+        <p>{{ results.description }}</p>
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "BaseCasItem",
+  name: "BaseSystemItem",
   props: ["results"],
   computed: {
     messageType: function() {
@@ -24,49 +24,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.BASECASCONTAINER {
+.BASESYSTEMCONTAINER {
   width: 100%;
-  height: 4em;
+
   background: transparent
     radial-gradient(closest-side at 17% 50%, #a2693c 0%, #1a1008 100%) 0% 0%
     no-repeat padding-box;
   border: 0.5px solid #f2ec3fab;
   border-radius: 10px;
 }
-.cautionBox {
+.systemBox {
   display: grid;
-  grid-template-columns: 3fr 7fr;
+  grid-template-columns: 4fr 7fr;
   height: 100%;
 }
-.cautionName {
+.systemMessage {
   background: black;
-  color: var(--cautionText);
-  width: 80%;
-  text-align: center;
+  color: var(--lightWhite);
+
   justify-self: center;
   align-self: center;
-  line-height: 1.9;
+  p {
+    text-align: center;
+    font-style: italic;
+  }
 }
-.cautionDesc {
+.messageDesc {
   color: var(--lightWhite);
   justify-self: center;
   align-self: center;
   p {
     margin: 0.5em;
+    padding: 1em;
   }
-}
-.warningName {
-  background: black;
-  color: red;
-  width: 80%;
-  text-align: center;
-  justify-self: center;
-  align-self: center;
-  line-height: 1.7;
-}
-.warningDesc {
-  color: var(--lightWhite);
-  justify-self: center;
-  align-self: center;
 }
 </style>

@@ -6,6 +6,13 @@ import store from "./store/store";
 import NxiStore from "./store/NxiStore";
 
 Vue.config.productionTip = false;
+Vue.filter("limitLength", function(value) {
+  if (value.length > 110) {
+    return value.toString().slice(0, 110) + "...";
+  } else {
+    return value;
+  }
+});
 
 new Vue({
   router,
@@ -13,5 +20,5 @@ new Vue({
   NxiStore,
   render: function(h) {
     return h(App);
-  }
+  },
 }).$mount("#app");

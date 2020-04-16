@@ -22,18 +22,21 @@ export default {
 <style lang="scss" scoped>
 .resultsContainer {
   display: grid;
-  grid-template-columns: 2fr 8fr;
+  grid-template-columns: 3fr 7fr;
 
-  background: #2c2a2a;
-  height: 100%;
   width: 100%;
+  height: 4em;
+  background: transparent
+    radial-gradient(closest-side at 17% 50%, #a2693c 0%, #1a1008 100%) 0% 0%
+    no-repeat padding-box;
+  border: 0.5px solid #f2ec3fab;
   border-radius: 10px;
-  border: 1px solid #707070;
+  overflow: hidden;
 }
 
 .resultsButtonName {
   background: url("../assets/totalBezelKey.svg") no-repeat;
-  background-size: 70%;
+  background-size: 50%;
   background-position: left 50% top -13%;
 
   width: 100%;
@@ -47,7 +50,7 @@ export default {
 }
 .resultsDesc {
   text-align: center;
-  margin: auto;
+  margin: 0.5em;
   font-size: 0.85em;
   color: var(--lightWhite);
 }
