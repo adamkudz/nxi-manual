@@ -42,7 +42,7 @@
 	import BaseSystemItem from '../components/Lists/BaseSystemItem';
 
 	export default {
-		name: 'System Messages',
+		name: 'SystemMessages',
 
 		components: {
 			PageTitle,
@@ -99,7 +99,7 @@
 		gap: 30px;
 		grid-template-rows: min-content min-content min-content 1fr;
 		overflow-x: scroll;
-		overflow-y: hidden;
+		overflow-y: scroll;
 		position: relative;
 	}
 	.titleBox {

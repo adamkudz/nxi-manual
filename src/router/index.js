@@ -41,12 +41,12 @@ const routes = [
 	},
 	{
 		path: '/casmessages',
-		name: 'CAS Messages',
+		name: 'CASMessages',
 		component: CasMessagesView
 	},
 	{
 		path: '/systemmessages',
-		name: 'System Messages',
+		name: 'SystemMessages',
 		component: SystemMessagesView
 	}
 ];

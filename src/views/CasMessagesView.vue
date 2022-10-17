@@ -12,6 +12,7 @@
 						v-model="searchText"
 						type="text"
 						placeholder="Search CAS Messages"
+						v-focus
 					/>
 				</div>
 			</div>
@@ -49,7 +50,7 @@
 	import BaseCasItem from '../components/Lists/BaseCasItem';
 
 	export default {
-		name: 'CAS Messages',
+		name: 'CASMessages',
 
 		components: {
 			MasterWarningAndCaution,

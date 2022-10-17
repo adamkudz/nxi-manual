@@ -1,11 +1,5 @@
 <template>
 	<div class="PATHFINDERCONTAINER">
-		<div class="noPhoneMessage">
-			<h1>
-				Not Available for use on Phones. Please use a tablet or desktop.
-			</h1>
-		</div>
-
 		<PageTitle :title="title" />
 
 		<div class="searchContainer">
@@ -14,7 +8,8 @@
 					<input
 						v-model="searchText"
 						type="text"
-						placeholder="Search PFD functions"
+						placeholder="Search for path, .eg 'traffic'"
+						v-focus
 					/>
 				</div>
 			</div>
@@ -191,6 +186,7 @@
 			color: var(--brightWhite);
 			font-size: 1.3em;
 			padding: 1em;
+
 			letter-spacing: 1px;
 			font-weight: 200;
 		}
@@ -205,6 +201,7 @@
 			padding: 0.3em;
 			background: transparent;
 			color: white;
+			text-align: center;
 		}
 	}
 

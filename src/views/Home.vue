@@ -78,11 +78,10 @@
 
 <style lang="scss" scoped>
 	.HOMECONTAINER {
-		height: 100vh;
 		width: 100vw;
 		max-width: var(--maxWidth);
 		display: grid;
-		grid-template-rows: 20vh 15vh 40vh;
+		grid-template-rows: 20vh 5vh 40vh;
 
 		overflow: hidden;
 		position: relative;
@@ -99,7 +98,7 @@
 		grid-template-columns: repeat(3, 1fr);
 	}
 	.optionBox {
-		border: solid var(--mainYellow) 5px;
+		border: solid var(--mainYellow) 2px;
 
 		justify-self: center;
 		display: flex;

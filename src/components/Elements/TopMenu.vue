@@ -1,9 +1,18 @@
 <template>
 	<div class="TOPMENUCONTAINER">
-		<span class="menuLinks" v-for="item in items" :key="item">
-			<span @click="$router.push({ name: `${item}` })">{{ item }}</span>
-		</span>
-		<p class="menuLinks">{{ currentRoute }}</p>
+		<div class="menuBox">
+			<span v-for="item in items" :key="item">
+				<span
+					:class="
+						currentRoute === item.replace(' ', '')
+							? 'currentLink'
+							: 'menuLink'
+					"
+					@click="$router.push({ name: `${item.replace(' ', '')}` })"
+					>{{ item }}</span
+				>
+			</span>
+		</div>
 	</div>
 </template>
 
@@ -26,30 +35,34 @@
 
 <style lang="scss" scoped>
 	.TOPMENUCONTAINER {
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
-		padding-top: 1em;
+		width: 100vw;
 
-		span {
-			color: var(--mainYellow);
-			font-family: var(--daysFont);
-			font-size: 1.3em;
+		background-color: var(--bgGradDark);
+		.menuBox {
+			display: flex;
+			justify-content: space-around;
+			max-width: 1000px;
+			margin: 1.3rem auto;
 		}
 	}
-
-	.menuLinks {
-		grid-template-columns: auto;
-		color: var(--mainYellow);
-		font-family: var(--daysFont);
-		font-size: 1.3em;
-	}
-
-	#backButton {
+	c #backButton {
 		margin-left: 10%;
 	}
 	#helpButton {
 		justify-self: end;
 		margin-right: 10%;
+	}
+
+	.currentLink {
+		color: var(--brightWhite);
+		font-family: var(--mainFont);
+		font-size: larger;
+		font-style: italic;
+	}
+
+	.menuLink {
+		color: var(--mainYellow);
+		font-family: var(--mainFont);
+		font-size: larger;
 	}
 </style>

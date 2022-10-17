@@ -1,8 +1,10 @@
 <template>
 	<div id="app" class="background">
-		<TopMenu :currentRoute="currentRoute" />
+		<TopMenu class="nav" :currentRoute="currentRoute" />
 		<div class="noPhoneMessage"></div>
-		<router-view class="main" />
+		<transition name="fade" mode="out-in"
+			><router-view class="main"></router-view
+		></transition>
 	</div>
 </template>
 
@@ -53,7 +55,7 @@
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: antialiased;
 		box-sizing: border-box;
-		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 
 	*,
@@ -73,11 +75,10 @@
 			rgba(24, 24, 22, 1) 100%
 		);
 		width: 100vw;
-		height: 100%;
+		height: 100vh;
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
 	}
 	.navButton {
@@ -135,7 +136,7 @@
 		max-width: var(--maxWidth);
 	}
 	.nav {
-		max-width: var(--maxWidth);
+		margin-bottom: 100px;
 	}
 
 	@media screen and (max-width: 700px) {
@@ -150,7 +151,17 @@
 			position: absolute;
 			top: 0;
 			left: 0;
+			z-index: 50;
 			padding: 10%;
 		}
+	}
+	.fade-enter-active,
+	.fade-leave-active {
+		transition: opacity 0.3s;
+	}
+
+	.fade-enter-from,
+	.fade-leave-to {
+		opacity: 0;
 	}
 </style>
