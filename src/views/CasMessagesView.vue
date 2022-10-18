@@ -119,7 +119,7 @@
 		display: grid;
 		gap: 30px;
 		grid-template-rows: min-content min-content min-content 1fr;
-		overflow-x: scroll;
+
 		overflow-y: hidden;
 		position: relative;
 	}

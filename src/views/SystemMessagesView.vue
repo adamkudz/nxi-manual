@@ -98,8 +98,7 @@
 		display: grid;
 		gap: 30px;
 		grid-template-rows: min-content min-content min-content 1fr;
-		overflow-x: scroll;
-		overflow-y: scroll;
+		overflow-y: hidden;
 		position: relative;
 	}
 	.titleBox {
@@ -135,6 +134,7 @@
 
 	.resultsContainer {
 		overflow-y: scroll;
+		overflow-x: hidden;
 		width: 95%;
 		margin: auto;
 	}

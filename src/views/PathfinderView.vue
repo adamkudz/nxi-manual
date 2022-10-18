@@ -138,7 +138,6 @@
 		display: grid;
 		grid-template-rows: 10vh 7vh 1fr;
 
-		overflow-x: scroll;
 		overflow-y: hidden;
 		position: relative;
 	}
@@ -167,7 +166,7 @@
 		}
 	}
 	.resultsContainer {
-		overflow: scroll;
+		overflow-y: scroll;
 	}
 
 	.resultsItems {

@@ -42,7 +42,7 @@
 	import TopMenu from '../components/Elements/TopMenu';
 
 	export default {
-		name: 'Pathfinder',
+		name: 'Pathfinder2',
 
 		components: {
 			PathBezelRow,
