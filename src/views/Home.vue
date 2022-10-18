@@ -15,6 +15,7 @@
       <hr />
     </div> -->
 		<AppHeader />
+
 		<div class="messageBox">
 			<p>Please choose an option</p>
 		</div>
@@ -41,11 +42,12 @@
 	import Fuse from 'fuse.js';
 	import store from '../store/store';
 	import AppHeader from '../components/Elements/AppHeader';
-
+	import PdfView from '../components/PDF/PdfView.vue';
 	export default {
 		name: 'Home',
 		components: {
-			AppHeader
+			AppHeader,
+			PdfView
 		},
 		data() {
 			return {

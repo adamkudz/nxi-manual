@@ -5,7 +5,7 @@ import Home from '../views/Home.vue';
 import PathfinderView from '../views/PathfinderView';
 import Path2 from '../views/Path2.vue';
 import SimulationView from '../views/SimulationView.vue';
-import viewpdf from '../views/viewpdf.vue';
+import PdfView from '../components/PDF/PdfView.vue';
 import CasMessagesView from '../views/CasMessagesView';
 import SystemMessagesView from '../views/SystemMessagesView';
 
@@ -35,9 +35,9 @@ const routes = [
 		component: SimulationView
 	},
 	{
-		path: '/viewpdf',
-		name: 'viewpdf',
-		component: viewpdf
+		path: '/pdfview',
+		name: 'PdfView',
+		component: PdfView
 	},
 	{
 		path: '/casmessages',
