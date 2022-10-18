@@ -2,9 +2,7 @@
 
 ## Concept
 
-```
-The menu based system of modern avionics systems can be difficult to navigate without practice.  Many key features are hidden deep in the menu structure. This training app is intended to help users of the Garmin G1000 Nxi system better understand the menu structure and be able to easily locate features.
-```
+The menu based system of modern avionics systems can be difficult to navigate without practice. Many key features are hidden deep in the menu structure. This training app is intended to help users of the Garmin G1000 Nxi system better understand the menu structure and be able to easily locate features.
 
 ## Pathfinder
 
