@@ -37,7 +37,7 @@
 	import PathBezelRow from '../components/PathBezelRow.vue';
 	import pfdBezelRow from '../components/PFDComponents/pfdBezelRow.vue';
 	import DescriptionWithLabel from '../components/DescriptionWithLabel';
-
+	import PDFComponent from '../components/PDF/PDFComponent.vue';
 	import PageTitle from '../components/Elements/PageTitle';
 	import TopMenu from '../components/Elements/TopMenu';
 
@@ -47,7 +47,7 @@
 		components: {
 			PathBezelRow,
 			DescriptionWithLabel,
-
+			PDFComponent,
 			pfdBezelRow,
 			PageTitle,
 			TopMenu

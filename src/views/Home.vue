@@ -39,7 +39,7 @@
 
 <script>
 	// import pfdData from "../static/javascript/pfd";
-
+	import Fuse from 'fuse.js';
 	import store from '../store/store';
 	import AppHeader from '../components/Elements/AppHeader';
 	import PdfView from '../components/PDF/PdfView.vue';

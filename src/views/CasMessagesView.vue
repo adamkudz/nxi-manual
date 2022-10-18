@@ -42,6 +42,7 @@
 </template>
 
 <script>
+	import Fuse from 'fuse.js';
 	import store from '../store/store';
 	import MasterWarningAndCaution from '../components/Elements/MasterWarningAndCaution';
 	import PageTitle from '../components/Elements/PageTitle';

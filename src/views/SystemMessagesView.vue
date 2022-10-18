@@ -35,6 +35,7 @@
 </template>
 
 <script>
+	import Fuse from 'fuse.js';
 	import store from '../store/store';
 	import PageTitle from '../components/Elements/PageTitle';
 	import TopMenu from '../components/Elements/TopMenu';
