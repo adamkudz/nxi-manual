@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build --modern",
+		"build": "vue-cli-service build",
 		"test:unit": "vue-cli-service test:unit",
 		"test:e2e": "vue-cli-service test:e2e"
 	},
@@ -29,9 +29,5 @@
 	],
 	"jest": {
 		"preset": "@vue/cli-plugin-unit-jest/presets/no-babel"
-	},
-	"engines": {
-		"node": "14.16.1",
-		"npm": "6.14.12"
 	}
 }
