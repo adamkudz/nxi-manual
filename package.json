@@ -29,5 +29,9 @@
 	],
 	"jest": {
 		"preset": "@vue/cli-plugin-unit-jest/presets/no-babel"
+	},
+	"engines": {
+		"node": "14.16.1",
+		"npm": "6.14.12"
 	}
 }
