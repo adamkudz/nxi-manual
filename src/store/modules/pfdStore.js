@@ -1,4 +1,4 @@
-import { data } from "../../../public/pfd";
+import { data } from "../../../public/buttonData";
 export default {
   namespaced: true,
   state: {

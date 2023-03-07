@@ -45,7 +45,7 @@ import PfdHsiDisplay2 from "../components/PFDComponents/PfdHsiDisplay2";
 import DynBezelRow from "../components/PFDComponents/DynBezelRow";
 import XponderRow from "../components/PFDComponents/XponderRow";
 import CodeRow from "../components/PFDComponents/CodeRow";
-import { data } from "../../public/pfd";
+import { data } from "../../public/buttonData";
 import { createNamespacedHelpers } from "vuex";
 const { mapState } = createNamespacedHelpers("pfdStore");
 export default {
