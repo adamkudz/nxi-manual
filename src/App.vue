@@ -36,7 +36,7 @@
 		--lightFont: #e4e4e4;
 		--labelDeselected: #8a8a8a;
 		--bezelLightOff: #e9ffff;
-		--daysFont: 'Days One', sans-serif;
+		--daysFont: 'Oswald', sans-serif;
 		--mainYellow: hsla(57, 87%, 59%, 0.808);
 		--mainFont: 'Open Sans';
 		--backupFont: 'Open Sans';
@@ -74,12 +74,12 @@
 			rgba(77, 92, 128, 1) 0%,
 			rgba(24, 24, 22, 1) 100%
 		);
-		width: 100vw;
-		height: 100vh;
+		width: 100%;
+		
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		
 	}
 	.navButton {
 		width: 200px;

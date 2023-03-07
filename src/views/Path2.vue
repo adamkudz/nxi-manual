@@ -1,7 +1,7 @@
 <template>
 	<div class="PATH2CONTAINER">
 		<div v-if="showPDF" class="pdfContainer">
-			<PDFComponent @togglePDF="togglePDF" :selected="selected" />
+			<PDFComponent	 @togglePDF="togglePDF" :selected="selected"  />
 		</div>
 
 		<PageTitle :title="title" />
