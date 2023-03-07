@@ -21,17 +21,16 @@
 		</div>
 		<div class="OPTIONSCONTAINER">
 			<div @click="gotoPathfinder" class="optionBox" id="pathFinderBox">
-				<h2>Pathfinder</h2>
+				<p>Pathfinder</p>
 			</div>
 			<div @click="gotoCasMessages" class="optionBox" id="casMessagesBox">
-				<h2>CAS Messages</h2>
+				<p>CAS Messages</p>
 			</div>
 			<div
 				@click="gotoSystemMessages"
 				class="optionBox"
-				id="systemMessagesBox"
-			>
-				<h2>System Messages</h2>
+				id="systemMessagesBox">
+				<p>System Messages</p>
 			</div>
 		</div>
 	</div>
@@ -47,12 +46,12 @@
 		name: 'Home',
 		components: {
 			AppHeader,
-			PdfView
+			PdfView,
 		},
 		data() {
 			return {
 				searchText: '',
-				pfdData: []
+				pfdData: [],
 			};
 		},
 
@@ -73,17 +72,17 @@
 			},
 			gotoSimulation: function () {
 				this.$router.push(`/simulationview`);
-			}
-		}
+			},
+		},
 	};
 </script>
 
 <style lang="scss" scoped>
 	.HOMECONTAINER {
-		width: 100vw;
-		max-width: var(--maxWidth);
+		max-width: 700px;
+		margin: auto;
 		display: grid;
-		grid-template-rows: 20vh 5vh 40vh;
+		grid-template-rows: 20vh 5vh min-content;
 
 		overflow: hidden;
 		position: relative;
@@ -100,20 +99,20 @@
 		grid-template-columns: repeat(3, 1fr);
 	}
 	.optionBox {
-		border: solid var(--mainYellow) 2px;
+		border: solid var(--colors-yellow5) 2px;
 
 		justify-self: center;
 		display: flex;
-		border-radius: 20px;
-		height: 136px;
-		width: 200px;
+		border-radius: 7px;
+		min-width: 164px;
+
 		justify-content: center;
 		align-items: center;
 		background: #1a1a19;
 
-		h2 {
-			color: var(--lightFont);
-			text-align: center;
+		p {
+			color: var(--mainYellow);
+			padding: 1rem;
 		}
 	}
 

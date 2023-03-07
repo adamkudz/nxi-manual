@@ -1,17 +1,17 @@
 <template>
 	<div class="PATHFINDERCONTAINER">
-		<PageTitle :title="title" />
-
-		<div class="searchContainer">
-			<div class="searchBox">
-				<div class="searchItems">
-					<input
-						v-model="searchText"
-						type="text"
-						placeholder="Search for path, .eg 'traffic'"
-						v-focus
-					/>
-				</div>
+		<header>
+			<div class="searchContainer">
+				<PageTitle :title="title" />
+			</div>
+		</header>
+		<div class="searchBox">
+			<div class="searchItems">
+				<input
+					v-model="searchText"
+					type="text"
+					placeholder="Search for path, .eg 'traffic'"
+					v-focus />
 			</div>
 		</div>
 
@@ -21,8 +21,7 @@
 				:id="results.id"
 				class="resultsItems"
 				v-for="results in searchResults"
-				:key="results.id"
-			>
+				:key="results.id">
 				<BaseBezelItem :results="results" />
 			</div>
 		</div>
@@ -32,8 +31,7 @@
 				:id="results.id"
 				class="resultsItems"
 				v-for="results in pfdData"
-				:key="results.id"
-			>
+				:key="results.id">
 				<BaseBezelItem :results="results" />
 			</div>
 		</div>
@@ -54,13 +52,13 @@
 		components: {
 			PageTitle,
 			TopMenu,
-			BaseBezelItem
+			BaseBezelItem,
 		},
 		data() {
 			return {
 				title: 'PathFinder',
 				searchText: '',
-				pfdData: ''
+				pfdData: '',
 			};
 		},
 		// filters: {
@@ -76,8 +74,8 @@
 			focus: {
 				inserted: function (input) {
 					input.focus();
-				}
-			}
+				},
+			},
 		},
 		created: function () {
 			this.pfdData = this.$store.getters['pfdStore/getPfdData'];
@@ -106,7 +104,7 @@
 			},
 			simulate: function () {
 				this.$router.push('/simulate');
-			}
+			},
 		},
 		computed: {
 			searchResults: function () {
@@ -121,22 +119,23 @@
 					keys: ['desc', 'buttonName'],
 					location: 0,
 					threshold: 0.3,
-					distance: 3
+					distance: 3,
 				};
 				const fuse = new Fuse(this.pfdData, options);
 				return fuse.search(this.searchText);
-			}
-		}
+			},
+		},
 	};
 </script>
 
 <style lang="scss" scoped>
 	.PATHFINDERCONTAINER {
+		width: 100%;
 		height: 100vh;
-		width: 100vw;
 		max-width: 800px;
+		margin: auto;
 		display: grid;
-		grid-template-rows: 10vh 7vh 1fr;
+		grid-template-rows: 10vh min-content 1fr;
 
 		overflow-y: hidden;
 		position: relative;
@@ -156,23 +155,32 @@
 	.searchContainer {
 		height: 100%;
 		width: 100%;
-		place-content: center;
-		margin-top: 10px;
+
 		h2 {
 			text-align: center;
 			font-family: var(--daysFont);
 			color: var(--mainYellow);
-			margin: 1em;
 		}
 	}
 	.resultsContainer {
 		overflow-y: scroll;
+		padding-top: 1rem;
+		padding-bottom: 2rem;
+		display: grid;
+		grid-template-columns: auto;
+		gap: 0.5rem;
+		margin-bottom: 100px;
+		margin-top: 2rem;
+		border: 1px solid var(--colors-yellow6);
+		border-radius: 7px;
 	}
 
 	.resultsItems {
-		width: 90%;
-		margin-left: 5%;
-		margin-bottom: 0.5em;
+		margin: 0 1rem;
+	}
+
+	.searchBox {
+		margin: 2rem;
 	}
 	.searchItems {
 		height: 100%;
@@ -195,7 +203,7 @@
 			border-top: none;
 			border-left: none;
 			border-right: none;
-			border-bottom: #e0e0e0 solid 1px;
+
 			font-size: 1.3em;
 			padding: 0.3em;
 			background: transparent;

@@ -1,28 +1,25 @@
 <template>
 	<div class="PATH2CONTAINER">
-		<div v-if="showPDF" class="pdfContainer">
-			<PDFComponent	 @togglePDF="togglePDF" :selected="selected"  />
+		<div v-if="showPDF">
+			<PDFComponent @togglePDF="togglePDF" :selected="selected" />
+			<button>Done</button>
 		</div>
-
 		<PageTitle :title="title" />
 
 		<div class="featureDescription">
 			<DescriptionWithLabel :selected="selected" :count="count" />
 		</div>
-
 		<div
 			v-for="(bezelKey, index) in selectionArray"
 			:key="bezelKey.index"
-			class="bezelRows"
-		>
+			class="bezelRows">
 			<PathBezelRow
 				@selectCurrentKey="selectCurrentKey"
 				:bezelKey="selectionArray[index]"
 				:count="count"
 				:highlighted="highlightArray[index]"
 				:selected="selected"
-				class="row"
-			/>
+				class="row" />
 		</div>
 		<div v-if="displayDescription" class="buttonContainer">
 			<button v-if="selected.ref" class="navButton" @click="togglePDF">
@@ -50,7 +47,7 @@
 			PDFComponent,
 			pfdBezelRow,
 			PageTitle,
-			TopMenu
+			TopMenu,
 		},
 		data() {
 			return {
@@ -62,7 +59,7 @@
 				selected: this.$store.getters['pfdStore/getSelected'],
 				count: 0,
 				displayDescription: false,
-				showPDF: false
+				showPDF: false,
 			};
 		},
 		mounted() {},
@@ -92,8 +89,8 @@
 			},
 			togglePDF: function () {
 				this.showPDF = !this.showPDF;
-			}
-		}
+			},
+		},
 	};
 </script>
 
@@ -114,8 +111,7 @@
 	}
 	.pdfContainer {
 		width: 100%;
-		height: 100%;
-		position: absolute;
+
 		background: #2c2a2a;
 		padding: 2em;
 	}

@@ -22,21 +22,24 @@
 		props: ['currentRoute'],
 		data: function () {
 			return {
-				items: ['Home', 'Pathfinder', 'CAS Messages', 'System Messages']
+				items: [
+					'Home',
+					'Pathfinder',
+					'CAS Messages',
+					'System Messages',
+				],
 			};
 		},
 		methods: {
 			test: function () {
 				console.log('test');
-			}
-		}
+			},
+		},
 	};
 </script>
 
 <style lang="scss" scoped>
 	.TOPMENUCONTAINER {
-		width: 100vw;
-
 		background-color: var(--bgGradDark);
 		.menuBox {
 			display: flex;

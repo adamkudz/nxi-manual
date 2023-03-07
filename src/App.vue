@@ -1,10 +1,15 @@
 <template>
-	<div id="app" class="background">
+	<div id="app">
 		<TopMenu class="nav" :currentRoute="currentRoute" />
 		<div class="noPhoneMessage"></div>
 		<transition name="fade" mode="out-in"
-			><router-view class="main"></router-view
+			><router-view></router-view
 		></transition>
+		<div class="footer">
+			<div>
+				<p>footer</p>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -15,18 +20,46 @@
 		name: 'App',
 		components: {
 			AppHeader,
-			TopMenu
+			TopMenu,
 		},
 		computed: {
 			currentRoute: function () {
 				return this.$route.name;
-			}
-		}
+			},
+		},
 	};
 </script>
 
 <style lang="scss">
 	:root {
+		--colors-amber1: #1f1300;
+		--colors-amber2: #271700;
+		--colors-amber3: #341c00;
+		--colors-amber4: #3f2200;
+		--colors-amber5: #4a2900;
+		--colors-amber6: #573300;
+		--colors-amber7: #693f05;
+		--colors-amber8: #824e00;
+		--colors-amber9: #ffb224;
+		--colors-amber10: #ffcb47;
+		--colors-amber11: #f1a10d;
+		--colors-yellow1: #1c1500;
+		--colors-yellow2: #221a00;
+		--colors-yellow3: #2c2100;
+		--colors-yellow4: #352800;
+		--colors-yellow5: #3e3000;
+		--colors-yellow6: #493c00;
+		--colors-yellow7: #594a05;
+		--colors-yellow8: #705e00;
+		--colors-yellow9: #f5d90a;
+		--colors-yellow10: #ffef5c;
+		--colors-yellow11: #f0c000;
+
+		--mainFont: 'Open Sans';
+		--backupFont: 'Open Sans';
+		// --cautionText: #f6e700;
+		--maxWidth: 800px;
+		--bezelGreen: #80ff6a;
 		--bgGradLight: #4d5c80;
 		--bgGradDark: #181816;
 		--lightWhite: #c3c3c3;
@@ -37,13 +70,9 @@
 		--labelDeselected: #8a8a8a;
 		--bezelLightOff: #e9ffff;
 		--daysFont: 'Oswald', sans-serif;
-		--mainYellow: hsla(57, 87%, 59%, 0.808);
-		--mainFont: 'Open Sans';
-		--backupFont: 'Open Sans';
-		--cautionText: #f6e700;
-		--maxWidth: 800px;
-
-		--bezelGreen: #80ff6a;
+		--mainYellow: var(--colors-yellow10);
+		--max-width: 500px;
+		--cautionText: var(--mainYellow);
 	}
 	html {
 		font-family: 'Open Sans';
@@ -56,6 +85,7 @@
 		-webkit-font-smoothing: antialiased;
 		box-sizing: border-box;
 		overflow-y: hidden;
+		background-color: var(--bgGradDark);
 	}
 
 	*,
@@ -64,23 +94,11 @@
 		box-sizing: border-box;
 		margin: 0;
 	}
+
 	h1 {
-		color: var(--mainYellow);
 		font-family: var(--daysFont);
 	}
-	.background {
-		background: radial-gradient(
-			circle,
-			rgba(77, 92, 128, 1) 0%,
-			rgba(24, 24, 22, 1) 100%
-		);
-		width: 100%;
-		
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		
-	}
+
 	.navButton {
 		width: 200px;
 
@@ -136,7 +154,7 @@
 		max-width: var(--maxWidth);
 	}
 	.nav {
-		margin-bottom: 100px;
+		margin-bottom: 2rem;
 	}
 
 	@media screen and (max-width: 700px) {
